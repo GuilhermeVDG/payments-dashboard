@@ -5,10 +5,10 @@ import {
   DATA_ANCHOR,
   DEFAULT_COUNT,
   DEFAULT_DAYS,
-  compareNewestFirst,
   generatePayments,
   mulberry32,
 } from '../scripts/lib/payments-generator';
+import { compareNewestFirst } from '@/domain/sort';
 
 const DAY_MS = 86_400_000;
 const MIX_TOLERANCE = 0.03;

@@ -11,6 +11,7 @@ import type {
   Wallet,
   WalletCardBrand,
 } from '../../src/domain/payment';
+import { compareNewestFirst } from '../../src/domain/sort';
 
 export const DEFAULT_SEED = 20261119;
 /** Fixed "now" the dataset is generated relative to. */
@@ -299,16 +300,6 @@ function methodFor(rng: Rng, type: PaymentMethod['type']): PaymentMethod {
         last4: last4(rng),
       };
   }
-}
-
-/** Code-unit string comparison, independent of the runtime locale. */
-function compareCodeUnits(a: string, b: string): number {
-  return a < b ? -1 : a > b ? 1 : 0;
-}
-
-/** created desc, then id asc: the canonical order of the dataset. */
-export function compareNewestFirst(a: Payment, b: Payment): number {
-  return compareCodeUnits(b.created, a.created) || compareCodeUnits(a.id, b.id);
 }
 
 export function generatePayments(options: GeneratorOptions = {}): Payment[] {
