@@ -1,0 +1,25 @@
+@import 'tailwindcss';
+@import '../src/styles/tokens.css';
+
+/* Keep the root at the browser default (16px): Tailwind spacing is in rem. */
+html {
+  background: var(--color-surface);
+}
+
+body {
+  background: var(--color-surface);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  font-size: var(--text-md);
+  line-height: var(--text-md--line-height);
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px var(--color-focus);
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}

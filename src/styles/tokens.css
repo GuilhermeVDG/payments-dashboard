@@ -1,0 +1,77 @@
+/*
+ * Design tokens for the payments screen, matched to the Stripe Dashboard reference.
+ * Declared in @theme so Tailwind emits both the CSS variables and utilities
+ * (text-fg-muted, bg-surface-subtle, border-border, rounded-md, text-sm ...).
+ * Seed values; tuned against the reference in the visual fidelity pass.
+ */
+@theme {
+  /* Typography */
+  /* Measured on the live Dashboard: system UI stack, 14px base. */
+  --font-sans:
+    -apple-system, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji';
+  --text-xs: 12px;
+  --text-xs--line-height: 16px;
+  --text-sm: 13px;
+  --text-sm--line-height: 18px;
+  --text-md: 14px;
+  --text-md--line-height: 20px;
+  --text-lg: 16px;
+  --text-lg--line-height: 24px;
+  --text-title: 28px;
+  --text-title--line-height: 36px;
+
+  /* Text */
+  /* Measured: primary #1a2c44, secondary #3c4f69, body copy #414552. */
+  --color-fg: #414552;
+  --color-fg-strong: #1a2c44;
+  --color-fg-muted: #3c4f69;
+  --color-fg-subdued: #6c7688;
+  --color-link: #533afd;
+
+  /* Surfaces and borders */
+  --color-surface: #ffffff;
+  --color-surface-subtle: #f4f7fa;
+  --color-surface-hover: #f4f7fa;
+  --color-border: #ebeef1;
+  --color-border-strong: #d4dee9;
+  --color-focus: rgb(83 58 253 / 0.36);
+
+  /* Brand */
+  --color-brand: #533afd;
+  --color-brand-hover: #4434d4;
+  --color-on-brand: #ffffff;
+
+  /* Status badges */
+  --color-success-bg: #d1fab3;
+  --color-success-fg: #217005;
+  --color-success-border: #a8f170;
+  --color-danger-bg: #ffe7f2;
+  --color-danger-fg: #b3093c;
+  --color-danger-border: #ffccdf;
+  --color-neutral-bg: #ebeef1;
+  --color-neutral-fg: #545969;
+  --color-neutral-border: #d8dee4;
+  --color-info-bg: #e2fbfe;
+  --color-info-fg: #045ad0;
+  --color-info-border: #cbf5fd;
+
+  /* Radii */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+
+  /* Elevation */
+  --shadow-popover:
+    0 0 0 1px rgb(64 68 82 / 0.08), 0 5px 15px 0 rgb(64 68 82 / 0.12),
+    0 15px 35px 0 rgb(64 68 82 / 0.08);
+}
+
+:root {
+  /* Layout */
+  --sidebar-width: 240px;
+  --topbar-height: 60px;
+  --content-gutter: 40px;
+  --table-row-height: 36px;
+  --table-header-height: 36px;
+}

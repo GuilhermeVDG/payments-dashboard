@@ -1,0 +1,4 @@
+.next
+node_modules
+src/data/payments.json
+package-lock.json
