@@ -23,11 +23,10 @@ import { EmptyState, emptyStateCopy } from '@/components/filters/empty-state';
 import { FilterBar } from '@/components/filters/filter-bar';
 import { StatusTabs } from '@/components/filters/status-tabs';
 import { EditColumns } from '@/components/payments-table/edit-columns';
+import { ExportButton } from '@/components/payments-table/export-button';
 import { Pagination } from '@/components/payments-table/pagination';
 import { PaymentsTable } from '@/components/payments-table/payments-table';
 import { AnnouncerProvider } from '@/components/ui/announcer';
-import { ExportIcon } from '@/components/ui/icons';
-import { toolbarButton } from '@/components/ui/toolbar-button';
 import { TooltipProvider } from '@/components/ui/tooltip';
 
 /**
@@ -86,10 +85,7 @@ export function PaymentsView({ payments }: { payments: readonly Payment[] }) {
               chipsRef={chipsRef}
               actions={
                 <>
-                  <button type="button" className={toolbarButton} disabled>
-                    <ExportIcon />
-                    Export
-                  </button>
+                  <ExportButton rows={sorted} now={now} />
                   <EditColumns
                     layout={layout}
                     onLayoutChange={setLayout}

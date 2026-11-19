@@ -33,6 +33,9 @@ npm run dev          # http://localhost:3000 (redirects to /payments)
 - **Search** (top bar): payment ID prefix, customer email substring or exact card/account last 4. Debounced 200 ms.
 - **Empty state** with "Clear filters".
 - **Shell:** sidebar and top bar matching the reference, with an account menu. Only Transactions → Payments is wired.
+- **Payment details** at `/payments/[id]`: summary, timeline of events (started, succeeded / failed / refunded / pending) and metadata. Click a row or the Payment ID to open it.
+- **Columns:** drag a header's handle to reorder (or Space, arrows, Space from the keyboard), drag its edge to resize (arrow keys, Home / End, Enter or double-click to reset), and show or hide columns from **Edit columns**.
+- **Export:** downloads the current filtered and sorted view as CSV.
 - **URL state:** every filter, sort, page and page size lives in the URL, so a link reproduces the view. Defaults are omitted and invalid values are ignored. Examples: `?sort=amount.desc,created.desc&page=2&size=50`, `?date=7d`, `?from=2026-11-01&to=2026-11-15`, `?status=failed,refunded&method=card,wallet`, `?amin=10&amax=500&acur=usd`, `?q=4242`.
 - **Accessibility:** every control is labelled, popovers and menus work with the keyboard (Enter opens, Escape closes, focus returns), sortable headers expose `aria-sort`, status is never shown by color alone, copy results are announced, there is a skip link, and controls the demo does not implement are marked `aria-disabled` with a shared description.
 
@@ -68,7 +71,9 @@ Filtering, search, sorting comparators, money formatting and date presets are pu
 - **Statuses: the four in the spec.** The reference also shows Disputed and Uncaptured tabs and Canceled / Blocked badges. The tabs are rendered; Disputed and Uncaptured have no matching mock payments, so they show their own empty state (`?tab=disputed`).
 - **The account menu is in the sidebar**, on the account switcher, where the reference puts it. The spec mentions it under the top bar.
 - **Placeholders instead of real third parties.** The reference's account name and third-party app logos are replaced by "Acme Inc." and a generic apps icon. Card, wallet and bank marks are simplified generic SVGs.
-- **Inert controls.** Create payment, Analyze, the other sidebar sections and the top-bar icons are present for fidelity but are not implemented. They are focusable, marked `aria-disabled` and described as "Not available in this demo". Export and Edit columns are rendered disabled.
+- **Inert controls.** Create payment, Analyze, the other sidebar sections and the top-bar icons are present for fidelity but are not implemented. They are focusable, marked `aria-disabled` and described as "Not available in this demo".
+- **Column layout is per browser.** Order, widths and hidden columns are saved in `localStorage`, not the URL: they are a personal preference rather than part of a shareable view. A column used for sorting can't be hidden.
+- **CSV export** contains every row of the current filtered and sorted view (all pages), with RFC 4180 quoting, a UTF-8 BOM for Excel, ISO UTC dates and amounts in major units. Text fields starting with `=`, `+`, `-` or `@` are prefixed with `'` to prevent spreadsheet formula injection.
 - **Font.** The live Dashboard uses the system UI stack (`-apple-system, system-ui, …`), which this project uses too, so it renders the same on macOS. Colors and sizes were measured on the live Dashboard (test mode) with computed styles.
 - **Client-side data.** The 600 rows are bundled and filtered in memory. That keeps the demo simple and instant; a real app would page and filter on the server.
 - **ACH payments are always USD** and yen amounts are scaled to realistic prices (whole yen, ~¥1,500–¥750,000).
