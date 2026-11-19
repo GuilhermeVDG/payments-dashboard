@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { BarChartIcon, PlusIcon } from '@/components/ui/icons';
-import { AnnouncementBanner, UNAVAILABLE_ACTION_TITLE } from './announcement-banner';
+import { AnnouncementBanner } from './announcement-banner';
+import { unavailableProps } from './unavailable';
 
 const SECTION_TABS = [
   { label: 'Payments', href: '/payments' },
@@ -23,19 +24,13 @@ export function PageHeader() {
         <div className="page-header__actions flex items-center gap-2">
           <button
             type="button"
-            aria-disabled="true"
-            title={UNAVAILABLE_ACTION_TITLE}
+            {...unavailableProps}
             className="page-header__button page-header__button--primary inline-flex h-7 items-center gap-1.5 rounded-md bg-brand px-2.5 text-md font-semibold text-on-brand shadow-[0_1px_1px_rgb(0_0_0/0.08)] hover:bg-brand-hover"
           >
             <PlusIcon />
             Create payment
           </button>
-          <button
-            type="button"
-            aria-disabled="true"
-            title={UNAVAILABLE_ACTION_TITLE}
-            className={secondaryButton}
-          >
+          <button type="button" {...unavailableProps} className={secondaryButton}>
             <BarChartIcon />
             Analyze
           </button>

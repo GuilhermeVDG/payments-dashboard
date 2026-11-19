@@ -2,8 +2,7 @@
 
 import { useRef, useState } from 'react';
 import { CloseIcon, SparkleIcon } from '@/components/ui/icons';
-
-export const UNAVAILABLE_ACTION_TITLE = 'Not available in this demo';
+import { unavailableProps } from './unavailable';
 
 /** The reference's "New" announcement strip; dismissible until the page reloads. */
 export function AnnouncementBanner() {
@@ -28,8 +27,7 @@ export function AnnouncementBanner() {
           </p>
           <button
             type="button"
-            aria-disabled="true"
-            title={UNAVAILABLE_ACTION_TITLE}
+            {...unavailableProps}
             className="announcement-banner__link rounded-sm text-md text-link hover:text-brand-hover"
           >
             Get started

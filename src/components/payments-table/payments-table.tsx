@@ -137,7 +137,7 @@ export function PaymentsTable({ rows, sort, onSortChange, now }: PaymentsTablePr
   });
 
   return (
-    <div className="payments-table overflow-x-auto">
+    <div className="payments-table relative overflow-x-auto">
       <table className="payments-table__table w-full min-w-max table-fixed border-collapse text-md">
         <caption className="sr-only">Payments</caption>
         <thead className="payments-table__head">
