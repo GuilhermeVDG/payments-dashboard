@@ -164,6 +164,8 @@ export function SortableHeaderCell(props: HeaderCellProps & { id: MovableColumn 
     zIndex: isDragging ? 20 : undefined,
   };
 
+  // Absolutely placed in the cell's left padding so it never shifts the label:
+  // right-aligned headers stay flush with their values, as in the reference.
   const grip: ReactNode = (
     <button
       ref={setActivatorNodeRef}
@@ -171,13 +173,12 @@ export function SortableHeaderCell(props: HeaderCellProps & { id: MovableColumn 
       aria-label={`Reorder ${label} column`}
       {...attributes}
       {...listeners}
-      className={`payments-table__drag inline-flex h-5 w-3 shrink-0 cursor-grab items-center justify-center rounded-sm text-fg-subdued opacity-0 group-hover/th:opacity-100 focus-visible:opacity-100 active:cursor-grabbing ${isDragging ? 'opacity-100' : ''}`}
+      className={`payments-table__drag absolute top-1/2 left-0 inline-flex h-5 w-2 -translate-y-1/2 cursor-grab items-center justify-center rounded-sm text-fg-subdued opacity-0 group-hover/th:opacity-100 focus-visible:opacity-100 active:cursor-grabbing ${isDragging ? 'opacity-100' : ''}`}
     >
-      <GripIcon />
+      <GripIcon width={8} height={12} />
     </button>
   );
 
-  const alignRight = header.column.columnDef.meta?.align === 'right';
   return (
     <th
       ref={setNodeRef}
@@ -186,12 +187,8 @@ export function SortableHeaderCell(props: HeaderCellProps & { id: MovableColumn 
       aria-sort={ariaSort(header)}
       className={thClassName(header, isDragging ? 'bg-surface shadow-popover' : '')}
     >
-      <span
-        className={`inline-flex max-w-full items-center gap-1 ${alignRight ? 'flex-row-reverse' : ''}`}
-      >
-        {grip}
-        <HeaderLabel {...props} />
-      </span>
+      {grip}
+      <HeaderLabel {...props} />
       <ResizeHandle {...props} label={label} />
     </th>
   );
