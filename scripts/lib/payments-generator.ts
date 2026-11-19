@@ -13,7 +13,7 @@ import type {
 } from '../../src/domain/payment';
 
 export const DEFAULT_SEED = 20261119;
-/** Fixed "now" for the dataset. The app rebases dates to the real clock at load time. */
+/** Fixed "now" the dataset is generated relative to. */
 export const DATA_ANCHOR = '2026-11-19T18:00:00.000Z';
 export const DEFAULT_COUNT = 600;
 export const DEFAULT_DAYS = 90;
@@ -68,12 +68,12 @@ const STATUS_MIX: Weighted<Status> = [
 /** Non-ACH currency mix. ACH debits are always usd. */
 const CURRENCY_MIX: Weighted<Currency> = [
   ['usd', 52],
-  ['eur', 15],
-  ['gbp', 11],
-  ['cad', 7],
+  ['eur', 17],
+  ['gbp', 10],
+  ['cad', 8],
   ['brl', 6],
-  ['aud', 5],
-  ['jpy', 4],
+  ['aud', 4],
+  ['jpy', 3],
 ];
 
 const METHOD_MIX: Weighted<PaymentMethod['type']> = [
@@ -276,7 +276,7 @@ function createdAt(rng: Rng, anchorMs: number, offset: number): number {
 function amountFor(rng: Rng, currency: Currency): number {
   const major = rng() < 0.88 ? logUniform(rng, 10, 500) : logUniform(rng, 500, 5_000);
   if (currency === 'jpy') {
-    return Math.max(100, Math.round((major * 150) / 10) * 10);
+    return Math.round((major * 150) / 10) * 10; // ~150 yen per major unit, nearest 10 yen
   }
   const style = rng();
   const whole = Math.floor(major);
@@ -299,6 +299,16 @@ function methodFor(rng: Rng, type: PaymentMethod['type']): PaymentMethod {
         last4: last4(rng),
       };
   }
+}
+
+/** Code-unit string comparison, independent of the runtime locale. */
+function compareCodeUnits(a: string, b: string): number {
+  return a < b ? -1 : a > b ? 1 : 0;
+}
+
+/** created desc, then id asc: the canonical order of the dataset. */
+export function compareNewestFirst(a: Payment, b: Payment): number {
+  return compareCodeUnits(b.created, a.created) || compareCodeUnits(a.id, b.id);
 }
 
 export function generatePayments(options: GeneratorOptions = {}): Payment[] {
@@ -345,5 +355,5 @@ export function generatePayments(options: GeneratorOptions = {}): Payment[] {
     payments.push(payment);
   }
 
-  return payments.sort((a, b) => b.created.localeCompare(a.created) || a.id.localeCompare(b.id));
+  return payments.sort(compareNewestFirst);
 }

@@ -70,55 +70,71 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_3UmWUEUyf3kUQU7JSVyU89EG",
-    "amount": 9000,
-    "currency": "brl",
+    "id": "pi_31dyTRtOQowNqwq3VXanYHs7",
+    "amount": 45599,
+    "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "James Young",
-      "email": "james.young@example.com"
+      "name": "Emma Patel",
+      "email": "epatel@example.com"
     },
     "method": {
       "type": "card",
-      "brand": "discover",
-      "last4": "4753"
+      "brand": "mastercard",
+      "last4": "4237"
     },
-    "created": "2026-11-18T18:54:33.000Z",
+    "created": "2026-11-19T16:01:50.000Z",
     "description": "Subscription update"
   },
   {
-    "id": "pi_3KsoH4T0O0vGYxRKh5yg2yGb",
-    "amount": 2699,
+    "id": "pi_354OfyvY46cQG3LjO6FcMqQU",
+    "amount": 46745,
     "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Evelyn Garcia",
+      "email": "evelyn.garcia@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "mastercard",
+      "last4": "3338"
+    },
+    "created": "2026-11-18T17:50:04.000Z"
+  },
+  {
+    "id": "pi_3oH4T0O0vGYxRKh5yg2yGbmk",
+    "amount": 1098,
+    "currency": "brl",
     "status": "succeeded",
     "customer": {
       "name": "Benjamin Moore",
       "email": "bmoore@example.com"
     },
     "method": {
-      "type": "ach",
-      "bankName": "U.S. Bank",
-      "last4": "2535"
+      "type": "card",
+      "brand": "visa",
+      "last4": "0234"
     },
-    "created": "2026-11-18T14:37:08.000Z",
+    "created": "2026-11-18T14:58:30.000Z",
     "description": "Subscription update"
   },
   {
-    "id": "pi_3mcnLEgnPR4IjZvngie2eZVA",
-    "amount": 4399,
+    "id": "pi_3uLrWsRqG1ukZx2ypZjEqWac",
+    "amount": 361700,
     "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "Samuel Anderson",
-      "email": "samuelanderson92@example.com"
+      "name": "Hugo Khan",
+      "email": "hugo.khan@example.com"
     },
     "method": {
       "type": "card",
-      "brand": "mastercard",
-      "last4": "6820"
+      "brand": "amex",
+      "last4": "1654"
     },
-    "created": "2026-11-18T12:43:37.000Z",
-    "description": "One-time purchase"
+    "created": "2026-11-18T14:57:01.000Z",
+    "description": "Payment for Invoice"
   },
   {
     "id": "pi_3kPDs7OEX2CV3u9THB7TnjBc",
@@ -175,6 +191,24 @@
     "failureReason": "Generic decline"
   },
   {
+    "id": "pi_3zFOWYAarUBWF9FlTNszfB1o",
+    "amount": 33183,
+    "currency": "brl",
+    "status": "refunded",
+    "customer": {
+      "name": "Lars Gonzalez",
+      "email": "larsgonzalez59@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "mastercard",
+      "last4": "7117"
+    },
+    "created": "2026-11-17T22:42:39.000Z",
+    "description": "Subscription update",
+    "refundedAt": "2026-11-19T18:00:00.000Z"
+  },
+  {
     "id": "pi_3V5BjyyQ4esLFtl5eqxD5Mdu",
     "amount": 9918,
     "currency": "usd",
@@ -229,7 +263,7 @@
   {
     "id": "pi_3gUpC4tkmQLddMuZQwmO3UYe",
     "amount": 3499,
-    "currency": "brl",
+    "currency": "cad",
     "status": "succeeded",
     "customer": {
       "name": "Samuel Martinez",
@@ -280,22 +314,6 @@
     "failureReason": "Expired card"
   },
   {
-    "id": "pi_3do9AA4eftel1FQD4k5lPgni",
-    "amount": 3999,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Mateo Khan",
-      "email": "mateokhan97@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "mastercard",
-      "last4": "0204"
-    },
-    "created": "2026-11-17T16:08:50.000Z"
-  },
-  {
     "id": "pi_3jG4dpfRvRYPI42RYSYZbz50",
     "amount": 29432,
     "currency": "usd",
@@ -313,21 +331,38 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_3XgCZ4qWLXcVrPbZuBA9dCUC",
-    "amount": 16000,
+    "id": "pi_3HIrBV0UI1K5KTsK8FcPb6Pc",
+    "amount": 9299,
     "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "Chloe Miller",
-      "email": "cmiller@example.com"
+      "name": "Layla Muller",
+      "email": "laylamuller76@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "mastercard",
+      "last4": "4116"
+    },
+    "created": "2026-11-17T12:57:11.000Z",
+    "description": "Subscription update"
+  },
+  {
+    "id": "pi_3C6Uq9zeoN6goFPUK49nLB9e",
+    "amount": 3999,
+    "currency": "gbp",
+    "status": "succeeded",
+    "customer": {
+      "name": "Evelyn Miller",
+      "email": "evelyn.miller@example.com"
     },
     "method": {
       "type": "card",
       "brand": "amex",
-      "last4": "3872"
+      "last4": "5869"
     },
-    "created": "2026-11-17T12:26:46.000Z",
-    "description": "Subscription update"
+    "created": "2026-11-16T23:14:34.000Z",
+    "description": "Payment for Invoice"
   },
   {
     "id": "pi_3nWADL8HEmsRginPKNcKOZI4",
@@ -347,60 +382,44 @@
     "description": "Payment for Invoice"
   },
   {
-    "id": "pi_3ssb7MqTaEdqD5ZPe3NAj2hh",
-    "amount": 20229,
+    "id": "pi_3G2OunzmRJX9SX7DItfpdu3b",
+    "amount": 9099,
     "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "Evelyn Sato",
-      "email": "esato@example.com"
+      "name": "Gabriel Martinez",
+      "email": "gabriel_m@example.com"
     },
     "method": {
-      "type": "card",
+      "type": "wallet",
+      "wallet": "apple_pay",
       "brand": "visa",
-      "last4": "2866"
+      "last4": "1315"
     },
-    "created": "2026-11-16T20:26:32.000Z",
-    "description": "Payment for Invoice"
-  },
-  {
-    "id": "pi_30xrKXQZFUs8AMEkO3Sls2ry",
-    "amount": 6299,
-    "currency": "eur",
-    "status": "succeeded",
-    "customer": {
-      "name": "Nora Jones",
-      "email": "njones@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "8262"
-    },
-    "created": "2026-11-16T19:19:28.000Z",
+    "created": "2026-11-16T19:00:50.000Z",
     "description": "Subscription creation"
   },
   {
-    "id": "pi_3uWC8aMzbpcD77KPYZXzw1r8",
-    "amount": 5344,
-    "currency": "gbp",
-    "status": "succeeded",
+    "id": "pi_3DPqQCr4oxq3YWxGTbkTSa0J",
+    "amount": 8599,
+    "currency": "usd",
+    "status": "pending",
     "customer": {
-      "name": "Daniel Young",
-      "email": "dyoung@example.com"
+      "name": "Nora Young",
+      "email": "nora_y@example.com"
     },
     "method": {
       "type": "card",
-      "brand": "mastercard",
-      "last4": "6925"
+      "brand": "visa",
+      "last4": "7230"
     },
-    "created": "2026-11-16T18:12:54.000Z",
-    "description": "Payment for Invoice"
+    "created": "2026-11-16T12:02:38.000Z",
+    "description": "Subscription update"
   },
   {
     "id": "pi_3P3WzcK1PvLNQr4GggI06X9M",
     "amount": 4199,
-    "currency": "gbp",
+    "currency": "eur",
     "status": "failed",
     "customer": {
       "name": "Priya Martinez",
@@ -418,7 +437,7 @@
   {
     "id": "pi_3IwRcIy2nxTpPCh7uei0ug9Q",
     "amount": 366400,
-    "currency": "aud",
+    "currency": "brl",
     "status": "succeeded",
     "customer": {
       "name": "Omar Hernandez",
@@ -450,6 +469,23 @@
     "description": "Payment for Invoice"
   },
   {
+    "id": "pi_3jKmwDPIYudbX5TodICz6Xgu",
+    "amount": 9799,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Harper Garcia",
+      "email": "harper_g@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "visa",
+      "last4": "4045"
+    },
+    "created": "2026-11-15T12:25:11.000Z",
+    "description": "Subscription update"
+  },
+  {
     "id": "pi_37JoPh0T8W6EPwd75Sp3rpu6",
     "amount": 139578,
     "currency": "usd",
@@ -464,6 +500,23 @@
       "last4": "5186"
     },
     "created": "2026-11-15T10:18:08.000Z",
+    "description": "Payment for Invoice"
+  },
+  {
+    "id": "pi_3HfD60QmQcTrNAIZEduFB4w9",
+    "amount": 15200,
+    "currency": "brl",
+    "status": "succeeded",
+    "customer": {
+      "name": "Theo Hernandez",
+      "email": "theo_h@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "visa",
+      "last4": "7726"
+    },
+    "created": "2026-11-14T22:04:19.000Z",
     "description": "Payment for Invoice"
   },
   {
@@ -485,22 +538,56 @@
     "refundedAt": "2026-11-19T18:00:00.000Z"
   },
   {
-    "id": "pi_3eQViuklxhCvpm5g85BkykTm",
-    "amount": 3230,
-    "currency": "jpy",
-    "status": "failed",
+    "id": "pi_3idnrZmZnUnDptY12o5pmhan",
+    "amount": 465907,
+    "currency": "usd",
+    "status": "succeeded",
     "customer": {
-      "name": "Olivia Hernandez",
-      "email": "oliviahernandez78@example.com"
+      "name": "Sofia Santos",
+      "email": "sofiasantos49@example.com"
     },
     "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "2121"
+      "type": "ach",
+      "bankName": "STRIPE TEST BANK",
+      "last4": "3046"
     },
-    "created": "2026-11-13T19:19:20.000Z",
+    "created": "2026-11-14T20:51:12.000Z",
+    "description": "Subscription update"
+  },
+  {
+    "id": "pi_3LJPv21i0b5hkaAMZt12sItp",
+    "amount": 1100,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Layla Martinez",
+      "email": "layla.martinez@example.com"
+    },
+    "method": {
+      "type": "ach",
+      "bankName": "STRIPE TEST BANK",
+      "last4": "8994"
+    },
+    "created": "2026-11-13T18:19:17.000Z",
+    "description": "Subscription update"
+  },
+  {
+    "id": "pi_3pTJAo6b1X6Mrzpu5ML90ov0",
+    "amount": 1247,
+    "currency": "usd",
+    "status": "refunded",
+    "customer": {
+      "name": "Aria Johnson",
+      "email": "aria_j@example.com"
+    },
+    "method": {
+      "type": "ach",
+      "bankName": "Wells Fargo",
+      "last4": "7046"
+    },
+    "created": "2026-11-13T17:46:12.000Z",
     "description": "Subscription update",
-    "failureReason": "Expired card"
+    "refundedAt": "2026-11-16T03:17:00.352Z"
   },
   {
     "id": "pi_3fiKrlc7HEnaY4YDCnShWmwe",
@@ -538,24 +625,6 @@
     "description": "Subscription creation"
   },
   {
-    "id": "pi_3rGbbli5mjMBXL5Gd9kkZVdj",
-    "amount": 19712,
-    "currency": "usd",
-    "status": "failed",
-    "customer": {
-      "name": "Fatima Davis",
-      "email": "fatima_d@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "mastercard",
-      "last4": "3352"
-    },
-    "created": "2026-11-13T16:26:50.000Z",
-    "description": "One-time purchase",
-    "failureReason": "Insufficient funds"
-  },
-  {
     "id": "pi_3PrUtqAUlMACjF6QH6kgrd9x",
     "amount": 3899,
     "currency": "usd",
@@ -591,38 +660,38 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_32k9Wa9dDDutwXQCbnjd1Obm",
-    "amount": 32799,
-    "currency": "aud",
+    "id": "pi_3U4t2AOoVVyFdk4GhCi3G5Ca",
+    "amount": 15600,
+    "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "Daniel Davis",
-      "email": "daniel_d@example.com"
+      "name": "Gabriel Martinez",
+      "email": "gabriel_m@example.com"
     },
     "method": {
       "type": "card",
       "brand": "visa",
-      "last4": "1971"
+      "last4": "4242"
     },
-    "created": "2026-11-12T23:51:21.000Z",
+    "created": "2026-11-13T03:05:43.000Z",
     "description": "Subscription creation"
   },
   {
-    "id": "pi_3wZBqdoJ8xjbzGjQZS6yeIMN",
-    "amount": 4199,
-    "currency": "eur",
-    "status": "failed",
+    "id": "pi_3lp9ASKI0P90R3aGHukP7lqJ",
+    "amount": 34702,
+    "currency": "gbp",
+    "status": "succeeded",
     "customer": {
-      "name": "Liam Brown",
-      "email": "liam_b@example.com"
+      "name": "Gabriel Martinez",
+      "email": "gabriel_m@example.com"
     },
     "method": {
       "type": "card",
-      "brand": "visa",
-      "last4": "8291"
+      "brand": "amex",
+      "last4": "0360"
     },
-    "created": "2026-11-12T20:51:41.000Z",
-    "failureReason": "Transaction not allowed"
+    "created": "2026-11-12T20:24:27.000Z",
+    "description": "Subscription update"
   },
   {
     "id": "pi_3MwgNc54aqeQGuaXRtNirNvz",
@@ -639,41 +708,6 @@
       "last4": "0062"
     },
     "created": "2026-11-12T19:38:50.000Z"
-  },
-  {
-    "id": "pi_3YFoM05mINm1HokHA5ESfb0Y",
-    "amount": 6699,
-    "currency": "aud",
-    "status": "succeeded",
-    "customer": {
-      "name": "Priya Martinez",
-      "email": "priya_m@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "mastercard",
-      "last4": "2414"
-    },
-    "created": "2026-11-12T19:18:33.000Z",
-    "description": "Plan upgrade"
-  },
-  {
-    "id": "pi_3YhAWgq9FtecRTBLmI3nhyNV",
-    "amount": 2141,
-    "currency": "usd",
-    "status": "refunded",
-    "customer": {
-      "name": "Liam Costa",
-      "email": "liam.costa@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "mastercard",
-      "last4": "0142"
-    },
-    "created": "2026-11-12T18:57:30.000Z",
-    "description": "Subscription creation",
-    "refundedAt": "2026-11-14T10:03:30.368Z"
   },
   {
     "id": "pi_3bmBN2dJuMlH1KeFr6e9nSoW",
@@ -710,56 +744,22 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_3SzrHgnRV83V5g5dOOjmoy3E",
-    "amount": 3073,
-    "currency": "gbp",
+    "id": "pi_3YaDYqdME1ApLRxaFvYXD7rX",
+    "amount": 3999,
+    "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "Arthur Sato",
-      "email": "arthur.sato@example.com"
+      "name": "Amelia Lee",
+      "email": "amelia.lee@example.com"
     },
     "method": {
       "type": "wallet",
-      "wallet": "apple_pay",
-      "brand": "visa",
-      "last4": "0122"
-    },
-    "created": "2026-11-12T15:13:59.000Z",
-    "description": "Subscription update"
-  },
-  {
-    "id": "pi_3bCi7p18YX9QeqGrMT8GxzsS",
-    "amount": 28300,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Hugo Lee",
-      "email": "hugo_l@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "8673"
-    },
-    "created": "2026-11-12T15:03:15.000Z",
-    "description": "Payment for Invoice"
-  },
-  {
-    "id": "pi_3acf13Snxj4gaBobTO4fTGBD",
-    "amount": 7900,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Evelyn Lee",
-      "email": "evelyn.lee@example.com"
-    },
-    "method": {
-      "type": "card",
+      "wallet": "google_pay",
       "brand": "mastercard",
-      "last4": "3822"
+      "last4": "2004"
     },
-    "created": "2026-11-12T12:36:37.000Z",
-    "description": "Plan upgrade"
+    "created": "2026-11-12T16:40:39.000Z",
+    "description": "Subscription update"
   },
   {
     "id": "pi_3IN2FkJQmFTBEouE3uOhKTYW",
@@ -779,21 +779,21 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_3cvc3fIKqKaKwiypa5Bs5LXB",
-    "amount": 29999,
+    "id": "pi_3fSAZgUj0xPQXNu5KFxyC8Pc",
+    "amount": 6698,
     "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "Fatima Young",
-      "email": "fatima_y@example.com"
+      "name": "Samuel Davis",
+      "email": "samuel.davis@example.com"
     },
     "method": {
-      "type": "card",
-      "brand": "discover",
-      "last4": "3195"
+      "type": "ach",
+      "bankName": "Bank of America",
+      "last4": "8075"
     },
-    "created": "2026-11-11T23:50:52.000Z",
-    "description": "Payment for Invoice"
+    "created": "2026-11-11T23:34:59.000Z",
+    "description": "Subscription update"
   },
   {
     "id": "pi_35RoTdqr8LOWwyBl4MNHsPSn",
@@ -882,22 +882,37 @@
     "description": "Plan upgrade"
   },
   {
-    "id": "pi_3gnM1f8tzW8OwUYd2n8vIygd",
-    "amount": 28600,
+    "id": "pi_3qsHxmIqUGTdwavJenEGpgtw",
+    "amount": 1124,
     "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "Lars Lee",
-      "email": "llee@example.com"
+      "name": "Chloe Harris",
+      "email": "chloe_h@example.com"
     },
     "method": {
-      "type": "wallet",
-      "wallet": "apple_pay",
-      "brand": "visa",
-      "last4": "7983"
+      "type": "ach",
+      "bankName": "Citibank",
+      "last4": "1141"
     },
-    "created": "2026-11-11T14:53:24.000Z",
-    "description": "Payment for Invoice"
+    "created": "2026-11-11T17:05:00.000Z",
+    "description": "Subscription update"
+  },
+  {
+    "id": "pi_3N9KFKCW6BJOkkTuwmhwXblL",
+    "amount": 19200,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Isabella Johnson",
+      "email": "isabellajohnson65@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "visa",
+      "last4": "4508"
+    },
+    "created": "2026-11-11T14:49:17.000Z"
   },
   {
     "id": "pi_3sTx9pGBrLsT0ioig8tCpNzf",
@@ -965,39 +980,6 @@
       "last4": "8219"
     },
     "created": "2026-11-10T16:41:43.000Z",
-    "description": "Subscription creation"
-  },
-  {
-    "id": "pi_3KpRwvtohueucb7MFm11cy7y",
-    "amount": 2800,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Sophia Gonzalez",
-      "email": "sophia.gonzalez@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "2902"
-    },
-    "created": "2026-11-10T14:11:14.000Z"
-  },
-  {
-    "id": "pi_3lmT0ZxvIwRusqC9K25LxrkL",
-    "amount": 2099,
-    "currency": "eur",
-    "status": "succeeded",
-    "customer": {
-      "name": "Fatima Martin",
-      "email": "fatima_m@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "5649"
-    },
-    "created": "2026-11-10T14:06:13.000Z",
     "description": "Subscription creation"
   },
   {
@@ -1103,56 +1085,37 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_3BeAfFj7jFfSAZgUj0xPQXNu",
-    "amount": 2110,
-    "currency": "jpy",
+    "id": "pi_3X1O64nWeghv1B6wYcKaCSTJ",
+    "amount": 211599,
+    "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "Lucas Walker",
-      "email": "lucas.walker@example.com"
+      "name": "Yuki Davis",
+      "email": "yukidavis50@example.com"
     },
     "method": {
       "type": "card",
-      "brand": "visa",
-      "last4": "9531"
+      "brand": "amex",
+      "last4": "4757"
     },
-    "created": "2026-11-09T19:31:15.000Z",
-    "description": "Plan upgrade"
+    "created": "2026-11-09T19:22:00.000Z",
+    "description": "Payment for Invoice"
   },
   {
-    "id": "pi_3ne2HNAA65HniBu7ZjhYSKjz",
-    "amount": 8999,
-    "currency": "gbp",
-    "status": "failed",
-    "customer": {
-      "name": "Gabriel Smith",
-      "email": "gsmith@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "4867"
-    },
-    "created": "2026-11-09T17:45:02.000Z",
-    "description": "Payment for Invoice",
-    "failureReason": "Insufficient funds"
-  },
-  {
-    "id": "pi_3j0llugIUBLnLwx1QqJ7l5EB",
-    "amount": 4245,
-    "currency": "aud",
+    "id": "pi_3guazggImuIpNsZtH681J8oV",
+    "amount": 2499,
+    "currency": "cad",
     "status": "succeeded",
     "customer": {
-      "name": "Ingrid Khan",
-      "email": "ingrid.khan@example.com"
+      "name": "Priya Garcia",
+      "email": "priyagarcia67@example.com"
     },
     "method": {
       "type": "card",
-      "brand": "visa",
-      "last4": "4242"
+      "brand": "mastercard",
+      "last4": "7480"
     },
-    "created": "2026-11-09T16:42:49.000Z",
-    "description": "Subscription update"
+    "created": "2026-11-09T17:53:57.000Z"
   },
   {
     "id": "pi_3Y1M9e28bpCwt7qZnPV5d4t0",
@@ -1189,39 +1152,6 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_3qktHESVTL91F5G3ggTyRk1V",
-    "amount": 3024,
-    "currency": "aud",
-    "status": "succeeded",
-    "customer": {
-      "name": "Harper Garcia",
-      "email": "harper_g@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "discover",
-      "last4": "8055"
-    },
-    "created": "2026-11-09T15:17:51.000Z",
-    "description": "Subscription update"
-  },
-  {
-    "id": "pi_3i1xtZFKN8imzgDl0u2SF93t",
-    "amount": 3400,
-    "currency": "eur",
-    "status": "succeeded",
-    "customer": {
-      "name": "Kenji Clark",
-      "email": "kenji.clark@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "0819"
-    },
-    "created": "2026-11-09T15:15:49.000Z"
-  },
-  {
     "id": "pi_3CAfPNOrXAitFCdP2H4fj9Lk",
     "amount": 7600,
     "currency": "eur",
@@ -1237,6 +1167,23 @@
       "last4": "6870"
     },
     "created": "2026-11-09T13:27:16.000Z",
+    "description": "Subscription update"
+  },
+  {
+    "id": "pi_37cVR05U7e1K7nwd8tuHhcly",
+    "amount": 6400,
+    "currency": "cad",
+    "status": "succeeded",
+    "customer": {
+      "name": "Amelia Lee",
+      "email": "amelia.lee@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "mastercard",
+      "last4": "4869"
+    },
+    "created": "2026-11-09T05:23:01.000Z",
     "description": "Subscription update"
   },
   {
@@ -1256,38 +1203,39 @@
     "created": "2026-11-08T23:30:52.000Z"
   },
   {
-    "id": "pi_3K1jVjfFBVwxgHqqeEPW8iqb",
-    "amount": 10199,
+    "id": "pi_35RgyOJsDEXiOVQ4mAx97TOJ",
+    "amount": 1271,
     "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "Lars Lee",
-      "email": "llee@example.com"
+      "name": "Leo Lopez",
+      "email": "leo.lopez@example.com"
     },
     "method": {
       "type": "card",
       "brand": "visa",
-      "last4": "4242"
+      "last4": "7040"
     },
-    "created": "2026-11-08T21:14:15.000Z",
-    "description": "Subscription update"
+    "created": "2026-11-08T21:59:50.000Z",
+    "description": "One-time purchase"
   },
   {
-    "id": "pi_3UxTF45RgyOJsDEXiOVQ4mAx",
-    "amount": 1670,
-    "currency": "usd",
-    "status": "succeeded",
+    "id": "pi_3L91F5G3ggTyRk1VdyonxE7W",
+    "amount": 8800,
+    "currency": "brl",
+    "status": "refunded",
     "customer": {
-      "name": "Liam Sato",
-      "email": "liam.sato@example.com"
+      "name": "Nora Jones",
+      "email": "njones@example.com"
     },
     "method": {
       "type": "card",
       "brand": "visa",
-      "last4": "3993"
+      "last4": "2828"
     },
-    "created": "2026-11-08T20:26:55.000Z",
-    "description": "Subscription creation"
+    "created": "2026-11-08T17:32:43.000Z",
+    "description": "Subscription update",
+    "refundedAt": "2026-11-11T20:40:19.168Z"
   },
   {
     "id": "pi_38wGeEu4sdDg0lr4EmF16o1N",
@@ -1358,23 +1306,6 @@
     "refundedAt": "2026-11-10T12:15:25.331Z"
   },
   {
-    "id": "pi_3bCtmBZTwSb8bQcniVsJJSM2",
-    "amount": 4650,
-    "currency": "jpy",
-    "status": "succeeded",
-    "customer": {
-      "name": "Fatima Martin",
-      "email": "fatima_m@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "mastercard",
-      "last4": "6791"
-    },
-    "created": "2026-11-07T12:40:24.000Z",
-    "description": "Subscription update"
-  },
-  {
     "id": "pi_33rNediThtiPWfTxe2EnMbJC",
     "amount": 3999,
     "currency": "usd",
@@ -1426,77 +1357,24 @@
     "description": "One-time purchase"
   },
   {
-    "id": "pi_3xIHyAVOHv6ekTIR5Xyj6cKS",
-    "amount": 3899,
-    "currency": "eur",
+    "id": "pi_3puBmGa5JrSV8YBM1jB39RBf",
+    "amount": 3799,
+    "currency": "aud",
     "status": "succeeded",
     "customer": {
-      "name": "Yuki Hernandez",
-      "email": "yukihernandez19@example.com"
+      "name": "Noah Patel",
+      "email": "noah_p@example.com"
     },
     "method": {
       "type": "card",
-      "brand": "visa",
-      "last4": "8688"
+      "brand": "discover",
+      "last4": "5260"
     },
-    "created": "2026-11-06T19:36:56.000Z",
-    "description": "Plan upgrade"
-  },
-  {
-    "id": "pi_3aHJgTk9Fj4JJXAJ2jE6LKoq",
-    "amount": 26500,
-    "currency": "usd",
-    "status": "refunded",
-    "customer": {
-      "name": "Liam Anderson",
-      "email": "liam.anderson@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "6195"
-    },
-    "created": "2026-11-06T14:03:48.000Z",
-    "description": "One-time purchase",
-    "refundedAt": "2026-11-07T09:58:46.561Z"
-  },
-  {
-    "id": "pi_32JAbgjeVaCw31ihVv2S8NKF",
-    "amount": 7000,
-    "currency": "usd",
-    "status": "failed",
-    "customer": {
-      "name": "Amelia Clark",
-      "email": "amelia.clark@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "9875"
-    },
-    "created": "2026-11-06T11:33:09.000Z",
-    "description": "One-time purchase",
-    "failureReason": "Card velocity exceeded"
-  },
-  {
-    "id": "pi_31t9ZOuXR3w9zftZ5n6HcbdZ",
-    "amount": 346100,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Noah Thompson",
-      "email": "noah_t@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "8114"
-    },
-    "created": "2026-11-06T02:04:06.000Z",
+    "created": "2026-11-06T18:14:37.000Z",
     "description": "Subscription update"
   },
   {
-    "id": "pi_31eh8Oqj3oTTOhRpFBUGKHtO",
+    "id": "pi_3eh8Oqj3oTTOhRpFBUGKHtOy",
     "amount": 2599,
     "currency": "aud",
     "status": "failed",
@@ -1505,8 +1383,7 @@
       "email": "priya.thomas@example.com"
     },
     "method": {
-      "type": "wallet",
-      "wallet": "apple_pay",
+      "type": "card",
       "brand": "visa",
       "last4": "6397"
     },
@@ -1568,6 +1445,24 @@
     "failureReason": "Insufficient funds"
   },
   {
+    "id": "pi_3mZim8MFc91tz8TSbgNjph5H",
+    "amount": 1150,
+    "currency": "usd",
+    "status": "refunded",
+    "customer": {
+      "name": "Amelia Johnson",
+      "email": "ameliajohnson12@example.com"
+    },
+    "method": {
+      "type": "ach",
+      "bankName": "Bank of America",
+      "last4": "0609"
+    },
+    "created": "2026-11-05T15:07:16.000Z",
+    "description": "Subscription update",
+    "refundedAt": "2026-11-10T20:20:08.558Z"
+  },
+  {
     "id": "pi_3vPHak93B05QQC3uItTjarYA",
     "amount": 2769,
     "currency": "usd",
@@ -1584,107 +1479,20 @@
     "created": "2026-11-05T14:31:38.000Z"
   },
   {
-    "id": "pi_3oEhlP8XccXWeO7PYglGuca2",
-    "amount": 2699,
+    "id": "pi_3hIqRkGZigmrJ3mKJV4BfwDk",
+    "amount": 369099,
     "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "Camila Hernandez",
-      "email": "camilahernandez48@example.com"
-    },
-    "method": {
-      "type": "ach",
-      "bankName": "JPMorgan Chase",
-      "last4": "7801"
-    },
-    "created": "2026-11-05T13:05:10.000Z",
-    "description": "Payment for Invoice"
-  },
-  {
-    "id": "pi_3qGXhXohGXbkI0qT8Wtgpng3",
-    "amount": 5199,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Amelia Clark",
-      "email": "amelia.clark@example.com"
+      "name": "Daniel Davis",
+      "email": "daniel_d@example.com"
     },
     "method": {
       "type": "card",
-      "brand": "visa",
-      "last4": "6501"
+      "brand": "amex",
+      "last4": "2277"
     },
-    "created": "2026-11-05T13:05:09.000Z",
-    "description": "One-time purchase"
-  },
-  {
-    "id": "pi_3oG7fUshERDIO9qOqynU7sbJ",
-    "amount": 45383,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Theo Robinson",
-      "email": "theo_r@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "6403"
-    },
-    "created": "2026-11-05T08:32:59.000Z",
-    "description": "Payment for Invoice"
-  },
-  {
-    "id": "pi_3IcSJH05lfdXmXQcyDhTr4VZ",
-    "amount": 5607,
-    "currency": "cad",
-    "status": "succeeded",
-    "customer": {
-      "name": "Noah Patel",
-      "email": "noah_p@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "mastercard",
-      "last4": "2257"
-    },
-    "created": "2026-11-05T03:35:07.000Z",
-    "description": "Payment for Invoice"
-  },
-  {
-    "id": "pi_3idhxFLcWWMmdqb92Lid9z3a",
-    "amount": 482599,
-    "currency": "aud",
-    "status": "failed",
-    "customer": {
-      "name": "Benjamin Young",
-      "email": "benjamin.young@example.com"
-    },
-    "method": {
-      "type": "wallet",
-      "wallet": "google_pay",
-      "brand": "mastercard",
-      "last4": "5128"
-    },
-    "created": "2026-11-04T23:22:11.000Z",
-    "description": "Subscription update",
-    "failureReason": "Lost card"
-  },
-  {
-    "id": "pi_3yUnOhbWGsFCrogxQIkNRRLb",
-    "amount": 1620,
-    "currency": "jpy",
-    "status": "succeeded",
-    "customer": {
-      "name": "Priya Anderson",
-      "email": "priyaanderson16@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "5720"
-    },
-    "created": "2026-11-04T21:34:43.000Z",
+    "created": "2026-11-05T14:23:48.000Z",
     "description": "Subscription update"
   },
   {
@@ -1756,37 +1564,20 @@
     "description": "Subscription creation"
   },
   {
-    "id": "pi_3HF8haQNNSyfDBsP81P8zBTL",
-    "amount": 1199,
-    "currency": "brl",
-    "status": "succeeded",
-    "customer": {
-      "name": "Amelia Clark",
-      "email": "amelia_c@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "discover",
-      "last4": "6009"
-    },
-    "created": "2026-11-03T21:58:05.000Z",
-    "description": "Subscription creation"
-  },
-  {
-    "id": "pi_3fAofXMvYCC6Uq9zeoN6goFP",
-    "amount": 90000,
+    "id": "pi_3J8xjbzGjQZS6yeIMN3KQpcv",
+    "amount": 2400,
     "currency": "cad",
     "status": "succeeded",
     "customer": {
-      "name": "Amelia Lee",
-      "email": "amelia.lee@example.com"
+      "name": "Emma Lewis",
+      "email": "elewis@example.com"
     },
     "method": {
       "type": "card",
       "brand": "visa",
-      "last4": "1472"
+      "last4": "9644"
     },
-    "created": "2026-11-03T19:47:39.000Z",
+    "created": "2026-11-03T19:17:58.000Z",
     "description": "Subscription update"
   },
   {
@@ -1843,20 +1634,38 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_3HwhxDPqQCr4oxq3YWxGTbkT",
-    "amount": 1206,
+    "id": "pi_3YMxYa0y3uUamgItOWLihZuW",
+    "amount": 4199,
     "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "Elijah Taylor",
-      "email": "etaylor@example.com"
+      "name": "Sofia Lopez",
+      "email": "slopez@example.com"
     },
     "method": {
       "type": "card",
-      "brand": "mastercard",
-      "last4": "4242"
+      "brand": "visa",
+      "last4": "5621"
     },
-    "created": "2026-11-02T20:40:37.000Z",
+    "created": "2026-11-02T22:40:50.000Z",
+    "description": "Payment for Invoice"
+  },
+  {
+    "id": "pi_3uklxhCvpm5g85BkykTmjU3D",
+    "amount": 19499,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Kenji Clark",
+      "email": "kenji.clark@example.com"
+    },
+    "method": {
+      "type": "wallet",
+      "wallet": "google_pay",
+      "brand": "visa",
+      "last4": "6101"
+    },
+    "created": "2026-11-02T21:46:42.000Z",
     "description": "Subscription update"
   },
   {
@@ -1893,9 +1702,26 @@
     "created": "2026-11-02T19:53:40.000Z"
   },
   {
+    "id": "pi_3eJmwgL4SzhVSVjDLj8ErpeC",
+    "amount": 34900,
+    "currency": "cad",
+    "status": "succeeded",
+    "customer": {
+      "name": "Noah Patel",
+      "email": "noah_p@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "visa",
+      "last4": "8948"
+    },
+    "created": "2026-11-02T19:45:34.000Z",
+    "description": "Subscription update"
+  },
+  {
     "id": "pi_3HZt5yvwaJdilchwNQEIazAP",
     "amount": 7099,
-    "currency": "aud",
+    "currency": "brl",
     "status": "succeeded",
     "customer": {
       "name": "Ava Davis",
@@ -1911,12 +1737,12 @@
   },
   {
     "id": "pi_372vuisJotfbttNg4xqnQTMZ",
-    "amount": 10160,
-    "currency": "jpy",
+    "amount": 6700,
+    "currency": "aud",
     "status": "succeeded",
     "customer": {
-      "name": "Lucas Miller",
-      "email": "lucasmiller97@example.com"
+      "name": "Sophia Garcia",
+      "email": "sgarcia@example.com"
     },
     "method": {
       "type": "card",
@@ -1927,21 +1753,38 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_3U6dSFU3AnlCdSIhHXJQUGWm",
-    "amount": 6699,
+    "id": "pi_3s1pYvAuFY3LADL6LcWB9Oms",
+    "amount": 149999,
     "currency": "usd",
-    "status": "pending",
+    "status": "succeeded",
     "customer": {
-      "name": "Harper Johnson",
-      "email": "harper_j@example.com"
+      "name": "Omar Rossi",
+      "email": "omar.rossi@example.com"
     },
     "method": {
       "type": "card",
-      "brand": "visa",
-      "last4": "3860"
+      "brand": "mastercard",
+      "last4": "0411"
     },
-    "created": "2026-11-02T15:40:30.000Z",
+    "created": "2026-11-02T17:54:50.000Z",
     "description": "Subscription creation"
+  },
+  {
+    "id": "pi_3OoDSaNTTrkYgwqyntET6rLE",
+    "amount": 12099,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Amelia Clark",
+      "email": "amelia.clark@example.com"
+    },
+    "method": {
+      "type": "ach",
+      "bankName": "STRIPE TEST BANK",
+      "last4": "2826"
+    },
+    "created": "2026-11-02T17:43:00.000Z",
+    "description": "Subscription update"
   },
   {
     "id": "pi_3kSIxB98psDigYn7LtzqmHO5",
@@ -1964,7 +1807,7 @@
   {
     "id": "pi_3WvdfdEdPz7OqA6T4WmJEA5h",
     "amount": 16799,
-    "currency": "aud",
+    "currency": "brl",
     "status": "succeeded",
     "customer": {
       "name": "Nora Young",
@@ -2029,21 +1872,37 @@
     "created": "2026-10-31T23:24:23.000Z"
   },
   {
-    "id": "pi_3WeyGDHhFjSwSC1Kszv38jdj",
-    "amount": 2899,
+    "id": "pi_3zzyGuuw0OK6ABoA5msrxM5Z",
+    "amount": 2799,
+    "currency": "eur",
+    "status": "succeeded",
+    "customer": {
+      "name": "Lucas Thomas",
+      "email": "lucas.thomas@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "mastercard",
+      "last4": "5266"
+    },
+    "created": "2026-10-31T16:26:44.000Z"
+  },
+  {
+    "id": "pi_35Cyqb1XLng0F6rvkwnPYORV",
+    "amount": 39540,
     "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "Mateo Smith",
-      "email": "mateosmith44@example.com"
+      "name": "Liam Anderson",
+      "email": "liam.anderson@example.com"
     },
     "method": {
-      "type": "ach",
-      "bankName": "U.S. Bank",
-      "last4": "0221"
+      "type": "card",
+      "brand": "visa",
+      "last4": "3326"
     },
-    "created": "2026-10-31T17:35:10.000Z",
-    "description": "One-time purchase"
+    "created": "2026-10-31T15:57:51.000Z",
+    "description": "Plan upgrade"
   },
   {
     "id": "pi_3Azgg4keyclU5UHhlWOnsFaH",
@@ -2061,6 +1920,23 @@
       "last4": "4032"
     },
     "created": "2026-10-31T13:13:13.000Z"
+  },
+  {
+    "id": "pi_3CUnLRZx92P99wpWHMJQF1Es",
+    "amount": 8399,
+    "currency": "gbp",
+    "status": "succeeded",
+    "customer": {
+      "name": "Chloe Miller",
+      "email": "cmiller@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "visa",
+      "last4": "8600"
+    },
+    "created": "2026-10-31T12:14:34.000Z",
+    "description": "Payment for Invoice"
   },
   {
     "id": "pi_3bJdb7hy9tyvK3DLA4p4RynB",
@@ -2151,20 +2027,39 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_3FT9ZtTeJmwgL4SzhVSVjDLj",
-    "amount": 1599,
-    "currency": "eur",
+    "id": "pi_3FyQkv52Nkko227xi8ghq6H4",
+    "amount": 16799,
+    "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "Priya Anderson",
-      "email": "priyaanderson16@example.com"
+      "name": "Liam Perez",
+      "email": "lperez@example.com"
     },
     "method": {
       "type": "card",
-      "brand": "visa",
-      "last4": "8236"
+      "brand": "mastercard",
+      "last4": "8241"
     },
-    "created": "2026-10-30T16:19:30.000Z"
+    "created": "2026-10-30T21:26:32.000Z",
+    "description": "Subscription update"
+  },
+  {
+    "id": "pi_38qPVpRX14uGlUyLUFzcIZPh",
+    "amount": 8300,
+    "currency": "usd",
+    "status": "pending",
+    "customer": {
+      "name": "Samuel Davis",
+      "email": "samuel.davis@example.com"
+    },
+    "method": {
+      "type": "wallet",
+      "wallet": "apple_pay",
+      "brand": "mastercard",
+      "last4": "4242"
+    },
+    "created": "2026-10-30T21:13:34.000Z",
+    "description": "Subscription update"
   },
   {
     "id": "pi_371swn1hiL1xD3DUOpSlUDhw",
@@ -2201,38 +2096,41 @@
     "description": "Payment for Invoice"
   },
   {
-    "id": "pi_3H4CMkU4t2AOoVVyFdk4GhCi",
-    "amount": 23399,
-    "currency": "eur",
-    "status": "succeeded",
+    "id": "pi_3UA5zcbcdMH1ftknjc8AZOvP",
+    "amount": 2000,
+    "currency": "cad",
+    "status": "refunded",
     "customer": {
-      "name": "Julian Sato",
-      "email": "julian_s@example.com"
+      "name": "Olivia Hernandez",
+      "email": "oliviahernandez78@example.com"
+    },
+    "method": {
+      "type": "wallet",
+      "wallet": "google_pay",
+      "brand": "visa",
+      "last4": "7732"
+    },
+    "created": "2026-10-30T13:46:06.000Z",
+    "description": "Subscription update",
+    "refundedAt": "2026-11-08T22:09:00.340Z"
+  },
+  {
+    "id": "pi_3Cl1NcxgiQ1R3vSW7BAdL1W5",
+    "amount": 67805,
+    "currency": "usd",
+    "status": "failed",
+    "customer": {
+      "name": "Amelia Clark",
+      "email": "amelia_c@example.com"
     },
     "method": {
       "type": "card",
       "brand": "visa",
-      "last4": "1943"
+      "last4": "4170"
     },
-    "created": "2026-10-30T12:34:45.000Z",
-    "description": "Subscription update"
-  },
-  {
-    "id": "pi_3H6zZUnlP4f3fPFZGVWTJSiW",
-    "amount": 2529,
-    "currency": "eur",
-    "status": "succeeded",
-    "customer": {
-      "name": "Priya Anderson",
-      "email": "priyaanderson16@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "mastercard",
-      "last4": "7431"
-    },
-    "created": "2026-10-29T23:51:06.000Z",
-    "description": "Subscription creation"
+    "created": "2026-10-29T23:25:12.000Z",
+    "description": "Subscription update",
+    "failureReason": "Generic decline"
   },
   {
     "id": "pi_3yjZozKToyCMwEwxKOZPd6sl",
@@ -2286,6 +2184,41 @@
     "description": "Subscription update"
   },
   {
+    "id": "pi_3neZcFZrgQ5kiGGCYurBKxvm",
+    "amount": 7799,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Samuel Martinez",
+      "email": "samuelmartinez48@example.com"
+    },
+    "method": {
+      "type": "ach",
+      "bankName": "STRIPE TEST BANK",
+      "last4": "9024"
+    },
+    "created": "2026-10-29T22:22:35.000Z",
+    "description": "Subscription update"
+  },
+  {
+    "id": "pi_3Ru8RdMDblnblZg5uiLaAoqg",
+    "amount": 30099,
+    "currency": "usd",
+    "status": "failed",
+    "customer": {
+      "name": "Priya Gonzalez",
+      "email": "priya.gonzalez@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "mastercard",
+      "last4": "3536"
+    },
+    "created": "2026-10-29T19:08:27.000Z",
+    "description": "One-time purchase",
+    "failureReason": "Transaction not allowed"
+  },
+  {
     "id": "pi_30vsgwdv1fdkC6X2zosJ6SJv",
     "amount": 37300,
     "currency": "aud",
@@ -2300,40 +2233,6 @@
       "last4": "0854"
     },
     "created": "2026-10-29T16:12:55.000Z"
-  },
-  {
-    "id": "pi_3dTHKF2EytDBRwZ9o9tUjTdH",
-    "amount": 13399,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Ava Lee",
-      "email": "ava_l@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "amex",
-      "last4": "9239"
-    },
-    "created": "2026-10-29T15:03:51.000Z",
-    "description": "Subscription creation"
-  },
-  {
-    "id": "pi_3SGmaF215tKGSI7a4RfvvrsA",
-    "amount": 1699,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Liam Martinez",
-      "email": "liam_m@example.com"
-    },
-    "method": {
-      "type": "ach",
-      "bankName": "JPMorgan Chase",
-      "last4": "3444"
-    },
-    "created": "2026-10-29T14:43:59.000Z",
-    "description": "Subscription update"
   },
   {
     "id": "pi_3qN6bjRmWvC9edSDs26u53DM",
@@ -2353,6 +2252,23 @@
     "description": "Subscription creation"
   },
   {
+    "id": "pi_3dOOjmoy3EyKCE0g64td0GHj",
+    "amount": 2499,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Camila Anderson",
+      "email": "canderson@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "visa",
+      "last4": "6964"
+    },
+    "created": "2026-10-29T12:14:28.000Z",
+    "description": "Payment for Invoice"
+  },
+  {
     "id": "pi_3bORxMAeUyyR9hsnhhsVlvnO",
     "amount": 2290,
     "currency": "usd",
@@ -2368,6 +2284,24 @@
     },
     "created": "2026-10-29T10:13:55.000Z",
     "description": "One-time purchase"
+  },
+  {
+    "id": "pi_3l3HTvI4AkX4LctJWOKsGAn9",
+    "amount": 1685,
+    "currency": "cad",
+    "status": "failed",
+    "customer": {
+      "name": "Sophia Silva",
+      "email": "sophia_s@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "mastercard",
+      "last4": "3974"
+    },
+    "created": "2026-10-28T22:07:18.000Z",
+    "description": "Plan upgrade",
+    "failureReason": "Incorrect CVC"
   },
   {
     "id": "pi_3T4hbOpzUe8ftmtoM7ttzm0R",
@@ -2388,20 +2322,38 @@
     "description": "Subscription creation"
   },
   {
-    "id": "pi_3oqKxMchZ34HZCoLdiavIGXf",
-    "amount": 20200,
-    "currency": "gbp",
+    "id": "pi_3THKF2EytDBRwZ9o9tUjTdHe",
+    "amount": 21299,
+    "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "Leo Anderson",
-      "email": "leo.anderson@example.com"
+      "name": "Arthur Muller",
+      "email": "arthur.muller@example.com"
+    },
+    "method": {
+      "type": "wallet",
+      "wallet": "apple_pay",
+      "brand": "mastercard",
+      "last4": "2316"
+    },
+    "created": "2026-10-28T20:11:23.000Z",
+    "description": "Payment for Invoice"
+  },
+  {
+    "id": "pi_3lv293uhFVykYWq2TDgw9kdc",
+    "amount": 1880,
+    "currency": "brl",
+    "status": "succeeded",
+    "customer": {
+      "name": "Priya Anderson",
+      "email": "priyaanderson16@example.com"
     },
     "method": {
       "type": "card",
-      "brand": "amex",
-      "last4": "1801"
+      "brand": "visa",
+      "last4": "2127"
     },
-    "created": "2026-10-28T20:52:23.000Z",
+    "created": "2026-10-28T19:37:53.000Z",
     "description": "Subscription update"
   },
   {
@@ -2493,21 +2445,21 @@
     "description": "Plan upgrade"
   },
   {
-    "id": "pi_3LCJGntjVnskqul0nOTyyYAf",
-    "amount": 168819,
-    "currency": "usd",
+    "id": "pi_3Vnskqul0nOTyyYAfqyhy8Fh",
+    "amount": 6529,
+    "currency": "gbp",
     "status": "succeeded",
     "customer": {
-      "name": "Camila Anderson",
-      "email": "canderson@example.com"
+      "name": "Olivia Jackson",
+      "email": "ojackson@example.com"
     },
     "method": {
-      "type": "ach",
-      "bankName": "Capital One",
-      "last4": "9698"
+      "type": "card",
+      "brand": "mastercard",
+      "last4": "5284"
     },
-    "created": "2026-10-28T14:12:56.000Z",
-    "description": "One-time purchase"
+    "created": "2026-10-28T15:17:41.000Z",
+    "description": "Subscription update"
   },
   {
     "id": "pi_3v8c9KhtlBBJgFPWE6XGgrV1",
@@ -2545,6 +2497,23 @@
     "description": "Subscription creation"
   },
   {
+    "id": "pi_334HZCoLdiavIGXfevDBfPFy",
+    "amount": 3421,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Lucia Jones",
+      "email": "lucia_j@example.com"
+    },
+    "method": {
+      "type": "ach",
+      "bankName": "STRIPE TEST BANK",
+      "last4": "7688"
+    },
+    "created": "2026-10-28T13:31:25.000Z",
+    "description": "Subscription update"
+  },
+  {
     "id": "pi_3CYMtYPgpuZftg6B2jGWY9E5",
     "amount": 11630,
     "currency": "jpy",
@@ -2559,6 +2528,24 @@
       "last4": "7776"
     },
     "created": "2026-10-28T13:26:27.000Z",
+    "description": "Subscription update"
+  },
+  {
+    "id": "pi_397HUI0UvRvR9AFWh3Y6x29h",
+    "amount": 63600,
+    "currency": "jpy",
+    "status": "succeeded",
+    "customer": {
+      "name": "Nora Young",
+      "email": "nora_y@example.com"
+    },
+    "method": {
+      "type": "wallet",
+      "wallet": "apple_pay",
+      "brand": "visa",
+      "last4": "8863"
+    },
+    "created": "2026-10-28T13:01:27.000Z",
     "description": "Subscription update"
   },
   {
@@ -2578,6 +2565,23 @@
     },
     "created": "2026-10-27T23:59:14.000Z",
     "description": "Subscription creation"
+  },
+  {
+    "id": "pi_315tKGSI7a4RfvvrsAlFWLRE",
+    "amount": 145299,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Priya Patel",
+      "email": "priyapatel40@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "visa",
+      "last4": "4927"
+    },
+    "created": "2026-10-27T23:26:18.000Z",
+    "description": "Plan upgrade"
   },
   {
     "id": "pi_3kpSJNvIk8XNajmvsxi7WjQ8",
@@ -2612,6 +2616,23 @@
     "created": "2026-10-27T17:23:07.000Z",
     "description": "Subscription update",
     "failureReason": "Do not honor"
+  },
+  {
+    "id": "pi_3djGMnzBGshCP3Xf4hVmu8qP",
+    "amount": 20200,
+    "currency": "cad",
+    "status": "succeeded",
+    "customer": {
+      "name": "Harper Miller",
+      "email": "harper_m@example.com"
+    },
+    "method": {
+      "type": "wallet",
+      "wallet": "google_pay",
+      "brand": "visa",
+      "last4": "7430"
+    },
+    "created": "2026-10-27T16:52:51.000Z"
   },
   {
     "id": "pi_3x9bT2bkIaoEIRv1iSegVET6",
@@ -2665,6 +2686,23 @@
     "created": "2026-10-27T16:13:31.000Z"
   },
   {
+    "id": "pi_3RqSWWtAoqPfDU1TUb0WTJ4R",
+    "amount": 13699,
+    "currency": "aud",
+    "status": "succeeded",
+    "customer": {
+      "name": "Arjun Williams",
+      "email": "arjun_w@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "mastercard",
+      "last4": "4465"
+    },
+    "created": "2026-10-27T16:05:16.000Z",
+    "description": "Subscription creation"
+  },
+  {
     "id": "pi_39J5ki6xVEaJt7TruVXf52Iv",
     "amount": 26413,
     "currency": "eur",
@@ -2680,23 +2718,6 @@
     },
     "created": "2026-10-27T14:39:43.000Z",
     "description": "Subscription creation"
-  },
-  {
-    "id": "pi_3brQDN0GK1MyBoJDZnuAGTZ3",
-    "amount": 31499,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Lars Jones",
-      "email": "ljones@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "mastercard",
-      "last4": "5322"
-    },
-    "created": "2026-10-27T14:19:43.000Z",
-    "description": "Subscription update"
   },
   {
     "id": "pi_3EqQzF0Ngug9XL782uQXCSgA",
@@ -2717,12 +2738,12 @@
   },
   {
     "id": "pi_38IVhodMwZ3onCYt2DrWvhqT",
-    "amount": 18900,
-    "currency": "jpy",
+    "amount": 12699,
+    "currency": "aud",
     "status": "refunded",
     "customer": {
-      "name": "Benjamin Moore",
-      "email": "bmoore@example.com"
+      "name": "Camila Hernandez",
+      "email": "camilahernandez48@example.com"
     },
     "method": {
       "type": "card",
@@ -2731,23 +2752,40 @@
     },
     "created": "2026-10-27T03:01:43.000Z",
     "description": "Subscription update",
-    "refundedAt": "2026-11-02T23:28:49.119Z"
+    "refundedAt": "2026-11-02T13:44:53.673Z"
   },
   {
-    "id": "pi_3LXd18kVUlaHduxguZNwdSBq",
-    "amount": 474133,
+    "id": "pi_34j4OQmx1C12C7ztu7m4TINq",
+    "amount": 38799,
     "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "Omar Oliveira",
-      "email": "ooliveira@example.com"
+      "name": "Sophia Silva",
+      "email": "sophia_s@example.com"
     },
     "method": {
       "type": "card",
       "brand": "mastercard",
-      "last4": "1539"
+      "last4": "5334"
     },
-    "created": "2026-10-26T23:36:19.000Z",
+    "created": "2026-10-26T21:23:12.000Z",
+    "description": "Subscription update"
+  },
+  {
+    "id": "pi_39kgeOzHCDJllBk1pIfygMDF",
+    "amount": 6799,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Chloe Williams",
+      "email": "chloe.williams@example.com"
+    },
+    "method": {
+      "type": "ach",
+      "bankName": "Bank of America",
+      "last4": "3980"
+    },
+    "created": "2026-10-26T20:40:41.000Z",
     "description": "Subscription update"
   },
   {
@@ -2768,6 +2806,23 @@
     "description": "Subscription update"
   },
   {
+    "id": "pi_3s4FtgzSJ9jws2btRR0OXwbp",
+    "amount": 15199,
+    "currency": "eur",
+    "status": "pending",
+    "customer": {
+      "name": "Omar Oliveira",
+      "email": "ooliveira@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "mastercard",
+      "last4": "2905"
+    },
+    "created": "2026-10-26T20:30:29.000Z",
+    "description": "Subscription creation"
+  },
+  {
     "id": "pi_3oB7XLoCItOdcMegnVGZOVMM",
     "amount": 2832,
     "currency": "eur",
@@ -2783,6 +2838,24 @@
     },
     "created": "2026-10-26T19:55:01.000Z",
     "description": "Subscription update"
+  },
+  {
+    "id": "pi_3bpcD77KPYZXzw1r8be7gjQ2",
+    "amount": 7467,
+    "currency": "usd",
+    "status": "failed",
+    "customer": {
+      "name": "Samuel Anderson",
+      "email": "samuelanderson92@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "visa",
+      "last4": "7908"
+    },
+    "created": "2026-10-26T19:51:47.000Z",
+    "description": "Subscription update",
+    "failureReason": "Insufficient funds"
   },
   {
     "id": "pi_3QWrrbfs78w4BQKs5SqobcHc",
@@ -2820,23 +2893,6 @@
     "refundedAt": "2026-10-27T10:50:36.393Z"
   },
   {
-    "id": "pi_3JeGlHLDA9klprF4stPBgWPU",
-    "amount": 4890,
-    "currency": "jpy",
-    "status": "succeeded",
-    "customer": {
-      "name": "Emma Lewis",
-      "email": "elewis@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "discover",
-      "last4": "7533"
-    },
-    "created": "2026-10-26T14:08:06.000Z",
-    "description": "Subscription update"
-  },
-  {
     "id": "pi_3YkMoSfRSlph3CADdMHxCxoO",
     "amount": 1000,
     "currency": "brl",
@@ -2870,21 +2926,22 @@
     "created": "2026-10-26T12:22:01.000Z"
   },
   {
-    "id": "pi_3JBfHdPWQhIOdrzUDLLHPPaO",
-    "amount": 3200,
-    "currency": "jpy",
+    "id": "pi_3BZTwSb8bQcniVsJJSM25lHg",
+    "amount": 390500,
+    "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "Chloe Harris",
-      "email": "chloe_h@example.com"
+      "name": "Isabella Miller",
+      "email": "isabella.miller@example.com"
     },
     "method": {
-      "type": "card",
-      "brand": "mastercard",
-      "last4": "0972"
+      "type": "wallet",
+      "wallet": "apple_pay",
+      "brand": "visa",
+      "last4": "0561"
     },
-    "created": "2026-10-26T08:32:37.000Z",
-    "description": "Payment for Invoice"
+    "created": "2026-10-25T20:41:50.000Z",
+    "description": "Subscription update"
   },
   {
     "id": "pi_3SGssxxM0iM8xpe8VXB6MOdS",
@@ -2956,6 +3013,24 @@
     "description": "Subscription update"
   },
   {
+    "id": "pi_31rtVneOotJogdnSq07zLEdV",
+    "amount": 4563,
+    "currency": "cad",
+    "status": "succeeded",
+    "customer": {
+      "name": "James Brown",
+      "email": "james_b@example.com"
+    },
+    "method": {
+      "type": "wallet",
+      "wallet": "apple_pay",
+      "brand": "visa",
+      "last4": "7057"
+    },
+    "created": "2026-10-25T08:15:13.000Z",
+    "description": "Payment for Invoice"
+  },
+  {
     "id": "pi_3hzCkIyhQ2tDQmuuG3HpnWh8",
     "amount": 161900,
     "currency": "eur",
@@ -2973,23 +3048,37 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_3fwrTSbCr6LJkDZP1c10HSaT",
-    "amount": 55600,
-    "currency": "jpy",
-    "status": "failed",
+    "id": "pi_3Ub1l5pxAsgQGbKDFFjHl0u4",
+    "amount": 4300,
+    "currency": "usd",
+    "status": "succeeded",
     "customer": {
-      "name": "Amelia Tanaka",
-      "email": "ameliatanaka87@example.com"
+      "name": "Priya Patel",
+      "email": "priyapatel40@example.com"
     },
     "method": {
-      "type": "wallet",
-      "wallet": "apple_pay",
+      "type": "card",
       "brand": "visa",
-      "last4": "7447"
+      "last4": "5721"
     },
-    "created": "2026-10-23T19:29:03.000Z",
-    "description": "Subscription creation",
-    "failureReason": "Insufficient funds"
+    "created": "2026-10-23T17:22:53.000Z"
+  },
+  {
+    "id": "pi_33M4ajiVS4WSMPOIPkk5EcNF",
+    "amount": 3999,
+    "currency": "aud",
+    "status": "succeeded",
+    "customer": {
+      "name": "Sofia Martin",
+      "email": "sofiamartin32@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "discover",
+      "last4": "5523"
+    },
+    "created": "2026-10-23T15:15:59.000Z",
+    "description": "One-time purchase"
   },
   {
     "id": "pi_3AoUZ5omqhmPmVT17nenvB15",
@@ -3010,24 +3099,6 @@
     "refundedAt": "2026-10-26T09:34:21.935Z"
   },
   {
-    "id": "pi_3G1kE5EqHCxsElVZ3mmvqILi",
-    "amount": 20599,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Priya Patel",
-      "email": "priyapatel40@example.com"
-    },
-    "method": {
-      "type": "wallet",
-      "wallet": "apple_pay",
-      "brand": "visa",
-      "last4": "2228"
-    },
-    "created": "2026-10-23T11:50:40.000Z",
-    "description": "One-time purchase"
-  },
-  {
     "id": "pi_3pNP9xG5sxE99gXvR6UGPMuM",
     "amount": 13399,
     "currency": "usd",
@@ -3045,39 +3116,21 @@
     "description": "Subscription creation"
   },
   {
-    "id": "pi_36VCZkYAJKrAGaO4wzgNjaoy",
-    "amount": 11899,
-    "currency": "gbp",
+    "id": "pi_3o812Dz9UsIjwZ5nMqbxJ6Kc",
+    "amount": 5000,
+    "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "Omar Davis",
-      "email": "omardavis99@example.com"
+      "name": "Lars Moore",
+      "email": "lmoore@example.com"
     },
     "method": {
       "type": "card",
       "brand": "visa",
-      "last4": "6449"
+      "last4": "6516"
     },
-    "created": "2026-10-22T22:44:15.000Z",
+    "created": "2026-10-22T19:57:41.000Z",
     "description": "Subscription update"
-  },
-  {
-    "id": "pi_3ZGpj5yP25WUguazggImuIpN",
-    "amount": 20203,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Amelia Martinez",
-      "email": "ameliamartinez84@example.com"
-    },
-    "method": {
-      "type": "wallet",
-      "wallet": "apple_pay",
-      "brand": "mastercard",
-      "last4": "1069"
-    },
-    "created": "2026-10-22T21:49:12.000Z",
-    "description": "Subscription creation"
   },
   {
     "id": "pi_3wOzJZWl21pfuAVSNzrBjOfU",
@@ -3131,9 +3184,26 @@
     "description": "Subscription creation"
   },
   {
+    "id": "pi_3Slj2PYKnFTcyJQ5nuJfkku8",
+    "amount": 2647,
+    "currency": "eur",
+    "status": "succeeded",
+    "customer": {
+      "name": "Omar Rossi",
+      "email": "omar.rossi@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "discover",
+      "last4": "5653"
+    },
+    "created": "2026-10-22T17:40:33.000Z",
+    "description": "One-time purchase"
+  },
+  {
     "id": "pi_3ajv4Y0QlI50myz3dMywprDo",
     "amount": 4500,
-    "currency": "aud",
+    "currency": "brl",
     "status": "succeeded",
     "customer": {
       "name": "Evelyn Sato",
@@ -3148,20 +3218,20 @@
     "description": "One-time purchase"
   },
   {
-    "id": "pi_3rGitkjZGo812Dz9UsIjwZ5n",
-    "amount": 12799,
+    "id": "pi_34ydF6ALj0tMg7ZewfN0Uic4",
+    "amount": 16599,
     "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "Layla Muller",
-      "email": "laylamuller76@example.com"
+      "name": "Liam Martinez",
+      "email": "liam_m@example.com"
     },
     "method": {
       "type": "card",
-      "brand": "amex",
-      "last4": "9539"
+      "brand": "visa",
+      "last4": "8659"
     },
-    "created": "2026-10-22T16:52:12.000Z",
+    "created": "2026-10-22T14:41:35.000Z",
     "description": "Subscription update"
   },
   {
@@ -3218,36 +3288,55 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_3hXhsXf2KdwB8gngJkBvcJ8h",
-    "amount": 2890,
+    "id": "pi_3RE8yAvLg3clNGBmxqXOPBk4",
+    "amount": 38888,
     "currency": "usd",
-    "status": "pending",
-    "customer": {
-      "name": "Harper Rossi",
-      "email": "harperrossi70@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "amex",
-      "last4": "3801"
-    },
-    "created": "2026-10-21T19:53:10.000Z"
-  },
-  {
-    "id": "pi_3SFK59PG5qAvHbmvdtjwPTNv",
-    "amount": 4199,
-    "currency": "eur",
     "status": "succeeded",
     "customer": {
-      "name": "Hugo Lee",
-      "email": "hugo_l@example.com"
+      "name": "Omar Costa",
+      "email": "ocosta@example.com"
     },
     "method": {
       "type": "card",
-      "brand": "mastercard",
+      "brand": "discover",
       "last4": "4242"
     },
-    "created": "2026-10-21T19:14:56.000Z",
+    "created": "2026-10-21T21:21:44.000Z",
+    "description": "Subscription update"
+  },
+  {
+    "id": "pi_33fPFZGVWTJSiWRorkZIE4zX",
+    "amount": 12746,
+    "currency": "usd",
+    "status": "failed",
+    "customer": {
+      "name": "Priya Anderson",
+      "email": "priyaanderson16@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "visa",
+      "last4": "5205"
+    },
+    "created": "2026-10-21T20:22:32.000Z",
+    "description": "Subscription update",
+    "failureReason": "Insufficient funds"
+  },
+  {
+    "id": "pi_3qTaEdqD5ZPe3NAj2hhgKSHS",
+    "amount": 1486,
+    "currency": "gbp",
+    "status": "succeeded",
+    "customer": {
+      "name": "Sofia Clark",
+      "email": "sofia_c@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "visa",
+      "last4": "4242"
+    },
+    "created": "2026-10-21T18:52:47.000Z",
     "description": "Payment for Invoice"
   },
   {
@@ -3298,23 +3387,6 @@
       "last4": "4340"
     },
     "created": "2026-10-21T13:18:41.000Z",
-    "failureReason": "Do not honor"
-  },
-  {
-    "id": "pi_3m6idQmZim8MFc91tz8TSbgN",
-    "amount": 5599,
-    "currency": "usd",
-    "status": "failed",
-    "customer": {
-      "name": "Noah Costa",
-      "email": "noah.costa@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "amex",
-      "last4": "0809"
-    },
-    "created": "2026-10-21T12:43:54.000Z",
     "failureReason": "Do not honor"
   },
   {
@@ -3372,24 +3444,6 @@
     "description": "Subscription creation"
   },
   {
-    "id": "pi_3JLD56iEGzULns7ssvdHtrjR",
-    "amount": 8199,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Isabella Lewis",
-      "email": "isabellalewis71@example.com"
-    },
-    "method": {
-      "type": "wallet",
-      "wallet": "google_pay",
-      "brand": "visa",
-      "last4": "5097"
-    },
-    "created": "2026-10-20T23:39:11.000Z",
-    "description": "Subscription update"
-  },
-  {
     "id": "pi_3s1JdbYxEFht0v3D3eNPuzjP",
     "amount": 45299,
     "currency": "usd",
@@ -3425,6 +3479,41 @@
     "description": "Subscription update"
   },
   {
+    "id": "pi_3A65HniBu7ZjhYSKjza4dUjv",
+    "amount": 7899,
+    "currency": "brl",
+    "status": "succeeded",
+    "customer": {
+      "name": "Gabriel Johnson",
+      "email": "gabrieljohnson13@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "amex",
+      "last4": "6971"
+    },
+    "created": "2026-10-20T12:25:55.000Z",
+    "description": "Subscription creation"
+  },
+  {
+    "id": "pi_3RfjUovmhXJTeCxahbshplDT",
+    "amount": 41500,
+    "currency": "gbp",
+    "status": "succeeded",
+    "customer": {
+      "name": "Ingrid Miller",
+      "email": "imiller@example.com"
+    },
+    "method": {
+      "type": "wallet",
+      "wallet": "apple_pay",
+      "brand": "visa",
+      "last4": "4358"
+    },
+    "created": "2026-10-20T12:15:36.000Z",
+    "description": "Subscription update"
+  },
+  {
     "id": "pi_3JVsDkhOIXlzDO6d46r5qtGt",
     "amount": 14549,
     "currency": "usd",
@@ -3441,23 +3530,6 @@
     "created": "2026-10-20T03:58:33.000Z",
     "description": "One-time purchase",
     "failureReason": "Do not honor"
-  },
-  {
-    "id": "pi_3GWW7J0dZcTuP8rITebdeZhX",
-    "amount": 5699,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Ava Lee",
-      "email": "ava_l@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "4785"
-    },
-    "created": "2026-10-19T22:28:47.000Z",
-    "description": "Subscription update"
   },
   {
     "id": "pi_3GuAViwdPmzSCjBvGeZHnAnc",
@@ -3492,6 +3564,24 @@
     },
     "created": "2026-10-19T22:02:23.000Z",
     "description": "Subscription update"
+  },
+  {
+    "id": "pi_3ZkYAJKrAGaO4wzgNjaoydHM",
+    "amount": 41900,
+    "currency": "usd",
+    "status": "failed",
+    "customer": {
+      "name": "Mateo Harris",
+      "email": "mateo_h@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "mastercard",
+      "last4": "3196"
+    },
+    "created": "2026-10-19T19:35:09.000Z",
+    "description": "Subscription update",
+    "failureReason": "Insufficient funds"
   },
   {
     "id": "pi_3o9EhAtq7NC8MJx9tU8MzVTG",
@@ -3546,91 +3636,21 @@
     "failureReason": "Expired card"
   },
   {
-    "id": "pi_3x1LtBHttCNjtGffkJEXlzUg",
-    "amount": 7900,
+    "id": "pi_3PG5qAvHbmvdtjwPTNvLd1Xg",
+    "amount": 26700,
     "currency": "usd",
-    "status": "pending",
-    "customer": {
-      "name": "Arthur Santos",
-      "email": "arthursantos28@example.com"
-    },
-    "method": {
-      "type": "wallet",
-      "wallet": "google_pay",
-      "brand": "visa",
-      "last4": "1647"
-    },
-    "created": "2026-10-19T15:58:31.000Z",
-    "description": "Subscription update"
-  },
-  {
-    "id": "pi_3R6QExlkY69kgeOzHCDJllBk",
-    "amount": 3080,
-    "currency": "jpy",
     "status": "succeeded",
     "customer": {
-      "name": "Amelia Harris",
-      "email": "ameliaharris32@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "amex",
-      "last4": "6741"
-    },
-    "created": "2026-10-19T14:54:52.000Z",
-    "description": "Plan upgrade"
-  },
-  {
-    "id": "pi_364WWGq1cyIoX47wV8NlsmYw",
-    "amount": 29599,
-    "currency": "gbp",
-    "status": "succeeded",
-    "customer": {
-      "name": "Liam Perez",
-      "email": "lperez@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "5460"
-    },
-    "created": "2026-10-19T12:25:05.000Z",
-    "description": "Subscription update"
-  },
-  {
-    "id": "pi_3azzyGuuw0OK6ABoA5msrxM5",
-    "amount": 232399,
-    "currency": "eur",
-    "status": "succeeded",
-    "customer": {
-      "name": "Isabella Lewis",
-      "email": "isabellalewis71@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "2216"
-    },
-    "created": "2026-10-18T22:35:28.000Z",
-    "description": "Payment for Invoice"
-  },
-  {
-    "id": "pi_32geWlp9ASKI0P90R3aGHukP",
-    "amount": 4009,
-    "currency": "usd",
-    "status": "failed",
-    "customer": {
-      "name": "Hugo Robinson",
-      "email": "hugo.robinson@example.com"
+      "name": "Arjun Garcia",
+      "email": "arjun_g@example.com"
     },
     "method": {
       "type": "card",
       "brand": "mastercard",
-      "last4": "3077"
+      "last4": "6562"
     },
-    "created": "2026-10-18T21:27:04.000Z",
-    "description": "Subscription creation",
-    "failureReason": "Generic decline"
+    "created": "2026-10-18T23:14:44.000Z",
+    "description": "Subscription creation"
   },
   {
     "id": "pi_3ED9HjeBFIKzuTjdHfEWboO0",
@@ -3648,23 +3668,6 @@
     },
     "created": "2026-10-18T17:25:40.000Z",
     "description": "Plan upgrade"
-  },
-  {
-    "id": "pi_317NVJrXPnr2y8ePC61Azp56",
-    "amount": 29469,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Sofia Tanaka",
-      "email": "sofia_t@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "1064"
-    },
-    "created": "2026-10-17T22:00:19.000Z",
-    "description": "Payment for Invoice"
   },
   {
     "id": "pi_3cewLKOvjC0WCh0tLHBlevqy",
@@ -3685,7 +3688,7 @@
   {
     "id": "pi_3atzyK8eJt7hQQaaYpuCKvnA",
     "amount": 162200,
-    "currency": "brl",
+    "currency": "cad",
     "status": "succeeded",
     "customer": {
       "name": "Daniel Rodriguez",
@@ -3735,55 +3738,21 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_3NetQaHVqmB5jU43unnq9gCl",
-    "amount": 4826,
-    "currency": "cad",
+    "id": "pi_3Id87Q1Q8q3ItrOWj3cc5zs4",
+    "amount": 2528,
+    "currency": "brl",
     "status": "succeeded",
     "customer": {
-      "name": "Camila Hernandez",
-      "email": "camilahernandez48@example.com"
-    },
-    "method": {
-      "type": "wallet",
-      "wallet": "apple_pay",
-      "brand": "visa",
-      "last4": "1079"
-    },
-    "created": "2026-10-16T17:51:33.000Z",
-    "description": "Payment for Invoice"
-  },
-  {
-    "id": "pi_3bE4d3TShfYRrEyzVjvm66JT",
-    "amount": 41900,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Samuel Anderson",
-      "email": "samuelanderson92@example.com"
-    },
-    "method": {
-      "type": "ach",
-      "bankName": "JPMorgan Chase",
-      "last4": "5532"
-    },
-    "created": "2026-10-16T15:55:12.000Z",
-    "description": "Subscription update"
-  },
-  {
-    "id": "pi_339qeihZI3M4ajiVS4WSMPOI",
-    "amount": 178351,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Camila Young",
-      "email": "camilayoung74@example.com"
+      "name": "Sofia Santos",
+      "email": "sofiasantos49@example.com"
     },
     "method": {
       "type": "card",
-      "brand": "mastercard",
-      "last4": "0925"
+      "brand": "visa",
+      "last4": "8727"
     },
-    "created": "2026-10-16T15:11:26.000Z"
+    "created": "2026-10-16T18:15:11.000Z",
+    "description": "Subscription update"
   },
   {
     "id": "pi_3jwiTaOJGydcAejDbEjgktfs",
@@ -3819,6 +3788,23 @@
       "last4": "3242"
     },
     "created": "2026-10-16T14:36:12.000Z"
+  },
+  {
+    "id": "pi_3gnPR4IjZvngie2eZVA3hbgU",
+    "amount": 70400,
+    "currency": "gbp",
+    "status": "succeeded",
+    "customer": {
+      "name": "Amelia Harris",
+      "email": "ameliaharris32@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "visa",
+      "last4": "0606"
+    },
+    "created": "2026-10-16T12:02:43.000Z",
+    "description": "Subscription update"
   },
   {
     "id": "pi_3x24T4wKUeqodhBItOeeUGPD",
@@ -3925,39 +3911,6 @@
     "refundedAt": "2026-10-17T02:14:13.669Z"
   },
   {
-    "id": "pi_3ixRt6GxW9BUm1wR5fM6yIWa",
-    "amount": 7729,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Ava Lee",
-      "email": "ava_l@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "mastercard",
-      "last4": "5580"
-    },
-    "created": "2026-10-15T14:42:53.000Z",
-    "description": "Subscription update"
-  },
-  {
-    "id": "pi_3EGadPjAhWtHfREgOYidgIPy",
-    "amount": 5999,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Priya Gonzalez",
-      "email": "priya.gonzalez@example.com"
-    },
-    "method": {
-      "type": "ach",
-      "bankName": "Wells Fargo",
-      "last4": "8737"
-    },
-    "created": "2026-10-15T14:39:50.000Z"
-  },
-  {
     "id": "pi_31unexhHBgPLt6gBE4xH0c22",
     "amount": 26000,
     "currency": "usd",
@@ -4006,6 +3959,24 @@
       "last4": "9114"
     },
     "created": "2026-10-14T19:56:25.000Z",
+    "description": "Payment for Invoice",
+    "failureReason": "Insufficient funds"
+  },
+  {
+    "id": "pi_3PIyIxkQ7uiUOmqBv9rNdOvH",
+    "amount": 5300,
+    "currency": "gbp",
+    "status": "failed",
+    "customer": {
+      "name": "James Brown",
+      "email": "james_b@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "mastercard",
+      "last4": "4125"
+    },
+    "created": "2026-10-14T13:49:50.000Z",
     "description": "Payment for Invoice",
     "failureReason": "Insufficient funds"
   },
@@ -4064,7 +4035,7 @@
   {
     "id": "pi_3LvwmSJfhOCJkjTKoR1kCZtH",
     "amount": 20676,
-    "currency": "brl",
+    "currency": "cad",
     "status": "succeeded",
     "customer": {
       "name": "Mia Khan",
@@ -4096,6 +4067,23 @@
     "description": "Payment for Invoice"
   },
   {
+    "id": "pi_3EqHCxsElVZ3mmvqILis2ESD",
+    "amount": 2157,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Ava Lee",
+      "email": "ava_l@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "visa",
+      "last4": "8176"
+    },
+    "created": "2026-10-14T02:10:57.000Z",
+    "description": "Subscription update"
+  },
+  {
     "id": "pi_3dgu19IhTdZ7Sb3AtN9Pe9g8",
     "amount": 6299,
     "currency": "cad",
@@ -4113,24 +4101,6 @@
     "created": "2026-10-13T23:56:28.000Z",
     "description": "Subscription update",
     "failureReason": "Generic decline"
-  },
-  {
-    "id": "pi_3FkHTt4oQiv3ZYEuDDEv4dv6",
-    "amount": 14599,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Julian Anderson",
-      "email": "julian.anderson@example.com"
-    },
-    "method": {
-      "type": "wallet",
-      "wallet": "apple_pay",
-      "brand": "mastercard",
-      "last4": "5374"
-    },
-    "created": "2026-10-13T22:07:09.000Z",
-    "description": "Subscription update"
   },
   {
     "id": "pi_3EnpAcKZ9MWj2sQTJHdWiwhJ",
@@ -4169,7 +4139,7 @@
   {
     "id": "pi_3WlMhCO8bBYPP4NGwiVkQwq4",
     "amount": 2099,
-    "currency": "gbp",
+    "currency": "eur",
     "status": "succeeded",
     "customer": {
       "name": "Evelyn Lee",
@@ -4202,72 +4172,90 @@
     "refundedAt": "2026-10-21T19:33:19.610Z"
   },
   {
-    "id": "pi_3pM7DBmP9i7gd5SDRZw2ekCP",
-    "amount": 19540,
-    "currency": "usd",
+    "id": "pi_3zULns7ssvdHtrjRtlATVQVL",
+    "amount": 14400,
+    "currency": "eur",
     "status": "succeeded",
     "customer": {
-      "name": "Lucia Jones",
-      "email": "lucia_j@example.com"
+      "name": "James Perez",
+      "email": "james.perez@example.com"
     },
     "method": {
       "type": "card",
-      "brand": "mastercard",
-      "last4": "8768"
+      "brand": "discover",
+      "last4": "4849"
     },
-    "created": "2026-10-13T17:39:47.000Z",
-    "description": "Subscription update"
-  },
-  {
-    "id": "pi_3iHHwz2rwCdqpDLOHDszysbn",
-    "amount": 19020,
-    "currency": "jpy",
-    "status": "succeeded",
-    "customer": {
-      "name": "Mia Khan",
-      "email": "mia.khan@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "0499"
-    },
-    "created": "2026-10-13T16:22:09.000Z",
+    "created": "2026-10-13T19:11:49.000Z",
     "description": "Payment for Invoice"
   },
   {
-    "id": "pi_3fmXBUE8Uxb4TzOCMeVUkvko",
-    "amount": 6700,
-    "currency": "gbp",
-    "status": "succeeded",
-    "customer": {
-      "name": "Evelyn Miller",
-      "email": "evelyn.miller@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "4766"
-    },
-    "created": "2026-10-13T14:29:36.000Z",
-    "description": "Subscription update"
-  },
-  {
-    "id": "pi_3LI17Yxdt6ojgC6S27JYoLB3",
-    "amount": 1099,
+    "id": "pi_3t6GxW9BUm1wR5fM6yIWaejr",
+    "amount": 6499,
     "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "Theo Hernandez",
-      "email": "theo_h@example.com"
+      "name": "Lars Gonzalez",
+      "email": "larsgonzalez59@example.com"
     },
     "method": {
       "type": "card",
       "brand": "visa",
-      "last4": "1979"
+      "last4": "3910"
     },
-    "created": "2026-10-12T22:36:23.000Z",
-    "description": "Subscription update"
+    "created": "2026-10-13T18:16:22.000Z",
+    "description": "One-time purchase"
+  },
+  {
+    "id": "pi_3C9K25LxrkLKQ5ZdC7iATLBK",
+    "amount": 68499,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Olivia Hernandez",
+      "email": "oliviahernandez78@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "visa",
+      "last4": "8574"
+    },
+    "created": "2026-10-13T14:55:02.000Z",
+    "description": "Subscription creation"
+  },
+  {
+    "id": "pi_32WePxdVCoKWlDZB6rlczTeR",
+    "amount": 4299,
+    "currency": "brl",
+    "status": "succeeded",
+    "customer": {
+      "name": "Gabriel Smith",
+      "email": "gsmith@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "visa",
+      "last4": "7358"
+    },
+    "created": "2026-10-13T13:21:06.000Z",
+    "description": "Subscription creation"
+  },
+  {
+    "id": "pi_3i3eeRulz4Y06uHDV2kF8ejg",
+    "amount": 4899,
+    "currency": "usd",
+    "status": "refunded",
+    "customer": {
+      "name": "Samuel Martinez",
+      "email": "smartinez@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "visa",
+      "last4": "7524"
+    },
+    "created": "2026-10-13T09:04:23.000Z",
+    "description": "Subscription update",
+    "refundedAt": "2026-10-14T17:02:09.949Z"
   },
   {
     "id": "pi_3hAVBwaWL0H13oiukpZG3ngz",
@@ -4285,6 +4273,24 @@
     },
     "created": "2026-10-12T22:15:53.000Z",
     "description": "Subscription update"
+  },
+  {
+    "id": "pi_32zvQN6MueHE4QThSUnRLKff",
+    "amount": 13499,
+    "currency": "gbp",
+    "status": "refunded",
+    "customer": {
+      "name": "Arjun Hernandez",
+      "email": "ahernandez@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "mastercard",
+      "last4": "0741"
+    },
+    "created": "2026-10-12T21:35:19.000Z",
+    "description": "Subscription update",
+    "refundedAt": "2026-10-22T19:18:30.599Z"
   },
   {
     "id": "pi_3czoP6wGH0fbeM0o0yKOW5qR",
@@ -4305,39 +4311,21 @@
     "failureReason": "Generic decline"
   },
   {
-    "id": "pi_3x0u8trkRqSWWtAoqPfDU1TU",
-    "amount": 38399,
+    "id": "pi_3VmxIgQRqX8iC5Niq9gHJjyB",
+    "amount": 43199,
     "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "Olivia Jackson",
-      "email": "ojackson@example.com"
+      "name": "Evelyn Davis",
+      "email": "edavis@example.com"
     },
     "method": {
       "type": "card",
       "brand": "visa",
-      "last4": "4752"
+      "last4": "6414"
     },
-    "created": "2026-10-12T18:47:23.000Z",
-    "description": "Payment for Invoice"
-  },
-  {
-    "id": "pi_3HLnAWo5UOx7rHM8rL2Zx2zF",
-    "amount": 55399,
-    "currency": "eur",
-    "status": "failed",
-    "customer": {
-      "name": "Priya Gonzalez",
-      "email": "priya.gonzalez@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "amex",
-      "last4": "2416"
-    },
-    "created": "2026-10-12T18:40:25.000Z",
-    "description": "One-time purchase",
-    "failureReason": "Insufficient funds"
+    "created": "2026-10-12T17:06:34.000Z",
+    "description": "Subscription update"
   },
   {
     "id": "pi_3tRjM6IfY3f8yPNroCKI4zb2",
@@ -4356,6 +4344,23 @@
     "created": "2026-10-12T15:40:56.000Z"
   },
   {
+    "id": "pi_3seoAiKYrmS3zL4frA01iPym",
+    "amount": 1454,
+    "currency": "eur",
+    "status": "pending",
+    "customer": {
+      "name": "Evelyn Lee",
+      "email": "evelyn.lee@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "discover",
+      "last4": "2789"
+    },
+    "created": "2026-10-12T13:43:37.000Z",
+    "description": "Subscription update"
+  },
+  {
     "id": "pi_3qleDHJnhtxNQx0eAacQxag7",
     "amount": 34599,
     "currency": "usd",
@@ -4371,23 +4376,6 @@
     },
     "created": "2026-10-12T13:20:24.000Z",
     "description": "Plan upgrade"
-  },
-  {
-    "id": "pi_36522xVCl1NcxgiQ1R3vSW7B",
-    "amount": 38899,
-    "currency": "eur",
-    "status": "succeeded",
-    "customer": {
-      "name": "Nora Lee",
-      "email": "nora.lee@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "mastercard",
-      "last4": "0211"
-    },
-    "created": "2026-10-12T12:30:34.000Z",
-    "description": "Subscription update"
   },
   {
     "id": "pi_3QtS7ZxOd14lssvUglXgsNYF",
@@ -4425,39 +4413,39 @@
     "description": "Plan upgrade"
   },
   {
-    "id": "pi_33yne9p23O6QTc9A7emISKuu",
-    "amount": 45099,
-    "currency": "usd",
-    "status": "pending",
-    "customer": {
-      "name": "Olivia Jackson",
-      "email": "ojackson@example.com"
-    },
-    "method": {
-      "type": "ach",
-      "bankName": "Citibank",
-      "last4": "5314"
-    },
-    "created": "2026-10-12T01:43:30.000Z",
-    "description": "One-time purchase"
-  },
-  {
-    "id": "pi_3AePTVx0EIfVBwBqwPCTniVQ",
-    "amount": 6007,
+    "id": "pi_30dZcTuP8rITebdeZhXBFFTR",
+    "amount": 12199,
     "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "Priya Martinez",
-      "email": "priya_m@example.com"
+      "name": "Amelia Clark",
+      "email": "amelia.clark@example.com"
     },
     "method": {
-      "type": "wallet",
-      "wallet": "apple_pay",
-      "brand": "mastercard",
-      "last4": "1285"
+      "type": "card",
+      "brand": "visa",
+      "last4": "9366"
     },
-    "created": "2026-10-12T01:03:31.000Z",
-    "description": "Payment for Invoice"
+    "created": "2026-10-11T21:20:14.000Z",
+    "description": "Subscription update"
+  },
+  {
+    "id": "pi_3PylC9zLrYciY2BysgAbLaY0",
+    "amount": 1299,
+    "currency": "usd",
+    "status": "failed",
+    "customer": {
+      "name": "Benjamin Tanaka",
+      "email": "benjamin.tanaka@example.com"
+    },
+    "method": {
+      "type": "ach",
+      "bankName": "U.S. Bank",
+      "last4": "4724"
+    },
+    "created": "2026-10-11T20:37:43.000Z",
+    "description": "Plan upgrade",
+    "failureReason": "Insufficient funds"
   },
   {
     "id": "pi_3p1gTI04n4yJH13L8yLUrZg1",
@@ -4474,6 +4462,24 @@
       "last4": "4644"
     },
     "created": "2026-10-11T13:41:12.000Z",
+    "description": "Payment for Invoice"
+  },
+  {
+    "id": "pi_3Tc9A7emISKuulgLWnRx4l4y",
+    "amount": 14300,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "James Jackson",
+      "email": "jamesjackson32@example.com"
+    },
+    "method": {
+      "type": "wallet",
+      "wallet": "apple_pay",
+      "brand": "visa",
+      "last4": "6768"
+    },
+    "created": "2026-10-10T23:02:45.000Z",
     "description": "Payment for Invoice"
   },
   {
@@ -4511,23 +4517,6 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_382HweZLAbCCN8WiJFk7MrYp",
-    "amount": 28199,
-    "currency": "eur",
-    "status": "succeeded",
-    "customer": {
-      "name": "Ava Lee",
-      "email": "ava_l@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "0057"
-    },
-    "created": "2026-10-10T06:04:12.000Z",
-    "description": "Subscription creation"
-  },
-  {
     "id": "pi_3b7PqKlMU0X8xT18MZybIIzs",
     "amount": 7370,
     "currency": "eur",
@@ -4544,20 +4533,20 @@
     "created": "2026-10-09T22:19:30.000Z"
   },
   {
-    "id": "pi_3rLdIOoEhkRChgiJDHWNp6Dz",
-    "amount": 8699,
-    "currency": "gbp",
+    "id": "pi_30mAy2HDEBiWqu99gjrFsXqc",
+    "amount": 1499,
+    "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "Chloe Sato",
-      "email": "chloe_s@example.com"
+      "name": "Amelia Clark",
+      "email": "amelia.clark@example.com"
     },
     "method": {
       "type": "card",
-      "brand": "mastercard",
-      "last4": "5336"
+      "brand": "visa",
+      "last4": "1149"
     },
-    "created": "2026-10-09T18:31:32.000Z",
+    "created": "2026-10-09T18:29:08.000Z",
     "description": "Subscription update"
   },
   {
@@ -4576,6 +4565,23 @@
     },
     "created": "2026-10-09T17:12:24.000Z",
     "description": "Payment for Invoice"
+  },
+  {
+    "id": "pi_3Pnr2y8ePC61Azp56QHF62NN",
+    "amount": 2475,
+    "currency": "cad",
+    "status": "succeeded",
+    "customer": {
+      "name": "Olivia Hernandez",
+      "email": "oliviahernandez78@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "amex",
+      "last4": "0337"
+    },
+    "created": "2026-10-09T15:39:09.000Z",
+    "description": "Subscription update"
   },
   {
     "id": "pi_3xYzN33rZKFkdb9GLiPtv8gC",
@@ -4661,6 +4667,23 @@
     "description": "Subscription creation"
   },
   {
+    "id": "pi_3zEfDmNFZETUhUZIETeUn1uC",
+    "amount": 5300,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Hugo Lee",
+      "email": "hugo_l@example.com"
+    },
+    "method": {
+      "type": "wallet",
+      "wallet": "apple_pay",
+      "brand": "visa",
+      "last4": "9629"
+    },
+    "created": "2026-10-08T21:28:42.000Z"
+  },
+  {
     "id": "pi_37okUoMf19xyjrItCNE2ULcA",
     "amount": 5566,
     "currency": "usd",
@@ -4676,24 +4699,6 @@
     },
     "created": "2026-10-08T21:14:06.000Z",
     "description": "Subscription update"
-  },
-  {
-    "id": "pi_3EkA0vFSRZj02RuJDDyGx0EG",
-    "amount": 45799,
-    "currency": "brl",
-    "status": "refunded",
-    "customer": {
-      "name": "Noah Thompson",
-      "email": "noah_t@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "mastercard",
-      "last4": "0662"
-    },
-    "created": "2026-10-08T20:49:39.000Z",
-    "description": "Subscription update",
-    "refundedAt": "2026-10-18T12:11:50.532Z"
   },
   {
     "id": "pi_3BgDD85YGO7Fz6jTr1HpuDI7",
@@ -4784,6 +4789,22 @@
     "failureReason": "Generic decline"
   },
   {
+    "id": "pi_3tHfREgOYidgIPynWssZO3Dq",
+    "amount": 3699,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Harper Khan",
+      "email": "harper_k@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "visa",
+      "last4": "3238"
+    },
+    "created": "2026-10-08T16:38:20.000Z"
+  },
+  {
     "id": "pi_3rjfhLrKavRtMNwntnZ73cai",
     "amount": 2000,
     "currency": "usd",
@@ -4820,23 +4841,6 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_38C5trHSRfjUovmhXJTeCxah",
-    "amount": 5503,
-    "currency": "gbp",
-    "status": "succeeded",
-    "customer": {
-      "name": "Evelyn Jackson",
-      "email": "evelyn.jackson@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "amex",
-      "last4": "8233"
-    },
-    "created": "2026-10-08T01:38:37.000Z",
-    "description": "Subscription creation"
-  },
-  {
     "id": "pi_3t2EvegKeBlPGJKkNfXm1jr7",
     "amount": 306199,
     "currency": "usd",
@@ -4853,25 +4857,6 @@
     "created": "2026-10-08T00:17:56.000Z",
     "description": "Payment for Invoice",
     "refundedAt": "2026-10-10T01:42:29.895Z"
-  },
-  {
-    "id": "pi_3xXL9ZGJ7cVR05U7e1K7nwd8",
-    "amount": 4999,
-    "currency": "gbp",
-    "status": "refunded",
-    "customer": {
-      "name": "Liam Anderson",
-      "email": "liam.anderson@example.com"
-    },
-    "method": {
-      "type": "wallet",
-      "wallet": "google_pay",
-      "brand": "visa",
-      "last4": "6196"
-    },
-    "created": "2026-10-07T22:49:35.000Z",
-    "description": "Subscription creation",
-    "refundedAt": "2026-10-10T05:39:46.713Z"
   },
   {
     "id": "pi_3LIvvRo82n69QFH5FjQASwo6",
@@ -4908,6 +4893,23 @@
     "description": "Subscription update"
   },
   {
+    "id": "pi_3E8Uxb4TzOCMeVUkvkoDIGTk",
+    "amount": 29594,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Nora Williams",
+      "email": "nora_w@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "visa",
+      "last4": "6038"
+    },
+    "created": "2026-10-07T19:18:46.000Z",
+    "description": "Subscription update"
+  },
+  {
     "id": "pi_3fuyXgUKI68IxW1MtcuyMPnX",
     "amount": 37599,
     "currency": "usd",
@@ -4925,6 +4927,23 @@
     "description": "Subscription update"
   },
   {
+    "id": "pi_3QXWSaVjRcvJ9hqc01iNhMxs",
+    "amount": 1067,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Arjun Rodriguez",
+      "email": "arjun.rodriguez@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "mastercard",
+      "last4": "2521"
+    },
+    "created": "2026-10-07T17:52:47.000Z",
+    "description": "Subscription update"
+  },
+  {
     "id": "pi_3JaZDSXmjEFzHlPSO5Lli4HF",
     "amount": 39686,
     "currency": "gbp",
@@ -4939,6 +4958,40 @@
       "last4": "4598"
     },
     "created": "2026-10-07T14:55:46.000Z",
+    "description": "Subscription update"
+  },
+  {
+    "id": "pi_3UbwCgxwZXwM0RXArSbsNoq1",
+    "amount": 3999,
+    "currency": "cad",
+    "status": "succeeded",
+    "customer": {
+      "name": "Omar Clark",
+      "email": "oclark@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "mastercard",
+      "last4": "5649"
+    },
+    "created": "2026-10-07T14:42:02.000Z",
+    "description": "Subscription update"
+  },
+  {
+    "id": "pi_3LXcVrPbZuBA9dCUCRqYOIk1",
+    "amount": 72700,
+    "currency": "gbp",
+    "status": "succeeded",
+    "customer": {
+      "name": "Amelia Harris",
+      "email": "ameliaharris32@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "visa",
+      "last4": "7915"
+    },
+    "created": "2026-10-07T07:20:00.000Z",
     "description": "Subscription update"
   },
   {
@@ -4977,23 +5030,6 @@
     "description": "Plan upgrade"
   },
   {
-    "id": "pi_3uNJy0pP54OfyvY46cQG3LjO",
-    "amount": 1999,
-    "currency": "cad",
-    "status": "succeeded",
-    "customer": {
-      "name": "Evelyn Gonzalez",
-      "email": "evelyn_g@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "3597"
-    },
-    "created": "2026-10-06T18:15:01.000Z",
-    "description": "Subscription creation"
-  },
-  {
     "id": "pi_3EIxBanLsy7VLeua3AECk6rI",
     "amount": 13699,
     "currency": "gbp",
@@ -5009,6 +5045,23 @@
     },
     "created": "2026-10-06T14:56:00.000Z",
     "description": "Subscription update"
+  },
+  {
+    "id": "pi_3fvzyqCilsrUOB08Vx1elcIX",
+    "amount": 1860,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Hugo Robinson",
+      "email": "hugo.robinson@example.com"
+    },
+    "method": {
+      "type": "wallet",
+      "wallet": "apple_pay",
+      "brand": "mastercard",
+      "last4": "3953"
+    },
+    "created": "2026-10-06T05:26:22.000Z"
   },
   {
     "id": "pi_3pT2DnT3iq2Eb2nGFtbrdt1w",
@@ -5028,21 +5081,20 @@
     "created": "2026-10-06T01:28:00.000Z"
   },
   {
-    "id": "pi_3GagNfKVYMxYa0y3uUamgItO",
-    "amount": 3299,
-    "currency": "eur",
-    "status": "failed",
+    "id": "pi_37MZza7cCAre0r293iOUBgxr",
+    "amount": 199699,
+    "currency": "usd",
+    "status": "succeeded",
     "customer": {
-      "name": "Sofia Clark",
-      "email": "sofia_c@example.com"
+      "name": "Olivia Lee",
+      "email": "olivia_l@example.com"
     },
     "method": {
       "type": "card",
-      "brand": "visa",
-      "last4": "7087"
+      "brand": "mastercard",
+      "last4": "4858"
     },
-    "created": "2026-10-05T14:46:14.000Z",
-    "failureReason": "Incorrect CVC"
+    "created": "2026-10-05T23:05:06.000Z"
   },
   {
     "id": "pi_3W4dTBW4B57yHmcoHYTpnyFO",
@@ -5131,7 +5183,7 @@
   {
     "id": "pi_3alK23HUfobo8BJn97fAqKxf",
     "amount": 3199,
-    "currency": "aud",
+    "currency": "brl",
     "status": "succeeded",
     "customer": {
       "name": "Samuel Martinez",
@@ -5196,6 +5248,23 @@
     "created": "2026-10-04T16:22:55.000Z"
   },
   {
+    "id": "pi_3TShfYRrEyzVjvm66JTlAAYd",
+    "amount": 1199,
+    "currency": "cad",
+    "status": "refunded",
+    "customer": {
+      "name": "Julian Harris",
+      "email": "julianharris72@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "visa",
+      "last4": "0974"
+    },
+    "created": "2026-10-04T14:55:01.000Z",
+    "refundedAt": "2026-10-12T04:40:59.723Z"
+  },
+  {
     "id": "pi_3AR5RdXex0X4mHbSNaDPnFgp",
     "amount": 1092,
     "currency": "usd",
@@ -5246,39 +5315,21 @@
     "description": "Subscription creation"
   },
   {
-    "id": "pi_3OidSrmDPz1jz1dyTRtOQowN",
-    "amount": 31999,
-    "currency": "usd",
+    "id": "pi_3QeqGrMT8GxzsS07nrO45hFc",
+    "amount": 11440,
+    "currency": "jpy",
     "status": "succeeded",
     "customer": {
-      "name": "Chloe Miller",
-      "email": "cmiller@example.com"
-    },
-    "method": {
-      "type": "ach",
-      "bankName": "Capital One",
-      "last4": "0497"
-    },
-    "created": "2026-10-02T21:40:31.000Z",
-    "description": "Subscription creation"
-  },
-  {
-    "id": "pi_3r8PHUCYT6Yd8DN0Q1goL6RN",
-    "amount": 4621,
-    "currency": "usd",
-    "status": "failed",
-    "customer": {
-      "name": "Ingrid Anderson",
-      "email": "ingridanderson54@example.com"
+      "name": "Yuki Walker",
+      "email": "yukiwalker50@example.com"
     },
     "method": {
       "type": "card",
-      "brand": "visa",
-      "last4": "6847"
+      "brand": "amex",
+      "last4": "7158"
     },
-    "created": "2026-10-02T18:27:19.000Z",
-    "description": "Subscription update",
-    "failureReason": "Do not honor"
+    "created": "2026-10-02T21:51:34.000Z",
+    "description": "Subscription update"
   },
   {
     "id": "pi_3qqIZaSSHacK6ZbiaCVUlRRM",
@@ -5296,23 +5347,6 @@
     },
     "created": "2026-10-02T18:15:55.000Z",
     "description": "Plan upgrade"
-  },
-  {
-    "id": "pi_3dEmHtGLRxy3YStn4JkiXy2I",
-    "amount": 1299,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Chloe Williams",
-      "email": "chloe.williams@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "0500"
-    },
-    "created": "2026-10-02T18:02:06.000Z",
-    "description": "Subscription update"
   },
   {
     "id": "pi_3IiKG2xIcz0UQwUyx8jq4Qu1",
@@ -5333,6 +5367,23 @@
     "refundedAt": "2026-10-09T17:44:48.394Z"
   },
   {
+    "id": "pi_3o5mY5XQRvnCJlvMgsPmCfkp",
+    "amount": 26707,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Ingrid Jones",
+      "email": "ingrid.jones@example.com"
+    },
+    "method": {
+      "type": "ach",
+      "bankName": "JPMorgan Chase",
+      "last4": "4242"
+    },
+    "created": "2026-10-02T16:53:45.000Z",
+    "description": "Subscription update"
+  },
+  {
     "id": "pi_3YuDKFFbWBYuKnZK8TfsI7Ih",
     "amount": 8899,
     "currency": "usd",
@@ -5351,71 +5402,73 @@
     "failureReason": "Incorrect CVC"
   },
   {
-    "id": "pi_33ETqgxDK1dCWh6nFtRzvMr2",
-    "amount": 5600,
-    "currency": "gbp",
-    "status": "succeeded",
-    "customer": {
-      "name": "Julian Thompson",
-      "email": "julianthompson59@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "8454"
-    },
-    "created": "2026-10-02T15:07:55.000Z",
-    "description": "Subscription update"
-  },
-  {
-    "id": "pi_3FUqo48trtX3wfLvUlK4etZS",
-    "amount": 2300,
+    "id": "pi_3yTq9Wac21JUh3un51dsVO8w",
+    "amount": 6239,
     "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "Daniel Williams",
-      "email": "danielwilliams84@example.com"
+      "name": "Kenji Johnson",
+      "email": "kenjijohnson63@example.com"
     },
     "method": {
-      "type": "card",
-      "brand": "mastercard",
-      "last4": "4466"
+      "type": "ach",
+      "bankName": "U.S. Bank",
+      "last4": "7446"
     },
-    "created": "2026-10-02T13:08:04.000Z",
-    "description": "Subscription update"
+    "created": "2026-10-02T14:55:54.000Z",
+    "description": "One-time purchase"
   },
   {
-    "id": "pi_39MTWj6QWy4HF9qvV79TBSoo",
-    "amount": 10800,
-    "currency": "cad",
-    "status": "succeeded",
+    "id": "pi_3lnZlWGJF34Akk9bekiYcKui",
+    "amount": 11319,
+    "currency": "usd",
+    "status": "refunded",
     "customer": {
-      "name": "Henry Anderson",
-      "email": "henry_a@example.com"
+      "name": "Hugo Robinson",
+      "email": "hugo.robinson@example.com"
     },
     "method": {
       "type": "card",
       "brand": "visa",
-      "last4": "2788"
+      "last4": "7879"
     },
-    "created": "2026-10-02T10:02:52.000Z",
-    "description": "Subscription creation"
+    "created": "2026-10-02T13:51:24.000Z",
+    "description": "Subscription update",
+    "refundedAt": "2026-10-04T22:19:41.441Z"
   },
   {
-    "id": "pi_3T3C2r0RdH6Mm2YobQUAhbZk",
-    "amount": 32400,
-    "currency": "aud",
-    "status": "succeeded",
+    "id": "pi_3M8rL2Zx2zFMu4EbvRkYkx23",
+    "amount": 39099,
+    "currency": "gbp",
+    "status": "failed",
     "customer": {
-      "name": "Evelyn Sato",
-      "email": "esato@example.com"
+      "name": "Camila Moore",
+      "email": "camila.moore@example.com"
     },
     "method": {
       "type": "card",
-      "brand": "mastercard",
-      "last4": "9458"
+      "brand": "visa",
+      "last4": "5377"
     },
-    "created": "2026-10-02T00:56:00.000Z",
+    "created": "2026-10-02T12:29:36.000Z",
+    "description": "Subscription update",
+    "failureReason": "Generic decline"
+  },
+  {
+    "id": "pi_3X3wfLvUlK4etZS9WdRGjX25",
+    "amount": 7000,
+    "currency": "eur",
+    "status": "succeeded",
+    "customer": {
+      "name": "Evelyn Johnson",
+      "email": "ejohnson@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "visa",
+      "last4": "6411"
+    },
+    "created": "2026-10-02T12:20:54.000Z",
     "description": "Subscription update"
   },
   {
@@ -5436,6 +5489,23 @@
     "description": "Subscription update"
   },
   {
+    "id": "pi_3eVaCw31ihVv2S8NKFGSCzUu",
+    "amount": 1399,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Priya Williams",
+      "email": "priyawilliams17@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "amex",
+      "last4": "7872"
+    },
+    "created": "2026-10-01T23:10:22.000Z",
+    "description": "One-time purchase"
+  },
+  {
     "id": "pi_3icXoCta5LRgSW6At8jg39YU",
     "amount": 32583,
     "currency": "usd",
@@ -5453,24 +5523,6 @@
     "description": "Payment for Invoice"
   },
   {
-    "id": "pi_3eqvYRuoXjqN9KFKCW6BJOkk",
-    "amount": 7399,
-    "currency": "gbp",
-    "status": "failed",
-    "customer": {
-      "name": "Ava Davis",
-      "email": "avadavis90@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "amex",
-      "last4": "7766"
-    },
-    "created": "2026-10-01T21:15:07.000Z",
-    "description": "Subscription update",
-    "failureReason": "Insufficient funds"
-  },
-  {
     "id": "pi_3wRFjtveuilSqRgo4Ir9bQHA",
     "amount": 1799,
     "currency": "aud",
@@ -5486,24 +5538,6 @@
     },
     "created": "2026-10-01T20:17:02.000Z",
     "description": "Subscription update"
-  },
-  {
-    "id": "pi_3VR7QRRx5I0mAy2HDEBiWqu9",
-    "amount": 2299,
-    "currency": "usd",
-    "status": "failed",
-    "customer": {
-      "name": "Evelyn Gonzalez",
-      "email": "evelyn_g@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "mastercard",
-      "last4": "8669"
-    },
-    "created": "2026-10-01T14:43:55.000Z",
-    "description": "Subscription update",
-    "failureReason": "Transaction not allowed"
   },
   {
     "id": "pi_38j2OwfiLeAtz6878OYnUjaw",
@@ -5541,6 +5575,24 @@
     "description": "Subscription creation"
   },
   {
+    "id": "pi_3yxBnWaflnpps0XLQxi5ZJv4",
+    "amount": 2600,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Camila Young",
+      "email": "camilayoung74@example.com"
+    },
+    "method": {
+      "type": "wallet",
+      "wallet": "apple_pay",
+      "brand": "visa",
+      "last4": "2416"
+    },
+    "created": "2026-10-01T13:17:04.000Z",
+    "description": "Payment for Invoice"
+  },
+  {
     "id": "pi_3EwER4dZlY4Ao2A9YFtTRAsM",
     "amount": 51599,
     "currency": "usd",
@@ -5558,20 +5610,37 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_34NNW5SEsu8qPVpRX14uGlUy",
-    "amount": 28699,
-    "currency": "eur",
+    "id": "pi_3ohueucb7MFm11cy7y3PFHOO",
+    "amount": 1699,
+    "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "Lucas Thomas",
-      "email": "lucas.thomas@example.com"
+      "name": "Daniel Davis",
+      "email": "daniel_d@example.com"
     },
     "method": {
       "type": "card",
-      "brand": "visa",
-      "last4": "9999"
+      "brand": "mastercard",
+      "last4": "9312"
     },
-    "created": "2026-09-30T20:26:08.000Z"
+    "created": "2026-09-30T23:37:36.000Z",
+    "description": "Payment for Invoice"
+  },
+  {
+    "id": "pi_3IO9qOqynU7sbJfEwdCK9pMf",
+    "amount": 9700,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Olivia Jackson",
+      "email": "ojackson@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "discover",
+      "last4": "4162"
+    },
+    "created": "2026-09-30T22:11:05.000Z"
   },
   {
     "id": "pi_3pBeYYLNVMxjQj8RDkJTp7ls",
@@ -5592,6 +5661,74 @@
     "description": "One-time purchase"
   },
   {
+    "id": "pi_3hkRChgiJDHWNp6DzMkXXhDS",
+    "amount": 51852,
+    "currency": "eur",
+    "status": "succeeded",
+    "customer": {
+      "name": "Priya Williams",
+      "email": "priyawilliams17@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "mastercard",
+      "last4": "1927"
+    },
+    "created": "2026-09-30T09:07:08.000Z",
+    "description": "Subscription update"
+  },
+  {
+    "id": "pi_3ngJkBvcJ8hArSN2rKypzgGx",
+    "amount": 1442,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Amelia Clark",
+      "email": "amelia.clark@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "mastercard",
+      "last4": "9951"
+    },
+    "created": "2026-09-30T01:56:45.000Z"
+  },
+  {
+    "id": "pi_3aHduxguZNwdSBqMlY9NcGdx",
+    "amount": 224599,
+    "currency": "eur",
+    "status": "succeeded",
+    "customer": {
+      "name": "Mia Robinson",
+      "email": "mia_r@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "discover",
+      "last4": "9710"
+    },
+    "created": "2026-09-29T21:06:04.000Z",
+    "description": "Subscription update"
+  },
+  {
+    "id": "pi_3U1SHYsQIcbi7XQoRpl93Rq1",
+    "amount": 2299,
+    "currency": "gbp",
+    "status": "succeeded",
+    "customer": {
+      "name": "Evelyn Garcia",
+      "email": "evelyn.garcia@example.com"
+    },
+    "method": {
+      "type": "wallet",
+      "wallet": "google_pay",
+      "brand": "visa",
+      "last4": "1748"
+    },
+    "created": "2026-09-29T20:39:22.000Z",
+    "description": "Subscription update"
+  },
+  {
     "id": "pi_3sZXBGDhSI0CbsMFgPdgDwAT",
     "amount": 7378,
     "currency": "usd",
@@ -5608,6 +5745,23 @@
     "created": "2026-09-29T20:03:25.000Z",
     "description": "Subscription creation",
     "refundedAt": "2026-10-05T00:17:04.545Z"
+  },
+  {
+    "id": "pi_3CCN8WiJFk7MrYp1Iy0dbSyF",
+    "amount": 1699,
+    "currency": "gbp",
+    "status": "succeeded",
+    "customer": {
+      "name": "Mateo Khan",
+      "email": "mateokhan97@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "visa",
+      "last4": "1732"
+    },
+    "created": "2026-09-29T19:53:20.000Z",
+    "description": "Subscription update"
   },
   {
     "id": "pi_3EXYmIqw3HTVSBFIx9u7PpSu",
@@ -5642,6 +5796,23 @@
     },
     "created": "2026-09-29T14:34:19.000Z",
     "description": "Subscription update"
+  },
+  {
+    "id": "pi_3jfFBVwxgHqqeEPW8iqb961N",
+    "amount": 3007,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Omar Hernandez",
+      "email": "omar.hernandez@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "visa",
+      "last4": "7697"
+    },
+    "created": "2026-09-28T23:42:24.000Z",
+    "description": "Payment for Invoice"
   },
   {
     "id": "pi_32Pb9Uxt7WkberYGuLajq55V",
@@ -5696,23 +5867,6 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_3Fsg26RkidnrZmZnUnDptY12",
-    "amount": 3200,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Nora Jones",
-      "email": "njones@example.com"
-    },
-    "method": {
-      "type": "ach",
-      "bankName": "STRIPE TEST BANK",
-      "last4": "7868"
-    },
-    "created": "2026-09-28T20:15:48.000Z",
-    "description": "Subscription update"
-  },
-  {
     "id": "pi_3j8tdlvfawnJLHcdJ414MKhl",
     "amount": 14674,
     "currency": "gbp",
@@ -5749,7 +5903,7 @@
   {
     "id": "pi_37DkUZJwokb2mY92xEqlEnhr",
     "amount": 6599,
-    "currency": "brl",
+    "currency": "cad",
     "status": "succeeded",
     "customer": {
       "name": "Samuel Anderson",
@@ -5778,6 +5932,24 @@
       "last4": "4372"
     },
     "created": "2026-09-28T16:59:11.000Z",
+    "description": "Subscription update"
+  },
+  {
+    "id": "pi_3M3ge79AIm0ke6ZjEu7hzuGM",
+    "amount": 45754,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Amelia Clark",
+      "email": "amelia.clark@example.com"
+    },
+    "method": {
+      "type": "wallet",
+      "wallet": "google_pay",
+      "brand": "mastercard",
+      "last4": "2425"
+    },
+    "created": "2026-09-28T16:32:19.000Z",
     "description": "Subscription update"
   },
   {
@@ -5849,6 +6021,41 @@
     "created": "2026-09-28T01:11:56.000Z"
   },
   {
+    "id": "pi_33YStn4JkiXy2I4J33VLXeVM",
+    "amount": 26199,
+    "currency": "usd",
+    "status": "failed",
+    "customer": {
+      "name": "Priya Patel",
+      "email": "priyapatel40@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "visa",
+      "last4": "1515"
+    },
+    "created": "2026-09-27T19:15:52.000Z",
+    "description": "Payment for Invoice",
+    "failureReason": "Do not honor"
+  },
+  {
+    "id": "pi_3EkO3Sls2ry4TZpdE2mnYOSJ",
+    "amount": 75300,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Liam Jones",
+      "email": "liam.jones@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "amex",
+      "last4": "1492"
+    },
+    "created": "2026-09-27T18:29:38.000Z",
+    "description": "Subscription update"
+  },
+  {
     "id": "pi_3XxAkqmSK6aCBOsBQx2bU1zY",
     "amount": 171252,
     "currency": "cad",
@@ -5863,41 +6070,6 @@
       "last4": "9301"
     },
     "created": "2026-09-27T16:45:19.000Z",
-    "description": "Payment for Invoice"
-  },
-  {
-    "id": "pi_3oky6ypk5Cyqb1XLng0F6rvk",
-    "amount": 6899,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Chloe Patel",
-      "email": "chloe.patel@example.com"
-    },
-    "method": {
-      "type": "wallet",
-      "wallet": "google_pay",
-      "brand": "visa",
-      "last4": "3902"
-    },
-    "created": "2026-09-27T14:23:38.000Z",
-    "description": "Subscription update"
-  },
-  {
-    "id": "pi_31WLDvqsHxmIqUGTdwavJenE",
-    "amount": 1299,
-    "currency": "aud",
-    "status": "pending",
-    "customer": {
-      "name": "James Young",
-      "email": "james.young@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "amex",
-      "last4": "9028"
-    },
-    "created": "2026-09-27T13:22:11.000Z",
     "description": "Payment for Invoice"
   },
   {
@@ -5953,21 +6125,37 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_3bk1li9ipjRgohnjLl9R68i7",
-    "amount": 4699,
-    "currency": "gbp",
+    "id": "pi_3oM05mINm1HokHA5ESfb0Ykk",
+    "amount": 36699,
+    "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "Aria Johnson",
-      "email": "aria_j@example.com"
+      "name": "Omar Brown",
+      "email": "obrown@example.com"
     },
     "method": {
       "type": "card",
-      "brand": "discover",
-      "last4": "5527"
+      "brand": "visa",
+      "last4": "0608"
     },
-    "created": "2026-09-25T23:31:41.000Z",
-    "description": "Subscription update"
+    "created": "2026-09-26T17:27:24.000Z",
+    "description": "Subscription creation"
+  },
+  {
+    "id": "pi_36QWy4HF9qvV79TBSooIT7Hm",
+    "amount": 121799,
+    "currency": "eur",
+    "status": "succeeded",
+    "customer": {
+      "name": "Theo Hernandez",
+      "email": "theo_h@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "mastercard",
+      "last4": "4186"
+    },
+    "created": "2026-09-26T14:04:19.000Z"
   },
   {
     "id": "pi_3EfXIojXOCHX5VJAFPCnftD4",
@@ -6038,23 +6226,6 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_3q88tK8mHIrBV0UI1K5KTsK8",
-    "amount": 4600,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Gabriel Martinez",
-      "email": "gabriel_m@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "mastercard",
-      "last4": "6084"
-    },
-    "created": "2026-09-25T18:54:39.000Z",
-    "description": "Subscription update"
-  },
-  {
     "id": "pi_30MzGK7dJRdwyfHrZYLtgAFm",
     "amount": 38000,
     "currency": "eur",
@@ -6069,40 +6240,6 @@
       "last4": "6604"
     },
     "created": "2026-09-25T18:41:09.000Z"
-  },
-  {
-    "id": "pi_3rRRWU1SHYsQIcbi7XQoRpl9",
-    "amount": 9700,
-    "currency": "brl",
-    "status": "pending",
-    "customer": {
-      "name": "Sophia Oliveira",
-      "email": "sophia_o@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "0284"
-    },
-    "created": "2026-09-25T14:05:53.000Z",
-    "description": "One-time purchase"
-  },
-  {
-    "id": "pi_36V9EzCUnLRZx92P99wpWHMJ",
-    "amount": 1599,
-    "currency": "usd",
-    "status": "failed",
-    "customer": {
-      "name": "Samuel Anderson",
-      "email": "samuelanderson92@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "4242"
-    },
-    "created": "2026-09-25T12:45:38.000Z",
-    "failureReason": "Insufficient funds"
   },
   {
     "id": "pi_3CgfME2qL7gwRer7qPiIDtnZ",
@@ -6122,38 +6259,21 @@
     "description": "One-time purchase"
   },
   {
-    "id": "pi_3Kj6wyiu4ydF6ALj0tMg7Zew",
-    "amount": 29599,
-    "currency": "usd",
+    "id": "pi_3Sg7cPBvUvjrzDMxD0hf2Crr",
+    "amount": 1399,
+    "currency": "eur",
     "status": "succeeded",
     "customer": {
-      "name": "Theo Hernandez",
-      "email": "theo_h@example.com"
+      "name": "Henry Anderson",
+      "email": "henry_a@example.com"
     },
     "method": {
       "type": "card",
       "brand": "visa",
-      "last4": "4242"
+      "last4": "7819"
     },
-    "created": "2026-09-24T19:33:38.000Z",
+    "created": "2026-09-24T23:02:15.000Z",
     "description": "Subscription update"
-  },
-  {
-    "id": "pi_3ut2EN90IjkG4V9iACyrHQwC",
-    "amount": 15085,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Chloe Sato",
-      "email": "chloe_s@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "mastercard",
-      "last4": "6943"
-    },
-    "created": "2026-09-24T16:54:40.000Z",
-    "description": "Payment for Invoice"
   },
   {
     "id": "pi_33xIqAWtDGAAGhlBVfocv69R",
@@ -6171,6 +6291,22 @@
     },
     "created": "2026-09-24T16:51:43.000Z",
     "description": "Subscription update"
+  },
+  {
+    "id": "pi_3KN8imzgDl0u2SF93tPKi5WN",
+    "amount": 20299,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Theo Robinson",
+      "email": "theo_r@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "mastercard",
+      "last4": "8636"
+    },
+    "created": "2026-09-24T16:22:47.000Z"
   },
   {
     "id": "pi_3ilgJK7YvAyIfbFlfJCRcUGZ",
@@ -6191,23 +6327,6 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_3X8x6hQZXaoDUcgLDUQCJ5Ib",
-    "amount": 1188,
-    "currency": "gbp",
-    "status": "pending",
-    "customer": {
-      "name": "Lars Gonzalez",
-      "email": "larsgonzalez59@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "8788"
-    },
-    "created": "2026-09-24T14:45:25.000Z",
-    "description": "Subscription update"
-  },
-  {
     "id": "pi_3a4bFSulwzdY6QUc68dojBpf",
     "amount": 2100,
     "currency": "gbp",
@@ -6223,41 +6342,6 @@
     },
     "created": "2026-09-24T12:34:09.000Z",
     "description": "Plan upgrade"
-  },
-  {
-    "id": "pi_31jEzEfDmNFZETUhUZIETeUn",
-    "amount": 1813,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Omar Davis",
-      "email": "omardavis99@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "amex",
-      "last4": "8966"
-    },
-    "created": "2026-09-24T06:31:54.000Z",
-    "description": "Payment for Invoice"
-  },
-  {
-    "id": "pi_3xQoNJDP0h7pERGqEvA8m0om",
-    "amount": 1999,
-    "currency": "aud",
-    "status": "failed",
-    "customer": {
-      "name": "Elijah Taylor",
-      "email": "etaylor@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "0024"
-    },
-    "created": "2026-09-24T05:56:55.000Z",
-    "description": "Plan upgrade",
-    "failureReason": "Do not honor"
   },
   {
     "id": "pi_3r3SXY9z97A47fYEjdmuR6VO",
@@ -6328,23 +6412,6 @@
     "refundedAt": "2026-09-25T02:29:28.305Z"
   },
   {
-    "id": "pi_3Ggq28drX3i3eeRulz4Y06uH",
-    "amount": 11306,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Elijah Patel",
-      "email": "elijah_p@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "7560"
-    },
-    "created": "2026-09-23T20:18:32.000Z",
-    "description": "Subscription update"
-  },
-  {
     "id": "pi_31gOoFewhygzwl5621c2sLYd",
     "amount": 85100,
     "currency": "usd",
@@ -6362,21 +6429,38 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_3TUNzSNZojWLsYDCOhSfXmXB",
-    "amount": 16199,
+    "id": "pi_3ZeMWFB7FIDABPriApPF9IqE",
+    "amount": 1199,
     "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "Layla Martinez",
-      "email": "layla.martinez@example.com"
+      "name": "Lars Williams",
+      "email": "lwilliams@example.com"
+    },
+    "method": {
+      "type": "ach",
+      "bankName": "JPMorgan Chase",
+      "last4": "1852"
+    },
+    "created": "2026-09-23T15:21:25.000Z",
+    "description": "Subscription update"
+  },
+  {
+    "id": "pi_32rwCdqpDLOHDszysbnU433z",
+    "amount": 9272,
+    "currency": "gbp",
+    "status": "succeeded",
+    "customer": {
+      "name": "Sophia Martinez",
+      "email": "sophia.martinez@example.com"
     },
     "method": {
       "type": "card",
-      "brand": "mastercard",
-      "last4": "4242"
+      "brand": "visa",
+      "last4": "3641"
     },
-    "created": "2026-09-23T16:03:36.000Z",
-    "description": "Payment for Invoice"
+    "created": "2026-09-23T06:01:06.000Z",
+    "description": "Subscription creation"
   },
   {
     "id": "pi_3O6vQxPubECZoi50D6qmcEWr",
@@ -6483,6 +6567,23 @@
     "description": "Payment for Invoice"
   },
   {
+    "id": "pi_3JJXAJ2jE6LKoqGKUcAx8eAn",
+    "amount": 1596,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Priya Thompson",
+      "email": "priyathompson98@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "amex",
+      "last4": "9012"
+    },
+    "created": "2026-09-22T19:56:24.000Z",
+    "description": "Subscription update"
+  },
+  {
     "id": "pi_3lTIQVvTLC2XZVspgEPYOZHA",
     "amount": 1199,
     "currency": "usd",
@@ -6498,6 +6599,25 @@
     },
     "created": "2026-09-22T19:48:53.000Z",
     "description": "Payment for Invoice"
+  },
+  {
+    "id": "pi_3Mmdqb92Lid9z3azwgbVwvAT",
+    "amount": 156299,
+    "currency": "usd",
+    "status": "refunded",
+    "customer": {
+      "name": "Fatima Davis",
+      "email": "fatima_d@example.com"
+    },
+    "method": {
+      "type": "wallet",
+      "wallet": "apple_pay",
+      "brand": "mastercard",
+      "last4": "1734"
+    },
+    "created": "2026-09-22T18:54:54.000Z",
+    "description": "Subscription update",
+    "refundedAt": "2026-09-25T03:10:27.307Z"
   },
   {
     "id": "pi_3RkEuRGz03NqZ4lUrwjfTdIq",
@@ -6585,7 +6705,7 @@
   {
     "id": "pi_3uCuXkqiSiOloFrSWp9uwG9S",
     "amount": 10399,
-    "currency": "gbp",
+    "currency": "eur",
     "status": "succeeded",
     "customer": {
       "name": "Yuki Costa",
@@ -6634,55 +6754,58 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_3lErQ9zL2zvQN6MueHE4QThS",
-    "amount": 21857,
+    "id": "pi_3IfVBwBqwPCTniVQxNiU7EaR",
+    "amount": 4251,
+    "currency": "cad",
+    "status": "failed",
+    "customer": {
+      "name": "Olivia Harris",
+      "email": "olivia_h@example.com"
+    },
+    "method": {
+      "type": "wallet",
+      "wallet": "apple_pay",
+      "brand": "mastercard",
+      "last4": "4582"
+    },
+    "created": "2026-09-21T21:41:32.000Z",
+    "description": "Payment for Invoice",
+    "failureReason": "Insufficient funds"
+  },
+  {
+    "id": "pi_3p43Zrhtxmib2YfvsZ5IOlGQ",
+    "amount": 13599,
     "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "Noah Johnson",
-      "email": "noah_j@example.com"
+      "name": "Priya Santos",
+      "email": "psantos@example.com"
+    },
+    "method": {
+      "type": "wallet",
+      "wallet": "apple_pay",
+      "brand": "mastercard",
+      "last4": "0866"
+    },
+    "created": "2026-09-21T19:07:59.000Z",
+    "description": "Payment for Invoice"
+  },
+  {
+    "id": "pi_3Hv6ekTIR5Xyj6cKSBOhraJ8",
+    "amount": 19485,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Kenji Clark",
+      "email": "kenji.clark@example.com"
     },
     "method": {
       "type": "card",
       "brand": "mastercard",
-      "last4": "3402"
+      "last4": "8631"
     },
-    "created": "2026-09-21T19:25:24.000Z",
-    "description": "Payment for Invoice"
-  },
-  {
-    "id": "pi_3Wo242K6MKOxGecdV38EimCk",
-    "amount": 1699,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Samuel Martinez",
-      "email": "smartinez@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "9725"
-    },
-    "created": "2026-09-21T16:31:43.000Z"
-  },
-  {
-    "id": "pi_31H9i03U29zFOWYAarUBWF9F",
-    "amount": 16700,
-    "currency": "usd",
-    "status": "refunded",
-    "customer": {
-      "name": "Nora Lee",
-      "email": "nora.lee@example.com"
-    },
-    "method": {
-      "type": "ach",
-      "bankName": "Wells Fargo",
-      "last4": "8842"
-    },
-    "created": "2026-09-21T12:22:07.000Z",
-    "description": "Plan upgrade",
-    "refundedAt": "2026-09-30T06:16:18.760Z"
+    "created": "2026-09-21T06:34:11.000Z",
+    "description": "Subscription creation"
   },
   {
     "id": "pi_3prhb6OIER7Cy50MpzivxdmU",
@@ -6737,6 +6860,23 @@
     "description": "Subscription creation"
   },
   {
+    "id": "pi_3utwXQCbnjd1ObmIQFCuk51z",
+    "amount": 29300,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Liam Jackson",
+      "email": "liamjackson35@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "amex",
+      "last4": "1167"
+    },
+    "created": "2026-09-20T00:50:32.000Z",
+    "description": "Subscription update"
+  },
+  {
     "id": "pi_3jH4RqOwrsSjdpfbJycwO4yO",
     "amount": 14400,
     "currency": "usd",
@@ -6770,9 +6910,26 @@
     "created": "2026-09-19T21:03:34.000Z"
   },
   {
+    "id": "pi_3oQiv3ZYEuDDEv4dv6xTkWX0",
+    "amount": 1900,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Evelyn Sato",
+      "email": "esato@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "visa",
+      "last4": "8432"
+    },
+    "created": "2026-09-19T19:46:19.000Z",
+    "description": "Subscription creation"
+  },
+  {
     "id": "pi_3VbfxViWT8vnEgu5VoSBxTBS",
     "amount": 2199,
-    "currency": "cad",
+    "currency": "gbp",
     "status": "succeeded",
     "customer": {
       "name": "Elijah Patel",
@@ -6787,20 +6944,21 @@
     "description": "Plan upgrade"
   },
   {
-    "id": "pi_3fGZRvUFhEQXWSaVjRcvJ9hq",
-    "amount": 10700,
-    "currency": "gbp",
+    "id": "pi_37nZfNNk8HV7S9kE2pqx8xRu",
+    "amount": 1323,
+    "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "Harper Miller",
-      "email": "harper_m@example.com"
+      "name": "Ava Rodriguez",
+      "email": "arodriguez@example.com"
     },
     "method": {
       "type": "card",
       "brand": "visa",
-      "last4": "4242"
+      "last4": "3345"
     },
-    "created": "2026-09-18T23:31:11.000Z"
+    "created": "2026-09-18T20:08:56.000Z",
+    "description": "Subscription update"
   },
   {
     "id": "pi_3ocHSAsXHhXXgmud5PPwDUZv",
@@ -6818,6 +6976,22 @@
     },
     "created": "2026-09-18T20:04:34.000Z",
     "description": "Subscription update"
+  },
+  {
+    "id": "pi_3mjMBXL5Gd9kkZVdjRgCK1v4",
+    "amount": 30900,
+    "currency": "gbp",
+    "status": "pending",
+    "customer": {
+      "name": "Isabella Johnson",
+      "email": "isabellajohnson65@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "visa",
+      "last4": "6385"
+    },
+    "created": "2026-09-18T19:42:47.000Z"
   },
   {
     "id": "pi_3Ywsw76slR0HZRRuCQXzEYMS",
@@ -6871,55 +7045,21 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_3Stbdbc6p6QQFyQkv52Nkko2",
-    "amount": 1100,
-    "currency": "usd",
+    "id": "pi_3SNZojWLsYDCOhSfXmXBka21",
+    "amount": 38299,
+    "currency": "gbp",
     "status": "succeeded",
     "customer": {
-      "name": "Noah Santos",
-      "email": "noah.santos@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "7169"
-    },
-    "created": "2026-09-18T02:20:22.000Z",
-    "description": "Subscription update"
-  },
-  {
-    "id": "pi_3OI0jEwMzKmkzQWur64sP8lG",
-    "amount": 48099,
-    "currency": "aud",
-    "status": "pending",
-    "customer": {
-      "name": "Sophia Gonzalez",
-      "email": "sophia.gonzalez@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "0069"
-    },
-    "created": "2026-09-17T23:37:55.000Z",
-    "description": "Subscription update"
-  },
-  {
-    "id": "pi_36kcxJKXoCvuM3ge79AIm0ke",
-    "amount": 38888,
-    "currency": "aud",
-    "status": "succeeded",
-    "customer": {
-      "name": "Omar Khan",
-      "email": "omarkhan70@example.com"
+      "name": "Theo Hernandez",
+      "email": "theo_h@example.com"
     },
     "method": {
       "type": "card",
       "brand": "mastercard",
-      "last4": "2371"
+      "last4": "3383"
     },
-    "created": "2026-09-17T21:58:43.000Z",
-    "description": "Subscription update"
+    "created": "2026-09-17T23:43:19.000Z",
+    "description": "One-time purchase"
   },
   {
     "id": "pi_35pGhc1Xy8oMWZjEVcZ5I5W5",
@@ -6939,23 +7079,6 @@
     "description": "Subscription creation"
   },
   {
-    "id": "pi_3FdHOXTfGdCatXKdtvOQVjeY",
-    "amount": 1469,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Noah Santos",
-      "email": "noah.santos@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "3857"
-    },
-    "created": "2026-09-17T12:30:17.000Z",
-    "description": "Subscription update"
-  },
-  {
     "id": "pi_3TVF7o5AAMNuoeN9kB4yVTVl",
     "amount": 4699,
     "currency": "usd",
@@ -6973,23 +7096,6 @@
     "description": "Subscription creation"
   },
   {
-    "id": "pi_33aZsY826ML0KYnm2RtPi9CF",
-    "amount": 1014,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Fatima Davis",
-      "email": "fatima_d@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "6733"
-    },
-    "created": "2026-09-17T02:16:23.000Z",
-    "description": "Subscription update"
-  },
-  {
     "id": "pi_3SE2j5XXbVnRpN3dG1A10ZZN",
     "amount": 3357,
     "currency": "usd",
@@ -7005,6 +7111,23 @@
       "last4": "5906"
     },
     "created": "2026-09-16T22:39:06.000Z",
+    "description": "Subscription update"
+  },
+  {
+    "id": "pi_3DjYKwKYn2iMLKwfskmnfDEQ",
+    "amount": 8500,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Lucas Thomas",
+      "email": "lucas.thomas@example.com"
+    },
+    "method": {
+      "type": "ach",
+      "bankName": "JPMorgan Chase",
+      "last4": "6064"
+    },
+    "created": "2026-09-16T21:53:34.000Z",
     "description": "Subscription update"
   },
   {
@@ -7026,22 +7149,38 @@
     "failureReason": "Generic decline"
   },
   {
-    "id": "pi_3nYzOcYy5r55tDRu8RdMDbln",
-    "amount": 27849,
-    "currency": "usd",
-    "status": "failed",
+    "id": "pi_3j02RuJDDyGx0EGJeB4rxT6j",
+    "amount": 3800,
+    "currency": "gbp",
+    "status": "refunded",
     "customer": {
-      "name": "Elijah Taylor",
-      "email": "etaylor@example.com"
+      "name": "Priya Anderson",
+      "email": "priyaanderson16@example.com"
     },
     "method": {
       "type": "card",
-      "brand": "mastercard",
-      "last4": "6786"
+      "brand": "visa",
+      "last4": "0640"
     },
-    "created": "2026-09-16T19:08:40.000Z",
-    "description": "Subscription update",
-    "failureReason": "Transaction not allowed"
+    "created": "2026-09-16T20:30:08.000Z",
+    "refundedAt": "2026-09-22T04:57:32.457Z"
+  },
+  {
+    "id": "pi_3EN90IjkG4V9iACyrHQwCEmU",
+    "amount": 16686,
+    "currency": "eur",
+    "status": "succeeded",
+    "customer": {
+      "name": "Julian Harris",
+      "email": "julianharris72@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "visa",
+      "last4": "6312"
+    },
+    "created": "2026-09-16T20:19:26.000Z",
+    "description": "One-time purchase"
   },
   {
     "id": "pi_3zpgKZKp98yUfbylkiSY97eU",
@@ -7163,40 +7302,6 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_38DSQ9YX3JZQemsvb0tvtEAl",
-    "amount": 2030,
-    "currency": "jpy",
-    "status": "succeeded",
-    "customer": {
-      "name": "James Brown",
-      "email": "james_b@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "mastercard",
-      "last4": "5971"
-    },
-    "created": "2026-09-16T12:54:24.000Z",
-    "description": "Subscription update"
-  },
-  {
-    "id": "pi_3SaY1VPIyIxkQ7uiUOmqBv9r",
-    "amount": 4900,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Lucas Thomas",
-      "email": "lucas.thomas@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "mastercard",
-      "last4": "9268"
-    },
-    "created": "2026-09-16T09:54:07.000Z",
-    "description": "One-time purchase"
-  },
-  {
     "id": "pi_3aNPpnyop7sZUESCyURk6gT8",
     "amount": 17446,
     "currency": "usd",
@@ -7215,20 +7320,20 @@
     "failureReason": "Insufficient funds"
   },
   {
-    "id": "pi_3yUKhiJq0VmxIgQRqX8iC5Ni",
-    "amount": 2100,
+    "id": "pi_3IbN5pwJsZfla5ltIAWzEngQ",
+    "amount": 1300,
     "currency": "usd",
-    "status": "succeeded",
+    "status": "pending",
     "customer": {
-      "name": "Julian Thomas",
-      "email": "jthomas@example.com"
+      "name": "Evelyn Perez",
+      "email": "evelyn_p@example.com"
     },
     "method": {
-      "type": "ach",
-      "bankName": "JPMorgan Chase",
-      "last4": "2857"
+      "type": "card",
+      "brand": "visa",
+      "last4": "5751"
     },
-    "created": "2026-09-16T04:28:13.000Z",
+    "created": "2026-09-15T23:38:35.000Z",
     "description": "Subscription update"
   },
   {
@@ -7247,22 +7352,6 @@
     },
     "created": "2026-09-15T23:04:40.000Z",
     "description": "Subscription update"
-  },
-  {
-    "id": "pi_3wbmajC6DHMqN1EWSNCjHJX9",
-    "amount": 22524,
-    "currency": "eur",
-    "status": "succeeded",
-    "customer": {
-      "name": "Amelia Clark",
-      "email": "amelia_c@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "8468"
-    },
-    "created": "2026-09-15T22:24:40.000Z"
   },
   {
     "id": "pi_3Ff2VYmOTW8lKIOhYGH5EIKd",
@@ -7334,21 +7423,20 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_35iisVquP3h11KPUA5zcbcdM",
-    "amount": 4801,
-    "currency": "gbp",
-    "status": "pending",
+    "id": "pi_3IDK5FQxZ84N9Bp3ZIj2tyAJ",
+    "amount": 35799,
+    "currency": "usd",
+    "status": "succeeded",
     "customer": {
-      "name": "Priya Williams",
-      "email": "priyawilliams17@example.com"
+      "name": "Hugo Lee",
+      "email": "hugo_l@example.com"
     },
     "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "8919"
+      "type": "ach",
+      "bankName": "U.S. Bank",
+      "last4": "3054"
     },
-    "created": "2026-09-15T13:40:32.000Z",
-    "description": "Subscription update"
+    "created": "2026-09-15T13:13:09.000Z"
   },
   {
     "id": "pi_3fGvlBcxp10BJ5p8x2uIfUmY",
@@ -7402,38 +7490,21 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_3SOLGL1jhIqRkGZigmrJ3mKJ",
-    "amount": 2100,
-    "currency": "aud",
-    "status": "succeeded",
-    "customer": {
-      "name": "Sofia Martin",
-      "email": "sofiamartin32@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "6670"
-    },
-    "created": "2026-09-14T22:55:02.000Z",
-    "description": "Subscription update"
-  },
-  {
-    "id": "pi_3ujQU6a4MQMSlj2PYKnFTcyJ",
-    "amount": 49922,
+    "id": "pi_39klprF4stPBgWPU6xekzDHM",
+    "amount": 16963,
     "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "Chloe Sato",
-      "email": "chloe_s@example.com"
+      "name": "Olivia Lewis",
+      "email": "olivia.lewis@example.com"
     },
     "method": {
       "type": "card",
       "brand": "visa",
-      "last4": "9172"
+      "last4": "3023"
     },
-    "created": "2026-09-14T21:43:48.000Z",
-    "description": "Subscription update"
+    "created": "2026-09-14T21:17:20.000Z",
+    "description": "Payment for Invoice"
   },
   {
     "id": "pi_36VYxeXzsLd8fbLrMAg3pKrQ",
@@ -7471,23 +7542,6 @@
     "refundedAt": "2026-09-16T05:24:11.811Z"
   },
   {
-    "id": "pi_3IaOl2teKYlv293uhFVykYWq",
-    "amount": 12699,
-    "currency": "aud",
-    "status": "succeeded",
-    "customer": {
-      "name": "Fatima Johnson",
-      "email": "fatimajohnson34@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "6854"
-    },
-    "created": "2026-09-14T19:21:55.000Z",
-    "description": "Subscription update"
-  },
-  {
     "id": "pi_3yFua7l4ft8FwRND1EkooiJZ",
     "amount": 1659,
     "currency": "usd",
@@ -7503,23 +7557,6 @@
     },
     "created": "2026-09-14T18:02:30.000Z",
     "description": "Payment for Invoice"
-  },
-  {
-    "id": "pi_3wuNBI7MZza7cCAre0r293iO",
-    "amount": 7599,
-    "currency": "brl",
-    "status": "succeeded",
-    "customer": {
-      "name": "Priya Martinez",
-      "email": "priya_m@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "9628"
-    },
-    "created": "2026-09-14T17:49:49.000Z",
-    "description": "Subscription update"
   },
   {
     "id": "pi_3cDWBhH3x8lngPITTBPczKRW",
@@ -7557,21 +7594,20 @@
     "failureReason": "Do not honor"
   },
   {
-    "id": "pi_3Sixx2oVq9hUb1l5pxAsgQGb",
-    "amount": 2960,
+    "id": "pi_3RgohnjLl9R68i7IwWYhXcbx",
+    "amount": 6199,
     "currency": "gbp",
     "status": "succeeded",
     "customer": {
-      "name": "Arthur Wilson",
-      "email": "arthur_w@example.com"
+      "name": "Henry Anderson",
+      "email": "henryanderson52@example.com"
     },
     "method": {
       "type": "card",
       "brand": "visa",
-      "last4": "2434"
+      "last4": "1522"
     },
-    "created": "2026-09-13T23:00:30.000Z",
-    "description": "Subscription update"
+    "created": "2026-09-14T12:04:06.000Z"
   },
   {
     "id": "pi_3tH94Ket7ilSw5O5ErztfdEe",
@@ -7606,6 +7642,23 @@
     },
     "created": "2026-09-13T20:43:50.000Z",
     "description": "Plan upgrade"
+  },
+  {
+    "id": "pi_3jtGffkJEXlzUgvyUpAOmMJK",
+    "amount": 12399,
+    "currency": "cad",
+    "status": "succeeded",
+    "customer": {
+      "name": "Leo Lopez",
+      "email": "leo.lopez@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "visa",
+      "last4": "4606"
+    },
+    "created": "2026-09-13T18:13:36.000Z",
+    "description": "Subscription creation"
   },
   {
     "id": "pi_3F8FAorgh1JtRPjl9G99rzcK",
@@ -7643,21 +7696,37 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_3dLLuEJalZr5KYeg1mX4pHdC",
-    "amount": 6140,
-    "currency": "jpy",
+    "id": "pi_3LfxhwN4GmixvM1AidLXoO2y",
+    "amount": 6999,
+    "currency": "gbp",
     "status": "succeeded",
     "customer": {
-      "name": "Ava Rodriguez",
-      "email": "arodriguez@example.com"
+      "name": "Olivia Lee",
+      "email": "olivia_l@example.com"
     },
     "method": {
       "type": "card",
       "brand": "mastercard",
-      "last4": "5605"
+      "last4": "6195"
     },
-    "created": "2026-09-13T02:06:58.000Z",
-    "description": "Subscription update"
+    "created": "2026-09-12T21:51:01.000Z",
+    "description": "Payment for Invoice"
+  },
+  {
+    "id": "pi_3N0Q1goL6RNZKlgSuXFXQ7Ot",
+    "amount": 3113,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Sofia Tanaka",
+      "email": "sofia_t@example.com"
+    },
+    "method": {
+      "type": "ach",
+      "bankName": "Bank of America",
+      "last4": "0478"
+    },
+    "created": "2026-09-12T18:14:40.000Z"
   },
   {
     "id": "pi_3QdzazXEU6abqrGpgcICGBZp",
@@ -7694,6 +7763,40 @@
     "description": "Subscription creation"
   },
   {
+    "id": "pi_3qmB5jU43unnq9gClyXTO6qe",
+    "amount": 91899,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Mateo Harris",
+      "email": "mateo_h@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "visa",
+      "last4": "7183"
+    },
+    "created": "2026-09-11T18:18:53.000Z",
+    "description": "Payment for Invoice"
+  },
+  {
+    "id": "pi_3rV9ySnNfGh37NU3BJPzAK9a",
+    "amount": 1500,
+    "currency": "cad",
+    "status": "succeeded",
+    "customer": {
+      "name": "Lars Gonzalez",
+      "email": "larsgonzalez59@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "discover",
+      "last4": "3304"
+    },
+    "created": "2026-09-11T17:53:47.000Z",
+    "description": "Subscription update"
+  },
+  {
     "id": "pi_3P6PpWaXDtwywCtfPEafukvA",
     "amount": 6600,
     "currency": "usd",
@@ -7710,23 +7813,6 @@
     },
     "created": "2026-09-11T14:33:43.000Z",
     "description": "Subscription update"
-  },
-  {
-    "id": "pi_33fhUbwCgxwZXwM0RXArSbsN",
-    "amount": 6732,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Daniel Rodriguez",
-      "email": "drodriguez@example.com"
-    },
-    "method": {
-      "type": "ach",
-      "bankName": "U.S. Bank",
-      "last4": "4242"
-    },
-    "created": "2026-09-11T13:33:29.000Z",
-    "description": "Plan upgrade"
   },
   {
     "id": "pi_38aZXbLctLjPL1G4osK1orIA",
@@ -7780,6 +7866,23 @@
     "created": "2026-09-11T06:12:06.000Z"
   },
   {
+    "id": "pi_3ZQemsvb0tvtEAlDgobyTig4",
+    "amount": 5671,
+    "currency": "eur",
+    "status": "succeeded",
+    "customer": {
+      "name": "Layla Martinez",
+      "email": "layla.martinez@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "mastercard",
+      "last4": "2361"
+    },
+    "created": "2026-09-10T22:39:56.000Z",
+    "description": "Subscription update"
+  },
+  {
     "id": "pi_39s7XPlpsYeGbFDaN4ZP1xzh",
     "amount": 296334,
     "currency": "usd",
@@ -7794,6 +7897,23 @@
       "last4": "5158"
     },
     "created": "2026-09-10T18:09:23.000Z",
+    "description": "Subscription update"
+  },
+  {
+    "id": "pi_3hIOdrzUDLLHPPaObkT6zOHr",
+    "amount": 44961,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Arjun Williams",
+      "email": "arjun_w@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "mastercard",
+      "last4": "1933"
+    },
+    "created": "2026-09-10T17:48:29.000Z",
     "description": "Subscription update"
   },
   {
@@ -7813,6 +7933,24 @@
     },
     "created": "2026-09-10T12:31:41.000Z",
     "description": "Subscription update"
+  },
+  {
+    "id": "pi_32r0RdH6Mm2YobQUAhbZk9ej",
+    "amount": 6999,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "James Rossi",
+      "email": "james.rossi@example.com"
+    },
+    "method": {
+      "type": "wallet",
+      "wallet": "google_pay",
+      "brand": "visa",
+      "last4": "8463"
+    },
+    "created": "2026-09-10T10:49:13.000Z",
+    "description": "Payment for Invoice"
   },
   {
     "id": "pi_3jrgKkXVFNkgcFwfg9O0o9xn",
@@ -7918,23 +8056,6 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_3cYvLU4GAl3HTvI4AkX4LctJ",
-    "amount": 4734,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Arjun Hernandez",
-      "email": "ahernandez@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "8721"
-    },
-    "created": "2026-09-09T17:59:21.000Z",
-    "description": "Subscription creation"
-  },
-  {
     "id": "pi_3K1JSHu8r4Hm7vdYv9qU4lpG",
     "amount": 10899,
     "currency": "eur",
@@ -7953,23 +8074,6 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_3PuK6hQbexW1DjYKwKYn2iML",
-    "amount": 23099,
-    "currency": "gbp",
-    "status": "pending",
-    "customer": {
-      "name": "Liam Martinez",
-      "email": "liam_m@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "discover",
-      "last4": "8792"
-    },
-    "created": "2026-09-09T14:42:00.000Z",
-    "description": "Subscription update"
-  },
-  {
     "id": "pi_3OXttGYNon81Tuo2eNlrtTAN",
     "amount": 31799,
     "currency": "usd",
@@ -7985,6 +8089,24 @@
     },
     "created": "2026-09-09T14:18:52.000Z",
     "description": "Subscription creation"
+  },
+  {
+    "id": "pi_3d5SDRZw2ekCPSmasKbPFTA1",
+    "amount": 1299,
+    "currency": "usd",
+    "status": "refunded",
+    "customer": {
+      "name": "Aria Taylor",
+      "email": "ataylor@example.com"
+    },
+    "method": {
+      "type": "ach",
+      "bankName": "Capital One",
+      "last4": "0614"
+    },
+    "created": "2026-09-09T13:47:18.000Z",
+    "description": "Plan upgrade",
+    "refundedAt": "2026-09-13T21:02:00.438Z"
   },
   {
     "id": "pi_3HgWtQcVycbPAy4rUMZdRBI1",
@@ -8039,26 +8161,43 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_3mp4FPs1pYvAuFY3LADL6LcW",
-    "amount": 2228,
-    "currency": "brl",
+    "id": "pi_3kUQU7JSVyU89EGUwVTuH0gZ",
+    "amount": 31767,
+    "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "Noah Thompson",
-      "email": "noah_t@example.com"
+      "name": "Elijah Taylor",
+      "email": "etaylor@example.com"
     },
     "method": {
       "type": "card",
       "brand": "visa",
-      "last4": "7881"
+      "last4": "5539"
     },
-    "created": "2026-09-09T00:59:13.000Z",
+    "created": "2026-09-09T00:43:15.000Z",
+    "description": "Subscription update"
+  },
+  {
+    "id": "pi_3NvIe4QpsBgTCuniPyWLZe37",
+    "amount": 1799,
+    "currency": "gbp",
+    "status": "succeeded",
+    "customer": {
+      "name": "Harper Garcia",
+      "email": "harper_g@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "amex",
+      "last4": "7298"
+    },
+    "created": "2026-09-09T00:21:39.000Z",
     "description": "Subscription update"
   },
   {
     "id": "pi_3PSp8OpDWkphRyofifYzaFKp",
     "amount": 13579,
-    "currency": "gbp",
+    "currency": "eur",
     "status": "failed",
     "customer": {
       "name": "Ava Jones",
@@ -8159,6 +8298,23 @@
     "description": "Subscription update"
   },
   {
+    "id": "pi_3JDZnuAGTZ31gYWPRGeCAgsM",
+    "amount": 65965,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Daniel Young",
+      "email": "dyoung@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "visa",
+      "last4": "7903"
+    },
+    "created": "2026-09-08T17:51:38.000Z",
+    "description": "Subscription update"
+  },
+  {
     "id": "pi_3weUmEEy2U6CgwXmP9v1hZR2",
     "amount": 21346,
     "currency": "usd",
@@ -8175,22 +8331,6 @@
     },
     "created": "2026-09-08T15:36:35.000Z",
     "description": "Subscription update"
-  },
-  {
-    "id": "pi_3gZKe2m778WfUVg6LKe0Fscc",
-    "amount": 1500,
-    "currency": "gbp",
-    "status": "succeeded",
-    "customer": {
-      "name": "Arthur Silva",
-      "email": "arthur.silva@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "6599"
-    },
-    "created": "2026-09-08T14:33:36.000Z"
   },
   {
     "id": "pi_3qg4b2OOmP8oVPZOY2hxp65d",
@@ -8210,20 +8350,21 @@
     "description": "Subscription creation"
   },
   {
-    "id": "pi_3GdJORqVNVQLfxhwN4GmixvM",
-    "amount": 8500,
+    "id": "pi_3pERGqEvA8m0om5SS0uvcvFo",
+    "amount": 1599,
     "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "Samuel Davis",
-      "email": "samuel.davis@example.com"
+      "name": "Arjun Tanaka",
+      "email": "atanaka@example.com"
     },
     "method": {
       "type": "card",
       "brand": "visa",
-      "last4": "6403"
+      "last4": "5036"
     },
-    "created": "2026-09-08T12:34:43.000Z"
+    "created": "2026-09-08T12:49:07.000Z",
+    "description": "Subscription update"
   },
   {
     "id": "pi_31Rkpkswnb2X4hJtN0BbSCjy",
@@ -8243,21 +8384,21 @@
     "description": "Subscription creation"
   },
   {
-    "id": "pi_3XHIH19OneZcFZrgQ5kiGGCY",
-    "amount": 2699,
-    "currency": "aud",
-    "status": "pending",
+    "id": "pi_36ojgC6S27JYoLB3gJdCTDRh",
+    "amount": 11288,
+    "currency": "usd",
+    "status": "succeeded",
     "customer": {
-      "name": "Omar Davis",
-      "email": "omardavis99@example.com"
+      "name": "Henry Anderson",
+      "email": "henryanderson52@example.com"
     },
     "method": {
       "type": "wallet",
-      "wallet": "google_pay",
+      "wallet": "apple_pay",
       "brand": "visa",
-      "last4": "9602"
+      "last4": "4242"
     },
-    "created": "2026-09-07T22:17:01.000Z"
+    "created": "2026-09-08T08:07:02.000Z"
   },
   {
     "id": "pi_3rLoW9YFfFXjSQzcd0CMu23K",
@@ -8362,6 +8503,24 @@
     "description": "Subscription update"
   },
   {
+    "id": "pi_3q9FtecRTBLmI3nhyNVMb806",
+    "amount": 49599,
+    "currency": "gbp",
+    "status": "succeeded",
+    "customer": {
+      "name": "Samuel Anderson",
+      "email": "samuelanderson92@example.com"
+    },
+    "method": {
+      "type": "wallet",
+      "wallet": "apple_pay",
+      "brand": "mastercard",
+      "last4": "4734"
+    },
+    "created": "2026-09-07T03:48:36.000Z",
+    "description": "Subscription update"
+  },
+  {
     "id": "pi_3TxUBV5NeJnZ8Nwfw4JNlw1s",
     "amount": 36999,
     "currency": "eur",
@@ -8394,6 +8553,22 @@
     },
     "created": "2026-09-07T02:46:29.000Z",
     "description": "One-time purchase"
+  },
+  {
+    "id": "pi_3AnlCdSIhHXJQUGWmVUVNJrC",
+    "amount": 10299,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Priya Santos",
+      "email": "psantos@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "visa",
+      "last4": "1644"
+    },
+    "created": "2026-09-06T19:45:13.000Z"
   },
   {
     "id": "pi_3XXty2YyD0E3cei7QQ1gXYTt",
@@ -8432,21 +8607,22 @@
     "failureReason": "Card velocity exceeded"
   },
   {
-    "id": "pi_3qNDMo6YUZeMWFB7FIDABPri",
-    "amount": 2099,
+    "id": "pi_3uXR3w9zftZ5n6HcbdZW36oS",
+    "amount": 1900,
     "currency": "usd",
-    "status": "succeeded",
+    "status": "failed",
     "customer": {
-      "name": "Julian Anderson",
-      "email": "julian.anderson@example.com"
+      "name": "Evelyn Sato",
+      "email": "esato@example.com"
     },
     "method": {
       "type": "card",
-      "brand": "amex",
-      "last4": "2454"
+      "brand": "visa",
+      "last4": "0861"
     },
-    "created": "2026-09-05T21:43:41.000Z",
-    "description": "Subscription update"
+    "created": "2026-09-05T20:57:28.000Z",
+    "description": "Subscription update",
+    "failureReason": "Generic decline"
   },
   {
     "id": "pi_3h9i3bj2bzoiM84KEvqN7r7T",
@@ -8498,37 +8674,21 @@
     "created": "2026-09-05T12:32:41.000Z"
   },
   {
-    "id": "pi_3yiJ82SPylC9zLrYciY2Bysg",
-    "amount": 138652,
-    "currency": "eur",
+    "id": "pi_3hm4xDLQr3BEdCbGNhsOG5uw",
+    "amount": 6000,
+    "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "Amelia Clark",
-      "email": "amelia_c@example.com"
+      "name": "Camila Martin",
+      "email": "camila_m@example.com"
     },
     "method": {
       "type": "card",
       "brand": "mastercard",
-      "last4": "5915"
+      "last4": "4625"
     },
-    "created": "2026-09-04T23:14:08.000Z",
-    "description": "Subscription creation"
-  },
-  {
-    "id": "pi_3oRTpvQlRevvjBH7DPEmBSwf",
-    "amount": 8582,
-    "currency": "gbp",
-    "status": "pending",
-    "customer": {
-      "name": "Priya Martinez",
-      "email": "priya_m@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "6332"
-    },
-    "created": "2026-09-04T23:00:11.000Z"
+    "created": "2026-09-04T21:28:52.000Z",
+    "description": "Subscription update"
   },
   {
     "id": "pi_3GD0wwvJsXR2mAoCXktrxwin",
@@ -8550,23 +8710,6 @@
     "refundedAt": "2026-09-11T09:20:15.329Z"
   },
   {
-    "id": "pi_30xoyS8Q4j4OQmx1C12C7ztu",
-    "amount": 2299,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Elijah Patel",
-      "email": "elijah_p@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "mastercard",
-      "last4": "4726"
-    },
-    "created": "2026-09-04T20:37:57.000Z",
-    "description": "Subscription update"
-  },
-  {
     "id": "pi_3ZrQcwYG92oR4If5TLISPkpe",
     "amount": 7163,
     "currency": "usd",
@@ -8585,6 +8728,24 @@
     "description": "Subscription creation"
   },
   {
+    "id": "pi_3zKmkzQWur64sP8lG7K40xnh",
+    "amount": 1400,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Mateo White",
+      "email": "mwhite@example.com"
+    },
+    "method": {
+      "type": "wallet",
+      "wallet": "google_pay",
+      "brand": "visa",
+      "last4": "9898"
+    },
+    "created": "2026-09-04T14:31:31.000Z",
+    "description": "Subscription update"
+  },
+  {
     "id": "pi_3B4Rba5izQDG4AL9McBcoKr1",
     "amount": 30400,
     "currency": "usd",
@@ -8599,6 +8760,23 @@
       "last4": "3263"
     },
     "created": "2026-09-04T14:09:44.000Z",
+    "description": "Subscription update"
+  },
+  {
+    "id": "pi_3bkI0qT8Wtgpng3DP4e9CAP5",
+    "amount": 33499,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Nora Young",
+      "email": "nora_y@example.com"
+    },
+    "method": {
+      "type": "ach",
+      "bankName": "Bank of America",
+      "last4": "3598"
+    },
+    "created": "2026-09-04T13:05:59.000Z",
     "description": "Subscription update"
   },
   {
@@ -8653,10 +8831,43 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_3D9ro02RCQiL1m1um9GVQYvK",
-    "amount": 2844,
+    "id": "pi_3WfUVg6LKe0FsccLQqehOo1D",
+    "amount": 17600,
     "currency": "usd",
-    "status": "failed",
+    "status": "pending",
+    "customer": {
+      "name": "Liam Martinez",
+      "email": "liam_m@example.com"
+    },
+    "method": {
+      "type": "ach",
+      "bankName": "JPMorgan Chase",
+      "last4": "6417"
+    },
+    "created": "2026-09-03T20:39:29.000Z"
+  },
+  {
+    "id": "pi_3ajC6DHMqN1EWSNCjHJX96Ol",
+    "amount": 29035,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Mateo White",
+      "email": "mwhite@example.com"
+    },
+    "method": {
+      "type": "ach",
+      "bankName": "Wells Fargo",
+      "last4": "7338"
+    },
+    "created": "2026-09-03T19:58:51.000Z",
+    "description": "One-time purchase"
+  },
+  {
+    "id": "pi_3IKqKaKwiypa5Bs5LXBevkJA",
+    "amount": 16700,
+    "currency": "gbp",
+    "status": "succeeded",
     "customer": {
       "name": "Lars Moore",
       "email": "lmoore@example.com"
@@ -8664,28 +8875,10 @@
     "method": {
       "type": "card",
       "brand": "visa",
-      "last4": "4346"
+      "last4": "9936"
     },
-    "created": "2026-09-03T19:05:21.000Z",
-    "description": "Subscription update",
-    "failureReason": "Generic decline"
-  },
-  {
-    "id": "pi_39djGMnzBGshCP3Xf4hVmu8q",
-    "amount": 33700,
-    "currency": "eur",
-    "status": "succeeded",
-    "customer": {
-      "name": "Yuki Walker",
-      "email": "yukiwalker50@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "discover",
-      "last4": "2211"
-    },
-    "created": "2026-09-03T15:08:33.000Z",
-    "description": "Subscription creation"
+    "created": "2026-09-03T19:02:16.000Z",
+    "description": "One-time purchase"
   },
   {
     "id": "pi_3SS9rDEXyGoIMuBAfwp6drPI",
@@ -8722,38 +8915,20 @@
     "description": "Plan upgrade"
   },
   {
-    "id": "pi_3kprG0OXBP8QqvsseoAiKYrm",
-    "amount": 5043,
-    "currency": "usd",
+    "id": "pi_3lrFhGUSsoEnbect6quk30Vu",
+    "amount": 52047,
+    "currency": "eur",
     "status": "succeeded",
     "customer": {
-      "name": "Ava Lee",
-      "email": "ava_l@example.com"
+      "name": "Omar Hernandez",
+      "email": "omar.hernandez@example.com"
     },
     "method": {
       "type": "card",
-      "brand": "visa",
-      "last4": "3409"
+      "brand": "discover",
+      "last4": "7250"
     },
-    "created": "2026-09-03T12:03:16.000Z",
-    "description": "Subscription update"
-  },
-  {
-    "id": "pi_3ySX4oN2WlSg7cPBvUvjrzDM",
-    "amount": 302600,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Daniel Young",
-      "email": "dyoung@example.com"
-    },
-    "method": {
-      "type": "wallet",
-      "wallet": "apple_pay",
-      "brand": "visa",
-      "last4": "6631"
-    },
-    "created": "2026-09-03T10:06:44.000Z",
+    "created": "2026-09-03T05:10:22.000Z",
     "description": "Subscription update"
   },
   {
@@ -8808,20 +8983,21 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_3dAQYE71rtVneOotJogdnSq0",
-    "amount": 29300,
-    "currency": "eur",
+    "id": "pi_3DLQn8CS8bw2ROwRFjYbZiv4",
+    "amount": 7599,
+    "currency": "gbp",
     "status": "succeeded",
     "customer": {
-      "name": "Fatima Martin",
-      "email": "fatima_m@example.com"
+      "name": "Mateo Jones",
+      "email": "mateojones13@example.com"
     },
     "method": {
       "type": "card",
-      "brand": "discover",
-      "last4": "2266"
+      "brand": "mastercard",
+      "last4": "3009"
     },
-    "created": "2026-09-02T18:54:32.000Z"
+    "created": "2026-09-02T15:50:03.000Z",
+    "description": "Subscription update"
   },
   {
     "id": "pi_38tPFT6AI33XMeJYrAeKSJHI",
@@ -8839,40 +9015,6 @@
     },
     "created": "2026-09-02T14:47:40.000Z",
     "description": "Subscription creation"
-  },
-  {
-    "id": "pi_3XrWBJuLrWsRqG1ukZx2ypZj",
-    "amount": 1078,
-    "currency": "eur",
-    "status": "succeeded",
-    "customer": {
-      "name": "Priya Thompson",
-      "email": "priyathompson98@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "amex",
-      "last4": "5904"
-    },
-    "created": "2026-09-02T13:59:08.000Z",
-    "description": "Subscription update"
-  },
-  {
-    "id": "pi_3jBvIIG2OunzmRJX9SX7DItf",
-    "amount": 1599,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Camila Thompson",
-      "email": "camila_t@example.com"
-    },
-    "method": {
-      "type": "ach",
-      "bankName": "Citibank",
-      "last4": "0524"
-    },
-    "created": "2026-09-02T13:50:40.000Z",
-    "description": "Subscription update"
   },
   {
     "id": "pi_3Oz856g0uNypTYDmdRNgL00j",
@@ -8926,40 +9068,6 @@
     "failureReason": "Insufficient funds"
   },
   {
-    "id": "pi_3VOZhqymabGLJPv21i0b5hka",
-    "amount": 1004,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Ingrid Miller",
-      "email": "imiller@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "8975"
-    },
-    "created": "2026-09-01T22:50:00.000Z",
-    "description": "Plan upgrade"
-  },
-  {
-    "id": "pi_3QWEX6X1O64nWeghv1B6wYcK",
-    "amount": 1699,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Daniel Rodriguez",
-      "email": "drodriguez@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "4754"
-    },
-    "created": "2026-09-01T17:42:34.000Z",
-    "description": "Subscription update"
-  },
-  {
     "id": "pi_3fnz4hMjIwWrW0N0DZFe072L",
     "amount": 10900,
     "currency": "aud",
@@ -8994,22 +9102,22 @@
     "created": "2026-09-01T17:28:13.000Z"
   },
   {
-    "id": "pi_34RzP0mqYF6QAQ5VC2xyn3l5",
-    "amount": 227945,
-    "currency": "usd",
+    "id": "pi_3s5ifim37bZAXzeqrnYzwUpl",
+    "amount": 300240,
+    "currency": "jpy",
     "status": "succeeded",
     "customer": {
-      "name": "Leo Lopez",
-      "email": "leo.lopez@example.com"
+      "name": "Aria Johnson",
+      "email": "aria_j@example.com"
     },
     "method": {
       "type": "wallet",
-      "wallet": "google_pay",
+      "wallet": "apple_pay",
       "brand": "visa",
-      "last4": "7268"
+      "last4": "5849"
     },
-    "created": "2026-09-01T12:37:34.000Z",
-    "description": "Subscription update"
+    "created": "2026-09-01T15:27:46.000Z",
+    "description": "Subscription creation"
   },
   {
     "id": "pi_3SYhPnmtn1PGpnsi3vEs4a4W",
@@ -9063,40 +9171,6 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_3Aqh32EvVdEELJOoDSaNTTrk",
-    "amount": 5870,
-    "currency": "jpy",
-    "status": "pending",
-    "customer": {
-      "name": "James Young",
-      "email": "james.young@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "mastercard",
-      "last4": "8479"
-    },
-    "created": "2026-08-31T17:41:14.000Z",
-    "description": "Subscription update"
-  },
-  {
-    "id": "pi_3X6vEuPijKmwDPIYudbX5Tod",
-    "amount": 2700,
-    "currency": "eur",
-    "status": "succeeded",
-    "customer": {
-      "name": "Liam Jackson",
-      "email": "liamjackson35@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "1031"
-    },
-    "created": "2026-08-31T15:20:43.000Z",
-    "description": "Subscription update"
-  },
-  {
     "id": "pi_3StRVRbz7QJiH89WCC0WaZ3c",
     "amount": 3199,
     "currency": "usd",
@@ -9114,20 +9188,22 @@
     "failureReason": "Insufficient funds"
   },
   {
-    "id": "pi_3wcZMN2yxBnWaflnpps0XLQx",
-    "amount": 6099,
-    "currency": "aud",
-    "status": "succeeded",
+    "id": "pi_3nOhbWGsFCrogxQIkNRRLbbD",
+    "amount": 11928,
+    "currency": "usd",
+    "status": "failed",
     "customer": {
-      "name": "Mia Robinson",
-      "email": "mia_r@example.com"
+      "name": "Camila Moore",
+      "email": "camila.moore@example.com"
     },
     "method": {
       "type": "card",
-      "brand": "visa",
-      "last4": "3203"
+      "brand": "mastercard",
+      "last4": "5810"
     },
-    "created": "2026-08-31T14:31:56.000Z"
+    "created": "2026-08-31T13:55:48.000Z",
+    "description": "Subscription update",
+    "failureReason": "Insufficient funds"
   },
   {
     "id": "pi_35Dyg1MlceUiGPxgFvhRnqwy",
@@ -9164,24 +9240,6 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_3bLWqfO3YaDYqdME1ApLRxaF",
-    "amount": 7190,
-    "currency": "brl",
-    "status": "succeeded",
-    "customer": {
-      "name": "Kenji Clark",
-      "email": "kenji.clark@example.com"
-    },
-    "method": {
-      "type": "wallet",
-      "wallet": "apple_pay",
-      "brand": "visa",
-      "last4": "1235"
-    },
-    "created": "2026-08-30T22:16:11.000Z",
-    "description": "Subscription creation"
-  },
-  {
     "id": "pi_3MoX4VM0LDKM3J8lRl4AfIe0",
     "amount": 3899,
     "currency": "usd",
@@ -9197,6 +9255,22 @@
     },
     "created": "2026-08-30T21:40:28.000Z",
     "description": "Subscription update"
+  },
+  {
+    "id": "pi_3IoX47wV8NlsmYw1HBXgUMc2",
+    "amount": 23199,
+    "currency": "gbp",
+    "status": "succeeded",
+    "customer": {
+      "name": "Samuel Martinez",
+      "email": "smartinez@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "mastercard",
+      "last4": "1704"
+    },
+    "created": "2026-08-30T19:50:56.000Z"
   },
   {
     "id": "pi_3kHYz1JQtx4k57J73eU3G3wZ",
@@ -9215,55 +9289,21 @@
     "created": "2026-08-30T18:11:15.000Z"
   },
   {
-    "id": "pi_3e8HuS97nZfNNk8HV7S9kE2p",
-    "amount": 2099,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Liam Perez",
-      "email": "lperez@example.com"
-    },
-    "method": {
-      "type": "ach",
-      "bankName": "Capital One",
-      "last4": "9540"
-    },
-    "created": "2026-08-30T16:56:56.000Z",
-    "description": "Payment for Invoice"
-  },
-  {
-    "id": "pi_32I6JulaQh2dUlrFhGUSsoEn",
-    "amount": 34699,
+    "id": "pi_3wd0zcvzz73VM0r5yaBgMXO6",
+    "amount": 1199,
     "currency": "usd",
     "status": "pending",
     "customer": {
-      "name": "Daniel White",
-      "email": "dwhite@example.com"
+      "name": "Priya Williams",
+      "email": "priyawilliams17@example.com"
     },
     "method": {
       "type": "card",
       "brand": "mastercard",
-      "last4": "8953"
+      "last4": "8810"
     },
-    "created": "2026-08-30T01:31:49.000Z",
-    "description": "Subscription update"
-  },
-  {
-    "id": "pi_3SklPI67Dhm4xDLQr3BEdCbG",
-    "amount": 6199,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Elijah Lee",
-      "email": "elijah_l@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "mastercard",
-      "last4": "3885"
-    },
-    "created": "2026-08-30T00:32:47.000Z",
-    "description": "Plan upgrade"
+    "created": "2026-08-30T12:34:53.000Z",
+    "description": "Payment for Invoice"
   },
   {
     "id": "pi_3oDKezXRNBeLszxqqhiKwF2d",
@@ -9282,21 +9322,37 @@
     "created": "2026-08-29T23:21:17.000Z"
   },
   {
-    "id": "pi_3ka3vDNvIe4QpsBgTCuniPyW",
-    "amount": 22544,
-    "currency": "usd",
-    "status": "succeeded",
+    "id": "pi_3XWeO7PYglGuca2lECmRAqXg",
+    "amount": 8499,
+    "currency": "eur",
+    "status": "pending",
     "customer": {
-      "name": "Evelyn Gonzalez",
-      "email": "evelyn_g@example.com"
+      "name": "Arthur Silva",
+      "email": "arthur.silva@example.com"
     },
     "method": {
       "type": "card",
-      "brand": "mastercard",
-      "last4": "0551"
+      "brand": "visa",
+      "last4": "6830"
     },
-    "created": "2026-08-29T20:45:30.000Z",
-    "description": "Payment for Invoice"
+    "created": "2026-08-29T17:16:08.000Z"
+  },
+  {
+    "id": "pi_3BsP81P8zBTLHvSbtiBWpTT2",
+    "amount": 1200,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Chloe Miller",
+      "email": "cmiller@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "amex",
+      "last4": "3001"
+    },
+    "created": "2026-08-29T14:09:02.000Z",
+    "description": "Subscription update"
   },
   {
     "id": "pi_3pRK7Q5yMZcDns4kRzlAuiK5",
@@ -9316,45 +9372,9 @@
     "description": "Payment for Invoice"
   },
   {
-    "id": "pi_3vnfcgT7fvzyqCilsrUOB08V",
-    "amount": 7240,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Mateo White",
-      "email": "mwhite@example.com"
-    },
-    "method": {
-      "type": "wallet",
-      "wallet": "apple_pay",
-      "brand": "visa",
-      "last4": "6251"
-    },
-    "created": "2026-08-28T23:12:58.000Z",
-    "description": "Subscription update"
-  },
-  {
-    "id": "pi_38nn1BPslVpTJAo6b1X6Mrzp",
-    "amount": 15746,
-    "currency": "usd",
-    "status": "pending",
-    "customer": {
-      "name": "Arjun Williams",
-      "email": "arjun_w@example.com"
-    },
-    "method": {
-      "type": "wallet",
-      "wallet": "apple_pay",
-      "brand": "visa",
-      "last4": "1517"
-    },
-    "created": "2026-08-28T21:43:42.000Z",
-    "description": "Subscription update"
-  },
-  {
     "id": "pi_3XsYnLdLbAaITGlOz56HmURK",
     "amount": 3300,
-    "currency": "cad",
+    "currency": "gbp",
     "status": "succeeded",
     "customer": {
       "name": "Olivia Lee",
@@ -9386,20 +9406,21 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_3zvdJlnyDh9BABUMvo5mY5XQ",
-    "amount": 21599,
+    "id": "pi_3SJH05lfdXmXQcyDhTr4VZDc",
+    "amount": 19499,
     "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "Yuki Davis",
-      "email": "yukidavis50@example.com"
+      "name": "Nora Lee",
+      "email": "nora_l@example.com"
     },
     "method": {
-      "type": "card",
-      "brand": "discover",
-      "last4": "1937"
+      "type": "ach",
+      "bankName": "JPMorgan Chase",
+      "last4": "2258"
     },
-    "created": "2026-08-28T20:08:22.000Z"
+    "created": "2026-08-28T19:44:52.000Z",
+    "description": "Subscription update"
   },
   {
     "id": "pi_3dIL9abyjjISFDNbORKoaZIG",
@@ -9436,21 +9457,21 @@
     "description": "Payment for Invoice"
   },
   {
-    "id": "pi_3UTAU3pmEDLQn8CS8bw2ROwR",
-    "amount": 3246,
-    "currency": "eur",
+    "id": "pi_36ML0KYnm2RtPi9CF61CfV2h",
+    "amount": 9899,
+    "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "Sofia Lopez",
-      "email": "slopez@example.com"
+      "name": "Camila Young",
+      "email": "camilayoung74@example.com"
     },
     "method": {
-      "type": "card",
-      "brand": "mastercard",
-      "last4": "6109"
+      "type": "ach",
+      "bankName": "STRIPE TEST BANK",
+      "last4": "8592"
     },
-    "created": "2026-08-28T18:16:32.000Z",
-    "description": "Payment for Invoice"
+    "created": "2026-08-28T17:32:10.000Z",
+    "description": "Subscription update"
   },
   {
     "id": "pi_3mycXZ9pB1sLcPGdYSNf5CTV",
@@ -9472,7 +9493,7 @@
   {
     "id": "pi_3Ejxq9fufg8GCuI9ttiNZ8m9",
     "amount": 6099,
-    "currency": "brl",
+    "currency": "cad",
     "status": "pending",
     "customer": {
       "name": "Priya Williams",
@@ -9488,7 +9509,7 @@
   {
     "id": "pi_35GwdTBSMfWZytCiJHrQBTa8",
     "amount": 1199,
-    "currency": "gbp",
+    "currency": "eur",
     "status": "succeeded",
     "customer": {
       "name": "Camila Thompson",
@@ -9502,6 +9523,41 @@
     },
     "created": "2026-08-28T12:25:19.000Z",
     "description": "One-time purchase"
+  },
+  {
+    "id": "pi_3RevvjBH7DPEmBSwfA4idkqq",
+    "amount": 108299,
+    "currency": "eur",
+    "status": "succeeded",
+    "customer": {
+      "name": "Evelyn Johnson",
+      "email": "ejohnson@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "amex",
+      "last4": "7346"
+    },
+    "created": "2026-08-28T03:22:39.000Z",
+    "description": "Subscription update"
+  },
+  {
+    "id": "pi_3bCr6LJkDZP1c10HSaTyQYTk",
+    "amount": 1300,
+    "currency": "eur",
+    "status": "succeeded",
+    "customer": {
+      "name": "Camila Young",
+      "email": "camilayoung74@example.com"
+    },
+    "method": {
+      "type": "wallet",
+      "wallet": "google_pay",
+      "brand": "visa",
+      "last4": "6236"
+    },
+    "created": "2026-08-28T00:51:04.000Z",
+    "description": "Subscription creation"
   },
   {
     "id": "pi_34qffavxNNjDseaHkIzdat0a",
@@ -9538,43 +9594,9 @@
     "description": "Payment for Invoice"
   },
   {
-    "id": "pi_3rEJPQVMfs4FtgzSJ9jws2bt",
-    "amount": 7999,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Kenji Tanaka",
-      "email": "kenji_t@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "4242"
-    },
-    "created": "2026-08-27T22:01:18.000Z",
-    "description": "Subscription update"
-  },
-  {
-    "id": "pi_3qt6OvHryTq9Wac21JUh3un5",
-    "amount": 6900,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Arjun Williams",
-      "email": "arjun_w@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "mastercard",
-      "last4": "5085"
-    },
-    "created": "2026-08-27T19:37:33.000Z",
-    "description": "Subscription update"
-  },
-  {
     "id": "pi_3Zjzji4O3ZAh151B9bkXrlLQ",
     "amount": 2799,
-    "currency": "aud",
+    "currency": "brl",
     "status": "refunded",
     "customer": {
       "name": "Mateo Jones",
@@ -9608,23 +9630,6 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_3r954BtOVHfD60QmQcTrNAIZ",
-    "amount": 20547,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Theo Robinson",
-      "email": "theo_r@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "mastercard",
-      "last4": "2424"
-    },
-    "created": "2026-08-27T17:18:33.000Z",
-    "description": "Subscription update"
-  },
-  {
     "id": "pi_36xhIZTbVCsTtmXE0UhAPywu",
     "amount": 15499,
     "currency": "usd",
@@ -9639,23 +9644,6 @@
       "last4": "0655"
     },
     "created": "2026-08-27T16:50:12.000Z"
-  },
-  {
-    "id": "pi_3ATuh7RE8yAvLg3clNGBmxqX",
-    "amount": 10187,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Kenji Clark",
-      "email": "kenji.clark@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "7527"
-    },
-    "created": "2026-08-27T15:09:07.000Z",
-    "description": "Subscription update"
   },
   {
     "id": "pi_3Zh8yZWU5Qe0QTAkCiAhN05A",
@@ -9691,6 +9679,23 @@
     "description": "Subscription update"
   },
   {
+    "id": "pi_3CWh6nFtRzvMr2V3Hqh8XIG8",
+    "amount": 8200,
+    "currency": "eur",
+    "status": "succeeded",
+    "customer": {
+      "name": "Lucas Walker",
+      "email": "lucas.walker@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "visa",
+      "last4": "9628"
+    },
+    "created": "2026-08-26T20:25:48.000Z",
+    "description": "Subscription update"
+  },
+  {
     "id": "pi_3cBPFHolxJ6WWpftt8BAx0WK",
     "amount": 3400,
     "currency": "eur",
@@ -9710,7 +9715,7 @@
   {
     "id": "pi_3cyZ4DFfKGKi2iJpYJaAUTzu",
     "amount": 4799,
-    "currency": "cad",
+    "currency": "gbp",
     "status": "failed",
     "customer": {
       "name": "Evelyn Garcia",
@@ -9758,23 +9763,6 @@
     "created": "2026-08-26T12:37:47.000Z",
     "description": "Subscription update",
     "failureReason": "Do not honor"
-  },
-  {
-    "id": "pi_3MyjlKPp43Zrhtxmib2YfvsZ",
-    "amount": 5500,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Leo Davis",
-      "email": "leo.davis@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "7596"
-    },
-    "created": "2026-08-25T22:48:58.000Z",
-    "description": "Subscription update"
   },
   {
     "id": "pi_3kfbr0wdA6WHxnAN8CQFjG5k",
@@ -9861,6 +9849,40 @@
     "created": "2026-08-25T18:30:38.000Z"
   },
   {
+    "id": "pi_3obTO4fTGBD9Y6ND15X3pkWc",
+    "amount": 45429,
+    "currency": "gbp",
+    "status": "succeeded",
+    "customer": {
+      "name": "Ingrid Jones",
+      "email": "ingrid.jones@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "mastercard",
+      "last4": "7072"
+    },
+    "created": "2026-08-25T17:47:43.000Z",
+    "description": "Subscription update"
+  },
+  {
+    "id": "pi_3nLwx1QqJ7l5EBH41v970OMm",
+    "amount": 2148,
+    "currency": "gbp",
+    "status": "succeeded",
+    "customer": {
+      "name": "Sofia Santos",
+      "email": "sofiasantos49@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "mastercard",
+      "last4": "1076"
+    },
+    "created": "2026-08-25T15:55:14.000Z",
+    "description": "Subscription creation"
+  },
+  {
     "id": "pi_3bf281dGHluTi1c9M6S2z15B",
     "amount": 2955,
     "currency": "aud",
@@ -9913,45 +9935,59 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_3V6yCs5ifim37bZAXzeqrnYz",
-    "amount": 186799,
-    "currency": "eur",
+    "id": "pi_3eg1mX4pHdCUaBYzDkn5G2MX",
+    "amount": 35501,
+    "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "Daniel Rodriguez",
-      "email": "drodriguez@example.com"
+      "name": "Ingrid Khan",
+      "email": "ingrid.khan@example.com"
     },
     "method": {
-      "type": "wallet",
-      "wallet": "apple_pay",
-      "brand": "mastercard",
-      "last4": "9999"
+      "type": "ach",
+      "bankName": "U.S. Bank",
+      "last4": "0068"
     },
-    "created": "2026-08-24T23:47:09.000Z",
-    "description": "Subscription update"
+    "created": "2026-08-25T07:13:14.000Z"
   },
   {
-    "id": "pi_3UhS2rV9ySnNfGh37NU3BJPz",
-    "amount": 2400,
+    "id": "pi_3DUcgLDUQCJ5IbaKCslqcqcG",
+    "amount": 28299,
     "currency": "usd",
-    "status": "refunded",
+    "status": "succeeded",
     "customer": {
-      "name": "Liam Jones",
-      "email": "liam.jones@example.com"
+      "name": "Omar Gonzalez",
+      "email": "omargonzalez53@example.com"
     },
     "method": {
       "type": "card",
       "brand": "visa",
-      "last4": "5827"
+      "last4": "2044"
     },
-    "created": "2026-08-24T22:08:22.000Z",
-    "description": "Payment for Invoice",
-    "refundedAt": "2026-08-26T00:36:27.451Z"
+    "created": "2026-08-25T00:53:11.000Z",
+    "description": "Plan upgrade"
+  },
+  {
+    "id": "pi_3mqYF6QAQ5VC2xyn3l5vyH5j",
+    "amount": 5699,
+    "currency": "eur",
+    "status": "succeeded",
+    "customer": {
+      "name": "Priya Anderson",
+      "email": "priyaanderson16@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "visa",
+      "last4": "7741"
+    },
+    "created": "2026-08-24T22:10:03.000Z",
+    "description": "Subscription update"
   },
   {
     "id": "pi_3CROou3JrHgKcOk2iiJTAwUR",
     "amount": 1206,
-    "currency": "gbp",
+    "currency": "eur",
     "status": "succeeded",
     "customer": {
       "name": "Camila Anderson",
@@ -9964,23 +10000,6 @@
     },
     "created": "2026-08-24T21:47:26.000Z",
     "description": "Subscription update"
-  },
-  {
-    "id": "pi_3I2PlrlzAHzSIbN5pwJsZfla",
-    "amount": 12799,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Sophia Garcia",
-      "email": "sgarcia@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "mastercard",
-      "last4": "2927"
-    },
-    "created": "2026-08-24T21:34:41.000Z",
-    "description": "Payment for Invoice"
   },
   {
     "id": "pi_3EfAfruGb816qtAVURSS8MRZ",
@@ -10000,9 +10019,26 @@
     "description": "Plan upgrade"
   },
   {
-    "id": "pi_3VXUhU2p1fa2WePxdVCoKWlD",
-    "amount": 1800,
-    "currency": "gbp",
+    "id": "pi_3dCatXKdtvOQVjeY8PcNUlhQ",
+    "amount": 3493,
+    "currency": "cad",
+    "status": "succeeded",
+    "customer": {
+      "name": "Nora Williams",
+      "email": "nora_w@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "visa",
+      "last4": "0982"
+    },
+    "created": "2026-08-24T16:01:06.000Z",
+    "description": "Payment for Invoice"
+  },
+  {
+    "id": "pi_3W8OwUYd2n8vIygdw22NnIk5",
+    "amount": 23074,
+    "currency": "cad",
     "status": "succeeded",
     "customer": {
       "name": "Harper Clark",
@@ -10011,61 +10047,27 @@
     "method": {
       "type": "card",
       "brand": "visa",
-      "last4": "8558"
+      "last4": "3491"
     },
-    "created": "2026-08-24T19:46:16.000Z",
+    "created": "2026-08-24T14:28:34.000Z",
     "description": "Subscription update"
   },
   {
-    "id": "pi_3Hu5ex0n2hIDK5FQxZ84N9Bp",
-    "amount": 27499,
+    "id": "pi_3hFjSwSC1Kszv38jdjrky16D",
+    "amount": 38199,
     "currency": "usd",
-    "status": "failed",
-    "customer": {
-      "name": "Julian Thomas",
-      "email": "jthomas@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "mastercard",
-      "last4": "7325"
-    },
-    "created": "2026-08-24T15:44:10.000Z",
-    "description": "Plan upgrade",
-    "failureReason": "Generic decline"
-  },
-  {
-    "id": "pi_3fchiGxdTPRyiswd0zcvzz73",
-    "amount": 8599,
-    "currency": "brl",
     "status": "succeeded",
     "customer": {
-      "name": "Isabella Johnson",
-      "email": "isabellajohnson65@example.com"
+      "name": "Omar Garcia",
+      "email": "omargarcia66@example.com"
     },
     "method": {
       "type": "card",
       "brand": "visa",
-      "last4": "4242"
+      "last4": "5771"
     },
-    "created": "2026-08-24T14:11:24.000Z",
-    "description": "Payment for Invoice"
-  },
-  {
-    "id": "pi_3dsCsb697HUI0UvRvR9AFWh3",
-    "amount": 491308,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Leo Anderson",
-      "email": "leo.anderson@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "0444"
-    },
-    "created": "2026-08-24T12:17:28.000Z"
+    "created": "2026-08-24T10:28:08.000Z",
+    "description": "Subscription creation"
   },
   {
     "id": "pi_3tHPKjZPwAbjHoithGZM7lfl",
@@ -10102,20 +10104,22 @@
     "description": "One-time purchase"
   },
   {
-    "id": "pi_36TdPDpuBmGa5JrSV8YBM1jB",
-    "amount": 1799,
-    "currency": "eur",
+    "id": "pi_3OxGecdV38EimCk74AyWQfEN",
+    "amount": 4999,
+    "currency": "usd",
     "status": "succeeded",
     "customer": {
-      "name": "Priya Anderson",
-      "email": "priyaanderson16@example.com"
+      "name": "Yuki Hernandez",
+      "email": "yukihernandez19@example.com"
     },
     "method": {
-      "type": "card",
+      "type": "wallet",
+      "wallet": "apple_pay",
       "brand": "visa",
-      "last4": "1813"
+      "last4": "7060"
     },
-    "created": "2026-08-23T18:18:44.000Z"
+    "created": "2026-08-23T17:57:49.000Z",
+    "description": "Plan upgrade"
   },
   {
     "id": "pi_3KQQzI2mp56Pin0odMIp5LkZ",
@@ -10135,6 +10139,23 @@
     "created": "2026-08-23T17:00:04.000Z",
     "description": "Subscription update",
     "refundedAt": "2026-09-02T07:23:29.066Z"
+  },
+  {
+    "id": "pi_3A4eftel1FQD4k5lPgnibey1",
+    "amount": 1276,
+    "currency": "eur",
+    "status": "succeeded",
+    "customer": {
+      "name": "Samuel Martinez",
+      "email": "smartinez@example.com"
+    },
+    "method": {
+      "type": "card",
+      "brand": "mastercard",
+      "last4": "4242"
+    },
+    "created": "2026-08-23T16:11:38.000Z",
+    "description": "Subscription update"
   },
   {
     "id": "pi_3Dmzb4qaUw0rS4JItMMcfzjH",
@@ -10170,22 +10191,6 @@
     "description": "Subscription update"
   },
   {
-    "id": "pi_3xcH6lnZlWGJF34Akk9bekiY",
-    "amount": 26800,
-    "currency": "usd",
-    "status": "succeeded",
-    "customer": {
-      "name": "Lars Williams",
-      "email": "lwilliams@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "visa",
-      "last4": "7193"
-    },
-    "created": "2026-08-23T01:46:18.000Z"
-  },
-  {
     "id": "pi_3MFJpvGzH7JSsteZ5b1TNvQf",
     "amount": 20000,
     "currency": "eur",
@@ -10218,6 +10223,24 @@
     },
     "created": "2026-08-22T21:25:56.000Z",
     "description": "Payment for Invoice"
+  },
+  {
+    "id": "pi_32RCQiL1m1um9GVQYvK7V4QH",
+    "amount": 35375,
+    "currency": "usd",
+    "status": "succeeded",
+    "customer": {
+      "name": "Emma Lewis",
+      "email": "elewis@example.com"
+    },
+    "method": {
+      "type": "wallet",
+      "wallet": "google_pay",
+      "brand": "mastercard",
+      "last4": "1039"
+    },
+    "created": "2026-08-22T21:00:31.000Z",
+    "description": "Subscription update"
   },
   {
     "id": "pi_3I8plDa39cpdOx3BjmuBPBbp",
@@ -10268,23 +10291,6 @@
       "last4": "6683"
     },
     "created": "2026-08-22T10:24:12.000Z",
-    "description": "Subscription update"
-  },
-  {
-    "id": "pi_3I5kxHlUgcId87Q1Q8q3ItrO",
-    "amount": 3440,
-    "currency": "eur",
-    "status": "succeeded",
-    "customer": {
-      "name": "Fatima Johnson",
-      "email": "fatimajohnson34@example.com"
-    },
-    "method": {
-      "type": "card",
-      "brand": "mastercard",
-      "last4": "6184"
-    },
-    "created": "2026-08-22T01:38:36.000Z",
     "description": "Subscription update"
   }
 ]

@@ -5,11 +5,13 @@ import {
   DATA_ANCHOR,
   DEFAULT_COUNT,
   DEFAULT_DAYS,
+  compareNewestFirst,
   generatePayments,
   mulberry32,
 } from '../scripts/lib/payments-generator';
 
 const DAY_MS = 86_400_000;
+const MIX_TOLERANCE = 0.03;
 const payments = generatePayments();
 
 function share(rows: Payment[], predicate: (p: Payment) => boolean): number {
@@ -60,10 +62,21 @@ describe('generatePayments', () => {
     }
   });
 
-  it('is sorted by created desc', () => {
+  it('is sorted by created desc, then id asc', () => {
     for (let i = 1; i < payments.length; i++) {
-      expect(payments[i - 1].created >= payments[i].created).toBe(true);
+      expect(compareNewestFirst(payments[i - 1], payments[i])).toBeLessThan(0);
     }
+  });
+
+  it('breaks created ties by id with locale-independent ordering', () => {
+    const created = '2026-11-19T12:00:00.000Z';
+    const [a, b] = [
+      { ...payments[0], id: 'pi_3B', created },
+      { ...payments[0], id: 'pi_3a', created },
+    ];
+    expect(compareNewestFirst(a, b)).toBeLessThan(0);
+    expect(compareNewestFirst(b, a)).toBeGreaterThan(0);
+    expect(compareNewestFirst(a, a)).toBe(0);
   });
 
   it('has more volume per day on weekdays than on weekends', () => {
@@ -79,7 +92,9 @@ describe('generatePayments', () => {
     ['failed', 0.09],
     ['refunded', 0.05],
   ] as const)('has about %s at %d', (status, target) => {
-    expect(share(payments, (p) => p.status === status)).toBeCloseTo(target, 1);
+    expect(Math.abs(share(payments, (p) => p.status === status) - target)).toBeLessThan(
+      MIX_TOLERANCE,
+    );
   });
 
   it.each([
@@ -87,17 +102,17 @@ describe('generatePayments', () => {
     ['ach', 0.12],
     ['wallet', 0.13],
   ] as const)('has about %s at %d', (type, target) => {
-    expect(share(payments, (p) => p.method.type === type)).toBeCloseTo(target, 1);
+    expect(Math.abs(share(payments, (p) => p.method.type === type) - target)).toBeLessThan(
+      MIX_TOLERANCE,
+    );
   });
 
-  it('uses usd for most payments and includes every currency', () => {
-    const usd = share(payments, (p) => p.currency === 'usd');
-    expect(usd).toBeGreaterThan(0.45);
-    for (const currency of ['eur', 'gbp', 'cad', 'brl', 'aud', 'jpy'] as const) {
-      const s = share(payments, (p) => p.currency === currency);
-      expect(s).toBeGreaterThan(0);
-      expect(s).toBeLessThan(usd);
-    }
+  it('orders currency volume usd, eur, gbp, cad, brl, aud, jpy', () => {
+    const order = ['usd', 'eur', 'gbp', 'cad', 'brl', 'aud', 'jpy'] as const;
+    const counts = order.map((c) => payments.filter((p) => p.currency === c).length);
+    expect(counts[0] / payments.length).toBeGreaterThan(0.45);
+    expect(counts.at(-1)).toBeGreaterThan(0);
+    expect([...counts].sort((x, y) => y - x)).toEqual(counts);
   });
 
   it('uses usd for every ACH debit', () => {
@@ -116,7 +131,9 @@ describe('generatePayments', () => {
     expect(yen.length).toBeGreaterThan(0);
     for (const p of yen) {
       expect(Number.isInteger(p.amount)).toBe(true);
-      expect(p.amount).toBeGreaterThanOrEqual(100);
+      expect(p.amount % 10).toBe(0);
+      expect(p.amount).toBeGreaterThanOrEqual(1_500);
+      expect(p.amount).toBeLessThanOrEqual(750_000);
     }
   });
 
