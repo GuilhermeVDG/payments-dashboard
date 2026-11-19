@@ -62,3 +62,36 @@ export function describeMethod(method: PaymentMethod): string {
       return assertNever(method);
   }
 }
+
+export interface DetailRow {
+  label: string;
+  value: string;
+}
+
+/** Rows for the details page "Payment method" section. */
+export function methodDetails(method: PaymentMethod): DetailRow[] {
+  const number = { label: 'Number', value: maskedLast4(method.last4) };
+  switch (method.type) {
+    case 'card':
+      return [
+        { label: 'Type', value: 'Card' },
+        { label: 'Brand', value: CARD_BRAND_LABELS[method.brand] },
+        number,
+      ];
+    case 'ach':
+      return [
+        { label: 'Type', value: 'ACH Direct Debit' },
+        { label: 'Bank', value: method.bankName },
+        { label: 'Account', value: maskedLast4(method.last4) },
+      ];
+    case 'wallet':
+      return [
+        { label: 'Type', value: 'Card' },
+        { label: 'Wallet', value: WALLET_LABELS[method.wallet] },
+        { label: 'Brand', value: CARD_BRAND_LABELS[method.brand] },
+        number,
+      ];
+    default:
+      return assertNever(method);
+  }
+}

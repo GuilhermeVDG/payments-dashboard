@@ -23,6 +23,8 @@ declare module '@tanstack/react-table' {
     className?: string;
     /** Pinned to the right edge while the table scrolls horizontally. */
     stickyRight?: boolean;
+    /** Clicks anywhere in this cell never open the payment (controls with padding). */
+    ignoreRowClick?: boolean;
   }
 }
 
@@ -61,12 +63,12 @@ export function createColumns(now: Date): TableOptions<Payment>['columns'] {
           onCheckedChange={(checked) => row.toggleSelected(checked)}
         />
       ),
-      meta: { className: 'select' },
+      meta: { className: 'select', ignoreRowClick: true },
     }),
     column.accessor('amount', {
       id: SORT_IDS.amount,
       header: 'Amount',
-      size: 84,
+      size: 100,
       sortDescFirst: true,
       cell: ({ row }) => (
         <AmountCell amount={row.original.amount} currency={row.original.currency} />
@@ -145,7 +147,7 @@ export function createColumns(now: Date): TableOptions<Payment>['columns'] {
       size: 44,
       header: () => <span className="sr-only">Actions</span>,
       cell: ({ row }) => <RowActions paymentId={row.original.id} />,
-      meta: { align: 'right', className: 'actions', stickyRight: true },
+      meta: { align: 'right', className: 'actions', stickyRight: true, ignoreRowClick: true },
     }),
   ];
 }

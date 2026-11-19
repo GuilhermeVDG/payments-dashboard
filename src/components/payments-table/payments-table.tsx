@@ -9,10 +9,12 @@ import {
   type SortingState,
   type Updater,
 } from '@tanstack/react-table';
-import { useMemo, useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { useMemo, useState, type MouseEvent } from 'react';
 import { isOneOf, type Payment } from '@/domain/payment';
 import { SORT_KEYS, isDefaultSortRules, type SortRule } from '@/domain/sort';
 import { SortIcon } from '@/components/ui/icons';
+import { paymentHref } from '@/domain/routes';
 import { createColumns } from './columns';
 
 interface PaymentsTableProps {
@@ -40,6 +42,19 @@ function isShiftClick(event: unknown): boolean {
 /** Pinned cells keep a solid background and a hairline on their left edge. */
 const STICKY_RIGHT =
   'sticky right-0 z-10 bg-surface shadow-[inset_1px_0_0_var(--color-border)] group-hover:bg-surface-hover group-data-[state=selected]:bg-surface-subtle';
+
+/** Clicks on controls inside a row keep their own behavior instead of opening the payment. */
+const INTERACTIVE =
+  'a, button, input, select, [role="checkbox"], [role="menuitem"], [role="menu"], [data-row-click="ignore"]';
+
+/** Only a plain primary click opens the payment; modified clicks and text selection do not. */
+function shouldOpenRow(event: MouseEvent<HTMLTableRowElement>): boolean {
+  if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+    return false;
+  }
+  if (event.target instanceof Element && event.target.closest(INTERACTIVE)) return false;
+  return !window.getSelection()?.toString();
+}
 
 const ARIA_SORT = { asc: 'ascending', desc: 'descending' } as const;
 
@@ -112,6 +127,7 @@ function HeaderCell({
 export function PaymentsTable({ rows, sort, onSortChange, now }: PaymentsTableProps) {
   const columns = useMemo(() => createColumns(now), [now]);
   const [rowSelection, setRowSelection] = useState<RowSelectionState>({});
+  const router = useRouter();
   const sorting = useMemo(() => toSortingState(sort), [sort]);
   const isDefaultSort = isDefaultSortRules(sort);
 
@@ -159,13 +175,18 @@ export function PaymentsTable({ rows, sort, onSortChange, now }: PaymentsTablePr
             <tr
               key={row.id}
               data-state={row.getIsSelected() ? 'selected' : undefined}
-              className="payments-table__row group border-b border-border hover:bg-surface-hover data-[state=selected]:bg-surface-subtle"
+              // Mouse convenience; keyboard users open the payment via the Payment ID link.
+              onClick={(event: MouseEvent<HTMLTableRowElement>) => {
+                if (shouldOpenRow(event)) router.push(paymentHref(row.original.id));
+              }}
+              className="payments-table__row group cursor-pointer border-b border-border hover:bg-surface-hover data-[state=selected]:bg-surface-subtle"
             >
               {row.getVisibleCells().map((cell) => {
                 const meta = cell.column.columnDef.meta;
                 return (
                   <td
                     key={cell.id}
+                    data-row-click={meta?.ignoreRowClick ? 'ignore' : undefined}
                     className={`payments-table__td payments-table__col--${meta?.className ?? cell.column.id} h-9 max-w-0 truncate px-2 align-middle ${meta?.align === 'right' ? 'text-right' : 'text-left'} ${meta?.stickyRight ? STICKY_RIGHT : ''}`}
                   >
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}

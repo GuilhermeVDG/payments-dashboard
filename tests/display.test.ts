@@ -1,5 +1,11 @@
 import { describe, expect, it } from 'vitest';
-import { describeMethod, maskedLast4, shortenPaymentId, STATUS_LABELS } from '@/domain/display';
+import {
+  describeMethod,
+  maskedLast4,
+  methodDetails,
+  shortenPaymentId,
+  STATUS_LABELS,
+} from '@/domain/display';
 
 describe('shortenPaymentId', () => {
   it('keeps the prefix, 3 characters, an ellipsis and the last 4', () => {
@@ -38,5 +44,28 @@ describe('describeMethod', () => {
 describe('STATUS_LABELS', () => {
   it('labels every status', () => {
     expect(Object.values(STATUS_LABELS)).toEqual(['Succeeded', 'Pending', 'Failed', 'Refunded']);
+  });
+});
+
+describe('methodDetails', () => {
+  it('describes each method type', () => {
+    expect(methodDetails({ type: 'card', brand: 'visa', last4: '4242' })).toEqual([
+      { label: 'Type', value: 'Card' },
+      { label: 'Brand', value: 'Visa' },
+      { label: 'Number', value: '•••• 4242' },
+    ]);
+    expect(methodDetails({ type: 'ach', bankName: 'Wells Fargo', last4: '6789' })).toEqual([
+      { label: 'Type', value: 'ACH Direct Debit' },
+      { label: 'Bank', value: 'Wells Fargo' },
+      { label: 'Account', value: '•••• 6789' },
+    ]);
+    expect(
+      methodDetails({ type: 'wallet', wallet: 'google_pay', brand: 'mastercard', last4: '4444' }),
+    ).toEqual([
+      { label: 'Type', value: 'Card' },
+      { label: 'Wallet', value: 'Google Pay' },
+      { label: 'Brand', value: 'Mastercard' },
+      { label: 'Number', value: '•••• 4444' },
+    ]);
   });
 });

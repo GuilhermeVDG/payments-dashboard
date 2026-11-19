@@ -122,3 +122,8 @@ export function isPayment(value: unknown): value is Payment {
   }
   return true;
 }
+
+/** Finds a payment by exact id. */
+export function findPayment(payments: readonly Payment[], id: string): Payment | undefined {
+  return payments.find((p) => p.id === id);
+}
