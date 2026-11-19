@@ -6,6 +6,7 @@
  *   ?date=7d | ?from=2026-11-01&to=2026-11-15
  *   ?status=failed,refunded&method=card,wallet
  *   ?amin=10&amax=500&acur=usd&q=4242
+ *   ?tab=disputed (Disputed / Uncaptured tabs)
  */
 import {
   createLoader,
@@ -22,6 +23,7 @@ import { validateAmountRange, type AmountFilter, type FilterState } from '@/doma
 import { DEFAULT_PAGE_SIZE, PAGE_SIZES } from '@/domain/paginate';
 import { CURRENCIES, METHOD_TYPES, STATUSES, isOneOf } from '@/domain/payment';
 import { DEFAULT_SORT, SORT_KEYS, normalizeSort, type SortRule } from '@/domain/sort';
+import { UNAVAILABLE_STATUS_TABS } from '@/domain/status-tabs';
 
 const SORT_DIRECTIONS = ['asc', 'desc'] as const;
 
@@ -72,6 +74,9 @@ export const parseAsLocalDate = createParser<string>({
   serialize: (value) => value,
 });
 
+/** Search waits this long after the last keystroke before filtering and writing the URL. */
+export const SEARCH_DEBOUNCE_MS = 200;
+
 export const paymentsSearchParams = {
   sort: parseAsSort.withDefault([...DEFAULT_SORT]),
   page: parseAsPage.withDefault(1),
@@ -85,6 +90,7 @@ export const paymentsSearchParams = {
   amax: parseAsAmount,
   acur: parseAsStringLiteral(CURRENCIES),
   q: parseAsString.withDefault(''),
+  tab: parseAsStringLiteral(UNAVAILABLE_STATUS_TABS),
 };
 
 export type PaymentsSearchParams = inferParserType<typeof paymentsSearchParams>;
@@ -100,6 +106,7 @@ export const FILTER_PARAM_KEYS = [
   'amax',
   'acur',
   'q',
+  'tab',
 ] as const satisfies readonly (keyof PaymentsSearchParams)[];
 
 /** Patch for `setQueryStates` that removes every filter and resets the page. */
@@ -113,6 +120,7 @@ export const CLEAR_FILTERS_PATCH = {
   amax: null,
   acur: null,
   q: null,
+  tab: null,
   page: null,
 } as const;
 
@@ -127,13 +135,21 @@ export function withFilterPatch(patch: FilterPatch): FilterPatch & { page: null 
 export const loadPaymentsSearchParams = createLoader(paymentsSearchParams);
 export const serializePaymentsSearchParams = createSerializer(paymentsSearchParams);
 
-function toDateFilter({ date, from, to }: PaymentsSearchParams): DateFilter {
+function toDateFilter({
+  date,
+  from,
+  to,
+}: Pick<PaymentsSearchParams, 'date' | 'from' | 'to'>): DateFilter {
   if ((from || to) && isValidCustomRange(from, to)) return { kind: 'custom', from, to };
   if (date) return { kind: 'preset', preset: date };
   return { kind: 'all' };
 }
 
-function toAmountFilter({ amin, amax, acur }: PaymentsSearchParams): AmountFilter {
+function toAmountFilter({
+  amin,
+  amax,
+  acur,
+}: Pick<PaymentsSearchParams, 'amin' | 'amax' | 'acur'>): AmountFilter {
   const valid = validateAmountRange(amin, amax) === null;
   return { min: valid ? amin : null, max: valid ? amax : null, currency: acur };
 }
@@ -142,12 +158,13 @@ function toAmountFilter({ amin, amax, acur }: PaymentsSearchParams): AmountFilte
  * Converts parsed URL values to domain filter state. A custom range wins over a
  * preset; an invalid custom or amount range is ignored rather than crashing.
  */
-export function toFilterState(params: PaymentsSearchParams): FilterState {
+export function toFilterState(params: Pick<PaymentsSearchParams, FilterParamKey>): FilterState {
   return {
     date: toDateFilter(params),
     status: params.status,
     method: params.method,
     amount: toAmountFilter(params),
     query: params.q,
+    statusTab: params.tab,
   };
 }

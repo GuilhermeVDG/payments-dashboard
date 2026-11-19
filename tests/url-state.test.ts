@@ -26,6 +26,7 @@ describe('URL state defaults', () => {
       amax: null,
       acur: null,
       q: '',
+      tab: null,
     });
     expect(toFilterState(load(''))).toEqual(EMPTY_FILTERS);
   });
@@ -53,6 +54,7 @@ describe('URL state round-trip', () => {
     'amin=10.5',
     'q=4242',
     'q=pi_3Nx',
+    'tab=disputed',
   ];
 
   it.each(examples)('round-trips ?%s', (query) => {
@@ -156,6 +158,11 @@ describe('toFilterState', () => {
       currency: 'usd',
     });
     expect(toFilterState(load('amin=-5')).amount.min).toBeNull();
+  });
+
+  it('maps the Disputed and Uncaptured tabs and ignores unknown tabs', () => {
+    expect(toFilterState(load('tab=uncaptured')).statusTab).toBe('uncaptured');
+    expect(toFilterState(load('tab=failed')).statusTab).toBeNull();
   });
 
   it('maps status, method and query', () => {

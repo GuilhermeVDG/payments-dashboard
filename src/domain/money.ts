@@ -59,3 +59,16 @@ export function formatAmount(minor: number, currency: CurrencyCode): string {
 export function formatCurrencyCode(currency: CurrencyCode): string {
   return currency.toUpperCase();
 }
+
+/**
+ * Converts an inclusive filter bound to minor units without widening it: a minimum
+ * rounds up and a maximum rounds down to the nearest representable amount
+ * (max 10.5 jpy -> 10 yen, min 10.005 usd -> 1001 cents).
+ */
+export function toMinorBound(major: number, currency: CurrencyCode, side: 'min' | 'max'): number {
+  if (!Number.isFinite(major)) {
+    throw new RangeError(`Amount must be a finite number, got ${major}`);
+  }
+  const scaled = Number((major * 10 ** currencyFractionDigits(currency)).toPrecision(15));
+  return (side === 'min' ? Math.ceil(scaled) : Math.floor(scaled)) || 0;
+}

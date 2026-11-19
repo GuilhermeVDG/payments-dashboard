@@ -5,6 +5,7 @@ import {
   formatCurrencyCode,
   toMajor,
   toMinor,
+  toMinorBound,
 } from '@/domain/money';
 
 describe('formatAmount', () => {
@@ -105,5 +106,24 @@ describe('formatCurrencyCode', () => {
   it('uppercases the ISO code', () => {
     expect(formatCurrencyCode('usd')).toBe('USD');
     expect(formatCurrencyCode('jpy')).toBe('JPY');
+  });
+});
+
+describe('toMinorBound', () => {
+  it('rounds a minimum up and a maximum down', () => {
+    expect(toMinorBound(10.005, 'usd', 'min')).toBe(1001);
+    expect(toMinorBound(10.005, 'usd', 'max')).toBe(1000);
+    expect(toMinorBound(10.5, 'jpy', 'min')).toBe(11);
+    expect(toMinorBound(10.5, 'jpy', 'max')).toBe(10);
+  });
+
+  it('keeps exact values and ignores float noise', () => {
+    expect(toMinorBound(19.99, 'usd', 'min')).toBe(1999);
+    expect(toMinorBound(19.99, 'usd', 'max')).toBe(1999);
+    expect(toMinorBound(0.1 + 0.2, 'usd', 'max')).toBe(30);
+  });
+
+  it('rejects non-finite input', () => {
+    expect(() => toMinorBound(Number.NaN, 'usd', 'min')).toThrow(RangeError);
   });
 });

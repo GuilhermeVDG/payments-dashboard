@@ -1,7 +1,8 @@
 import { isInDateRange, resolveDateRange, type DateFilter } from './dates';
-import { toMinor } from './money';
+import { toMinorBound } from './money';
 import type { Currency, Payment, PaymentMethodType, Status } from './payment';
 import { matchesSearch } from './search';
+import type { UnavailableStatusTab } from './status-tabs';
 
 /** Amount bounds are in major units (what the user types), inclusive. */
 export interface AmountFilter {
@@ -19,6 +20,8 @@ export interface FilterState {
   method: readonly PaymentMethodType[];
   amount: AmountFilter;
   query: string;
+  /** Disputed or Uncaptured tab: statuses this dataset has none of, so nothing matches. */
+  statusTab: UnavailableStatusTab | null;
 }
 
 export const EMPTY_AMOUNT_FILTER: AmountFilter = { min: null, max: null, currency: null };
@@ -29,6 +32,7 @@ export const EMPTY_FILTERS: FilterState = {
   method: [],
   amount: EMPTY_AMOUNT_FILTER,
   query: '',
+  statusTab: null,
 };
 
 export type AmountRangeError = 'invalid' | 'negative' | 'min-greater-than-max';
@@ -61,7 +65,8 @@ export function isFilterActive(filters: FilterState): boolean {
     filters.status.length > 0 ||
     filters.method.length > 0 ||
     isAmountFilterActive(filters.amount) ||
-    filters.query.trim() !== ''
+    filters.query.trim() !== '' ||
+    filters.statusTab !== null
   );
 }
 
@@ -78,8 +83,8 @@ function amountMatcher(amount: AmountFilter): (payment: Payment) => boolean {
     let cached = bounds.get(currency);
     if (!cached) {
       cached = {
-        min: amount.min === null ? null : toMinor(amount.min, currency),
-        max: amount.max === null ? null : toMinor(amount.max, currency),
+        min: amount.min === null ? null : toMinorBound(amount.min, currency, 'min'),
+        max: amount.max === null ? null : toMinorBound(amount.max, currency, 'max'),
       };
       bounds.set(currency, cached);
     }
@@ -102,6 +107,7 @@ export function applyFilters(
   filters: FilterState,
   now: Date,
 ): Payment[] {
+  if (filters.statusTab !== null) return [];
   const range = resolveDateRange(filters.date, now);
   const { min, max } = filters.amount;
   const amountValid = validateAmountRange(min, max) === null;
@@ -119,4 +125,18 @@ export function applyFilters(
       matchesAmount(p) &&
       matchesSearch(p, filters.query),
   );
+}
+
+/** Plain decimal, or comma thousands groups: `1250.5`, `1,250.50`. */
+const AMOUNT_INPUT_RE = /^(\d+|\d{1,3}(,\d{3})+)(\.\d+)?$/;
+
+/**
+ * Parses what the user typed in an amount field (major units). Empty means no
+ * bound; anything other than a plain non-negative decimal is `NaN`, which
+ * `validateAmountRange` reports as invalid. Commas are accepted only as thousands separators.
+ */
+export function parseAmountInput(input: string): number | null {
+  const value = input.trim();
+  if (value === '') return null;
+  return AMOUNT_INPUT_RE.test(value) ? Number(value.replace(/,/g, '')) : Number.NaN;
 }

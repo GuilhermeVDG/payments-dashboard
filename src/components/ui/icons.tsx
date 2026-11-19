@@ -222,3 +222,65 @@ export function BankMark(props: IconProps) {
     </Chip>
   );
 }
+
+export function PlusCircleIcon(props: IconProps) {
+  return (
+    <Svg width={12} height={12} viewBox="0 0 12 12" {...props}>
+      <circle cx="6" cy="6" r="5" {...stroke} strokeWidth={1.25} />
+      <path d="M6 3.75v4.5M3.75 6h4.5" {...stroke} strokeWidth={1.25} />
+    </Svg>
+  );
+}
+
+export function XCircleIcon(props: IconProps) {
+  return (
+    <Svg width={12} height={12} viewBox="0 0 12 12" {...props}>
+      <circle cx="6" cy="6" r="5" {...stroke} strokeWidth={1.25} />
+      <path d="m4.25 4.25 3.5 3.5m0-3.5-3.5 3.5" {...stroke} strokeWidth={1.25} />
+    </Svg>
+  );
+}
+
+export function SearchIcon(props: IconProps) {
+  return (
+    <Svg width={16} height={16} viewBox="0 0 16 16" {...props}>
+      <circle cx="7" cy="7" r="4.75" {...stroke} strokeWidth={1.5} />
+      <path d="m10.5 10.5 3 3" {...stroke} strokeWidth={1.5} />
+    </Svg>
+  );
+}
+
+export function ExportIcon(props: IconProps) {
+  return (
+    <Svg width={12} height={12} viewBox="0 0 12 12" {...props}>
+      <path d="M7 1.5h3.5V5M10.5 1.5 6 6" {...stroke} strokeWidth={1.4} />
+      <path
+        d="M9 7.5v2a1 1 0 0 1-1 1H2.5a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2"
+        {...stroke}
+        strokeWidth={1.4}
+      />
+    </Svg>
+  );
+}
+
+export function GearIcon(props: IconProps) {
+  return (
+    <Svg width={12} height={12} viewBox="0 0 12 12" {...props}>
+      <circle cx="6" cy="6" r="1.75" {...stroke} strokeWidth={1.3} />
+      <path
+        d="M6 1v1.25M6 9.75V11M1 6h1.25M9.75 6H11M2.46 2.46l.88.88M8.66 8.66l.88.88M2.46 9.54l.88-.88M8.66 3.34l.88-.88"
+        {...stroke}
+        strokeWidth={1.3}
+      />
+    </Svg>
+  );
+}
+
+export function EmptySearchIcon(props: IconProps) {
+  return (
+    <Svg width={32} height={32} viewBox="0 0 32 32" {...props}>
+      <circle cx="14" cy="14" r="9" {...stroke} strokeWidth={2} />
+      <path d="m21 21 6 6" {...stroke} strokeWidth={2} />
+    </Svg>
+  );
+}

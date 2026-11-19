@@ -3,6 +3,7 @@ import {
   EMPTY_FILTERS,
   applyFilters,
   isFilterActive,
+  parseAmountInput,
   validateAmountRange,
   type FilterState,
 } from '@/domain/filters';
@@ -124,30 +125,6 @@ describe('applyFilters', () => {
       ).toEqual(ids([usdCardToday]));
     });
 
-    it('compares fractional bounds exactly in minor units', () => {
-      const p1010 = makePayment({ amount: 1010, currency: 'usd' });
-      const p1009 = makePayment({ amount: 1009, currency: 'usd' });
-      const rows = [p1010, p1009];
-      const amount = { min: 10.1, max: 10.1, currency: null };
-      expect(ids(applyFilters(rows, withFilters({ amount }), now))).toEqual(ids([p1010]));
-    });
-
-    it('rounds fractional jpy bounds to whole yen', () => {
-      const yen11 = makePayment({ amount: 11, currency: 'jpy' });
-      const amount = { min: 10.5, max: null, currency: 'jpy' as const };
-      expect(ids(applyFilters([yen11], withFilters({ amount }), now))).toEqual(ids([yen11]));
-    });
-
-    it('keeps the currency when the bounds are invalid', () => {
-      const amount = { min: 500, max: 10, currency: 'eur' as const };
-      expect(ids(applyFilters(all, withFilters({ amount }), now))).toEqual(ids([eurWalletOld]));
-    });
-
-    it('ignores non-finite bounds without throwing', () => {
-      const amount = { min: Number.POSITIVE_INFINITY, max: null, currency: null };
-      expect(applyFilters(all, withFilters({ amount }), now)).toEqual(all);
-    });
-
     it('ignores an invalid range instead of returning nothing', () => {
       const amount = { min: 500, max: 10, currency: null };
       expect(applyFilters(all, withFilters({ amount }), now)).toEqual(all);
@@ -160,11 +137,35 @@ describe('applyFilters', () => {
       expect(ids(applyFilters([p1010, p1009], withFilters({ amount }), now))).toEqual(ids([p1010]));
     });
 
-    it('rounds fractional jpy bounds to whole yen', () => {
+    it('rounds a fractional jpy minimum up to whole yen', () => {
       const yen10 = makePayment({ amount: 10, currency: 'jpy' });
       const yen11 = makePayment({ amount: 11, currency: 'jpy' });
       const amount = { min: 10.5, max: null, currency: 'jpy' as const };
       expect(ids(applyFilters([yen10, yen11], withFilters({ amount }), now))).toEqual(ids([yen11]));
+    });
+
+    it('never widens a maximum: rounds it down to the minor unit', () => {
+      const yen10 = makePayment({ amount: 10, currency: 'jpy' });
+      const yen11 = makePayment({ amount: 11, currency: 'jpy' });
+      const jpyMax = { min: null, max: 10.5, currency: 'jpy' as const };
+      expect(ids(applyFilters([yen10, yen11], withFilters({ amount: jpyMax }), now))).toEqual(
+        ids([yen10]),
+      );
+      const cents1000 = makePayment({ amount: 1000, currency: 'usd' });
+      const cents1001 = makePayment({ amount: 1001, currency: 'usd' });
+      const usdMax = { min: null, max: 10.005, currency: 'usd' as const };
+      expect(
+        ids(applyFilters([cents1000, cents1001], withFilters({ amount: usdMax }), now)),
+      ).toEqual(ids([cents1000]));
+    });
+
+    it('never widens a minimum: rounds it up to the minor unit', () => {
+      const cents1000 = makePayment({ amount: 1000, currency: 'usd' });
+      const cents1001 = makePayment({ amount: 1001, currency: 'usd' });
+      const usdMin = { min: 10.005, max: null, currency: 'usd' as const };
+      expect(
+        ids(applyFilters([cents1000, cents1001], withFilters({ amount: usdMin }), now)),
+      ).toEqual(ids([cents1001]));
     });
 
     it('keeps the currency when the bounds are invalid', () => {
@@ -185,6 +186,11 @@ describe('applyFilters', () => {
     expect(ids(applyFilters(all, withFilters({ query: 'grace' }), now))).toEqual(
       ids([usdAchWeekAgo]),
     );
+  });
+
+  it('matches nothing on the Disputed and Uncaptured tabs', () => {
+    expect(applyFilters(all, withFilters({ statusTab: 'disputed' }), now)).toEqual([]);
+    expect(applyFilters(all, withFilters({ statusTab: 'uncaptured' }), now)).toEqual([]);
   });
 
   it('combines filters with AND', () => {
@@ -245,5 +251,27 @@ describe('isFilterActive', () => {
       true,
     );
     expect(isFilterActive(withFilters({ query: '4242' }))).toBe(true);
+    expect(isFilterActive(withFilters({ statusTab: 'disputed' }))).toBe(true);
   });
+});
+
+describe('parseAmountInput', () => {
+  it('parses plain decimals and thousands separators', () => {
+    expect(parseAmountInput('10')).toBe(10);
+    expect(parseAmountInput(' 10.50 ')).toBe(10.5);
+    expect(parseAmountInput('1,250.99')).toBe(1250.99);
+    expect(parseAmountInput('12,345,678')).toBe(12345678);
+  });
+
+  it('treats empty input as no bound', () => {
+    expect(parseAmountInput('')).toBeNull();
+    expect(parseAmountInput('   ')).toBeNull();
+  });
+
+  it.each(['abc', '-5', '1e3', '10.', '.5', 'Infinity', '1,0', '1,2,3', '12,34.5'])(
+    'marks %j as invalid',
+    (input) => {
+      expect(validateAmountRange(parseAmountInput(input), null)).toBe('invalid');
+    },
+  );
 });
