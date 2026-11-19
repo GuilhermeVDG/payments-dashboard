@@ -11,11 +11,11 @@ import type {
   Wallet,
   WalletCardBrand,
 } from '../../src/domain/payment';
+import { DATA_ANCHOR } from '../../src/data/anchor';
 import { compareNewestFirst } from '../../src/domain/sort';
 
 export const DEFAULT_SEED = 20261119;
-/** Fixed "now" the dataset is generated relative to. */
-export const DATA_ANCHOR = '2026-11-19T18:00:00.000Z';
+export { DATA_ANCHOR } from '../../src/data/anchor';
 export const DEFAULT_COUNT = 600;
 export const DEFAULT_DAYS = 90;
 
