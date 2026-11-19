@@ -1,9 +1,9 @@
 'use client';
 
 import * as Popover from '@radix-ui/react-popover';
-import type { Ref } from 'react';
+import type { ReactNode, Ref } from 'react';
 import { isFilterActive } from '@/domain/filters';
-import { ExportIcon, GearIcon, PlusCircleIcon } from '@/components/ui/icons';
+import { PlusCircleIcon } from '@/components/ui/icons';
 import { AmountFilter, CurrencyFilter } from './amount-currency-filters';
 import { DateFilter } from './date-filter';
 import { MethodFilter, StatusFilter } from './status-method-filters';
@@ -30,17 +30,16 @@ function MoreFilters() {
   );
 }
 
-const toolbarButton =
-  'toolbar-button inline-flex h-7 items-center gap-1.5 rounded-md border border-border-strong bg-surface px-2.5 text-sm font-semibold text-fg shadow-[0_1px_1px_rgb(0_0_0/0.04)] hover:bg-surface-hover disabled:cursor-default disabled:text-fg-subdued';
-
 interface FilterBarProps extends FilterControlProps {
   onClearAll: () => void;
   /** Focus target after clearing, since the Clear filters button unmounts. */
   chipsRef?: Ref<HTMLDivElement>;
+  /** View actions on the right (Export, Edit columns). */
+  actions?: ReactNode;
 }
 
 /** Filter chips on the left, view actions on the right. */
-export function FilterBar({ filters, onChange, onClearAll, chipsRef }: FilterBarProps) {
+export function FilterBar({ filters, onChange, onClearAll, chipsRef, actions }: FilterBarProps) {
   const control = { filters, onChange };
   return (
     <div className="filter-bar flex flex-wrap items-center justify-between gap-3">
@@ -67,16 +66,7 @@ export function FilterBar({ filters, onChange, onClearAll, chipsRef }: FilterBar
           </button>
         ) : null}
       </div>
-      <div className="filter-bar__actions flex items-center gap-2">
-        <button type="button" className={toolbarButton} disabled>
-          <ExportIcon />
-          Export
-        </button>
-        <button type="button" className={toolbarButton} disabled>
-          <GearIcon />
-          Edit columns
-        </button>
-      </div>
+      <div className="filter-bar__actions flex items-center gap-2">{actions}</div>
     </div>
   );
 }

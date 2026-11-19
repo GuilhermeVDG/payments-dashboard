@@ -9,6 +9,7 @@ import { applyFilters } from '@/domain/filters';
 import { paginate, type PageSize } from '@/domain/paginate';
 import type { Payment } from '@/domain/payment';
 import { sortPayments, type SortRule } from '@/domain/sort';
+import { useColumnLayout } from '@/hooks/use-column-layout';
 import { useDebouncedValue } from '@/hooks/use-debounced-value';
 import {
   CLEAR_FILTERS_PATCH,
@@ -21,9 +22,12 @@ import {
 import { EmptyState, emptyStateCopy } from '@/components/filters/empty-state';
 import { FilterBar } from '@/components/filters/filter-bar';
 import { StatusTabs } from '@/components/filters/status-tabs';
+import { EditColumns } from '@/components/payments-table/edit-columns';
 import { Pagination } from '@/components/payments-table/pagination';
 import { PaymentsTable } from '@/components/payments-table/payments-table';
 import { AnnouncerProvider } from '@/components/ui/announcer';
+import { ExportIcon } from '@/components/ui/icons';
+import { toolbarButton } from '@/components/ui/toolbar-button';
 import { TooltipProvider } from '@/components/ui/tooltip';
 
 /**
@@ -37,6 +41,7 @@ export function PaymentsView({ payments }: { payments: readonly Payment[] }) {
   const [now] = useState(() => new Date());
   const [params, setParams] = useQueryStates(paymentsSearchParams);
   const chipsRef = useRef<HTMLDivElement>(null);
+  const { layout, setLayout, resetLayout } = useColumnLayout();
   // The search box updates `q` on every keystroke; filtering waits for typing to
   // pause. Clearing the search applies at once.
   const debouncedQuery = useDebouncedValue(params.q, SEARCH_DEBOUNCE_MS);
@@ -57,6 +62,7 @@ export function PaymentsView({ payments }: { payments: readonly Payment[] }) {
     [sorted, params.page, params.size],
   );
 
+  const sortedColumnIds = useMemo(() => params.sort.map((rule) => rule.key), [params.sort]);
   const changeFilters = (patch: FilterPatch) => void setParams(withFilterPatch(patch));
   const clearFilters = () => {
     void setParams(CLEAR_FILTERS_PATCH);
@@ -78,6 +84,20 @@ export function PaymentsView({ payments }: { payments: readonly Payment[] }) {
               onChange={changeFilters}
               onClearAll={clearFilters}
               chipsRef={chipsRef}
+              actions={
+                <>
+                  <button type="button" className={toolbarButton} disabled>
+                    <ExportIcon />
+                    Export
+                  </button>
+                  <EditColumns
+                    layout={layout}
+                    onLayoutChange={setLayout}
+                    onReset={resetLayout}
+                    sortedColumns={sortedColumnIds}
+                  />
+                </>
+              }
             />
           </div>
           <p role="status" className="payments-view__results-status sr-only">
@@ -89,7 +109,14 @@ export function PaymentsView({ payments }: { payments: readonly Payment[] }) {
             </div>
           ) : (
             <div className="payments-view__results mt-3">
-              <PaymentsTable rows={page.rows} sort={params.sort} onSortChange={setSort} now={now} />
+              <PaymentsTable
+                rows={page.rows}
+                sort={params.sort}
+                onSortChange={setSort}
+                now={now}
+                layout={layout}
+                onLayoutChange={setLayout}
+              />
               <Pagination
                 page={page}
                 size={params.size}

@@ -316,3 +316,16 @@ export function BarChartIcon(props: IconProps) {
     </Svg>
   );
 }
+
+export function GripIcon(props: IconProps) {
+  return (
+    <Svg width={10} height={12} viewBox="0 0 10 12" {...props}>
+      {[2, 6, 10].map((y) => (
+        <g key={y}>
+          <circle cx="3" cy={y} r="1" fill="currentColor" />
+          <circle cx="7" cy={y} r="1" fill="currentColor" />
+        </g>
+      ))}
+    </Svg>
+  );
+}

@@ -43,6 +43,7 @@ export function createColumns(now: Date): TableOptions<Payment>['columns'] {
     column.display({
       id: 'select',
       size: 36,
+      enableResizing: false,
       header: ({ table }) => (
         <Checkbox
           label="Select all payments on this page"
@@ -145,6 +146,7 @@ export function createColumns(now: Date): TableOptions<Payment>['columns'] {
     column.display({
       id: 'actions',
       size: 44,
+      enableResizing: false,
       header: () => <span className="sr-only">Actions</span>,
       cell: ({ row }) => <RowActions paymentId={row.original.id} />,
       meta: { align: 'right', className: 'actions', stickyRight: true, ignoreRowClick: true },

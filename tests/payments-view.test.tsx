@@ -52,7 +52,7 @@ describe('PaymentsView', () => {
 
   it('sorts by amount on click and writes the sort to the URL', async () => {
     const { user, lastQuery } = renderView();
-    await user.click(await sortButton(/Amount/));
+    await user.click(await sortButton(/^Amount/));
 
     expect(lastQuery()).toBe('?sort=amount.desc');
     expect(header('Amount')).toHaveAttribute('aria-sort', 'descending');
@@ -65,7 +65,7 @@ describe('PaymentsView', () => {
 
   it('toggles direction on a second click', async () => {
     const { user, lastQuery } = renderView();
-    const amount = await sortButton(/Amount/);
+    const amount = await sortButton(/^Amount/);
     await user.click(amount);
     await user.click(amount);
     expect(lastQuery()).toBe('?sort=amount.asc');
@@ -74,9 +74,9 @@ describe('PaymentsView', () => {
 
   it('adds a secondary sort with shift-click', async () => {
     const { user, lastQuery } = renderView();
-    await user.click(await sortButton(/Amount/));
+    await user.click(await sortButton(/^Amount/));
     await user.keyboard('{Shift>}');
-    await user.click(await sortButton(/Status/));
+    await user.click(await sortButton(/^Status/));
     await user.keyboard('{/Shift}');
 
     expect(lastQuery()).toBe('?sort=amount.desc,status.asc');
@@ -88,14 +88,14 @@ describe('PaymentsView', () => {
 
   it('keeps the Status header visually empty, as in the reference, but named', async () => {
     renderView();
-    const button = await sortButton(/Status/);
+    const button = await sortButton(/^Status/);
     const label = within(button).getByText('Status');
     expect(label).toHaveClass('sr-only');
   });
 
   it('toggles the default Date sort to ascending on click', async () => {
     const { user, lastQuery } = renderView();
-    await user.click(await sortButton(/Date/));
+    await user.click(await sortButton(/^Date/));
     expect(lastQuery()).toBe('?sort=created.asc');
     expect(header('Date')).toHaveAttribute('aria-sort', 'ascending');
   });
