@@ -18,11 +18,14 @@ export function DescriptionCell({ description }: { description?: string }) {
   return <span className="description-cell truncate text-fg-muted">{description}</span>;
 }
 
-/** Email in the row; the customer name is in a hover tooltip and in screen reader text. */
+/**
+ * Email in the row; the customer name is in a hover tooltip and in screen reader text.
+ * Not focusable, to keep one row from adding a tab stop per cell.
+ */
 export function CustomerCell({ customer }: { customer: Customer }) {
   return (
     <Tooltip content={customer.name}>
-      <span tabIndex={0} className="customer-cell truncate rounded-sm text-fg-muted">
+      <span className="customer-cell truncate rounded-sm text-fg-muted">
         <span className="sr-only">{customer.name}, </span>
         {customer.email}
       </span>

@@ -182,15 +182,53 @@ describe('PaymentsView', () => {
     expect(await screen.findByRole('tooltip')).toHaveTextContent('7 minutes ago');
   });
 
-  it('opens the customer name tooltip on keyboard focus', async () => {
+  it('gives the customer name to screen readers without adding a tab stop', async () => {
     renderView();
     const first = DATASET[0];
     const customer = (await screen.findByRole('table')).querySelector<HTMLElement>(
       '.customer-cell',
     );
-    expect(customer).toHaveAttribute('tabindex', '0');
-    customer?.focus();
-    expect(await screen.findByRole('tooltip')).toHaveTextContent(first.customer.name);
+    expect(customer).not.toHaveAttribute('tabindex');
+    expect(customer).toHaveTextContent(`${first.customer.name}, ${first.customer.email}`);
+  });
+
+  it('offers View payment details in the row menu', async () => {
+    const { user } = renderView();
+    const first = DATASET[0];
+    await user.click(
+      await screen.findByRole('button', { name: `More actions for payment ${first.id}` }),
+    );
+    expect(await screen.findByRole('menuitem', { name: 'View payment details' })).toHaveAttribute(
+      'href',
+      `/payments/${first.id}`,
+    );
+  });
+
+  it('scopes row selection to the current page', async () => {
+    const { user } = renderView();
+    const table = await screen.findByRole('table');
+    await user.click(
+      within(table).getByRole('checkbox', { name: `Select payment ${DATASET[0].id}` }),
+    );
+    const selectAll = within(table).getByRole('checkbox', {
+      name: 'Select all payments on this page',
+    });
+    expect(selectAll).toHaveAttribute('data-state', 'indeterminate');
+
+    await user.click(screen.getByRole('button', { name: 'Next' }));
+    expect(
+      within(screen.getByRole('table')).getByRole('checkbox', {
+        name: 'Select all payments on this page',
+      }),
+    ).toHaveAttribute('data-state', 'unchecked');
+
+    await user.click(
+      within(screen.getByRole('table')).getByRole('checkbox', {
+        name: 'Select all payments on this page',
+      }),
+    );
+    const boxes = within(screen.getByRole('table')).getAllByRole('checkbox');
+    expect(boxes.every((box) => box.getAttribute('data-state') === 'checked')).toBe(true);
   });
 
   it('shows the short id with the full id in a title', async () => {

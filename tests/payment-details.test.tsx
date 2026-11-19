@@ -1,4 +1,4 @@
-import { fireEvent, render, screen, within } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { NuqsTestingAdapter } from 'nuqs/adapters/testing';
 import { Suspense } from 'react';
@@ -125,6 +125,33 @@ describe('navigation to details', () => {
     );
     await user.type(screen.getByRole('searchbox'), '4');
     expect(navigation.push).toHaveBeenCalledWith('/payments?q=4');
+  });
+});
+
+describe('breadcrumb back link', () => {
+  afterEach(() => window.sessionStorage.clear());
+
+  it('returns to the list view the user left', async () => {
+    window.sessionStorage.setItem('payments:last-list-query', '?status=failed&page=2');
+    renderDetails();
+    const breadcrumb = within(await screen.findByRole('navigation', { name: 'Breadcrumb' }));
+    expect(breadcrumb.getByRole('link', { name: 'Payments' })).toHaveAttribute(
+      'href',
+      '/payments?status=failed&page=2',
+    );
+  });
+
+  it('is written by the list as filters change', async () => {
+    render(
+      <NuqsTestingAdapter searchParams="?status=refunded" hasMemory>
+        <Suspense fallback="Loading">
+          <PaymentsView payments={PAYMENTS.slice(0, 5)} />
+        </Suspense>
+      </NuqsTestingAdapter>,
+    );
+    await waitFor(() =>
+      expect(window.sessionStorage.getItem('payments:last-list-query')).toBe('?status=refunded'),
+    );
   });
 });
 

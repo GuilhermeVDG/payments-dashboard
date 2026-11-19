@@ -8,7 +8,7 @@ import { formatDateTime, formatFullTimestamp, formatRelative, rebaseToNow } from
 import { STATUS_LABELS, methodDetails, shortenPaymentId } from '@/domain/display';
 import { formatAmount, formatCurrencyCode } from '@/domain/money';
 import type { Payment } from '@/domain/payment';
-import { PAYMENTS_PATH } from '@/domain/routes';
+import { LAST_LIST_QUERY_KEY, paymentsListHref } from '@/domain/routes';
 import { buildTimeline, type TimelineEventKind } from '@/domain/timeline';
 import { MethodCell } from '@/components/payments-table/cells/method-cell';
 import { AnnouncerProvider } from '@/components/ui/announcer';
@@ -63,6 +63,14 @@ function SummaryItem({ label, children }: { label: string; children: ReactNode }
 export function PaymentDetails({ payment: original }: { payment: Payment }) {
   use(browser('Dates are shown in the viewer’s local time zone.'));
   const [now] = useState(() => new Date());
+  // Back to the list as the user left it (filters, sort, page), when known.
+  const [backHref] = useState(() => {
+    try {
+      return paymentsListHref(window.sessionStorage.getItem(LAST_LIST_QUERY_KEY));
+    } catch {
+      return paymentsListHref(null);
+    }
+  });
   const payment = useMemo(() => rebaseToNow([original], DATA_ANCHOR, now)[0], [original, now]);
   const timeline = useMemo(() => buildTimeline(payment), [payment]);
   const amount = formatAmount(payment.amount, payment.currency);
@@ -79,7 +87,7 @@ export function PaymentDetails({ payment: original }: { payment: Payment }) {
             <ol className="flex items-center gap-1">
               <li>
                 <Link
-                  href={PAYMENTS_PATH}
+                  href={backHref}
                   className="inline-flex items-center gap-1 rounded-sm font-semibold text-link hover:text-brand-hover"
                 >
                   <ChevronIcon direction="left" />

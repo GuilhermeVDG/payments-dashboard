@@ -51,14 +51,19 @@ describe('fullColumnOrder', () => {
 
 describe('setColumnHidden', () => {
   it('hides and shows hideable columns in default order', () => {
-    const hidden = setColumnHidden(setColumnHidden(DEFAULT_LAYOUT, 'id', true), 'currency', true);
-    expect(hidden.hidden).toEqual(['currency', 'id']);
-    expect(setColumnHidden(hidden, 'id', false).hidden).toEqual(['currency']);
+    const hidden = setColumnHidden(
+      setColumnHidden(DEFAULT_LAYOUT, 'description', true),
+      'currency',
+      true,
+    );
+    expect(hidden.hidden).toEqual(['currency', 'description']);
+    expect(setColumnHidden(hidden, 'description', false).hidden).toEqual(['currency']);
   });
 
-  it('never hides Amount or Date', () => {
+  it('never hides Amount, Date or Payment ID', () => {
     expect(setColumnHidden(DEFAULT_LAYOUT, 'amount', true).hidden).toEqual([]);
     expect(setColumnHidden(DEFAULT_LAYOUT, 'created', true).hidden).toEqual([]);
+    expect(setColumnHidden(DEFAULT_LAYOUT, 'id', true).hidden).toEqual([]);
   });
 });
 
@@ -74,7 +79,7 @@ describe('isDefaultLayout', () => {
   it('detects changes to order, size or visibility', () => {
     expect(isDefaultLayout(DEFAULT_LAYOUT)).toBe(true);
     expect(isDefaultLayout({ ...DEFAULT_LAYOUT, sizing: { amount: 120 } })).toBe(false);
-    expect(isDefaultLayout({ ...DEFAULT_LAYOUT, hidden: ['id'] })).toBe(false);
+    expect(isDefaultLayout({ ...DEFAULT_LAYOUT, hidden: ['description'] })).toBe(false);
     expect(
       isDefaultLayout({ ...DEFAULT_LAYOUT, order: moveColumn(order, 'created', 'amount') }),
     ).toBe(false);
@@ -86,7 +91,7 @@ describe('parseColumnLayout', () => {
     const layout = {
       order: moveColumn(order, 'created', 'amount'),
       sizing: { amount: 140 },
-      hidden: ['id' as const],
+      hidden: ['description' as const],
     };
     expect(parseColumnLayout(JSON.parse(JSON.stringify(layout)))).toEqual(layout);
   });
@@ -109,7 +114,9 @@ describe('parseColumnLayout', () => {
   });
 
   it('only keeps hideable columns in hidden', () => {
-    expect(parseColumnLayout({ hidden: ['amount', 'id', 'bogus'] }).hidden).toEqual(['id']);
+    expect(parseColumnLayout({ hidden: ['amount', 'id', 'description', 'bogus'] }).hidden).toEqual([
+      'description',
+    ]);
   });
 });
 
@@ -146,11 +153,11 @@ describe('columnVisibility / visibleMovableColumns', () => {
   it('derives TanStack visibility and the visible order', () => {
     const layout = setColumnHidden(
       { ...DEFAULT_LAYOUT, order: moveColumn(order, 'created', 'amount') },
-      'id',
+      'description',
       true,
     );
-    expect(columnVisibility(layout)).toEqual({ id: false });
-    expect(visibleMovableColumns(layout)).not.toContain('id');
+    expect(columnVisibility(layout)).toEqual({ description: false });
+    expect(visibleMovableColumns(layout)).not.toContain('description');
     expect(visibleMovableColumns(layout)[0]).toBe('created');
   });
 });

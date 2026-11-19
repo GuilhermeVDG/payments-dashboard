@@ -47,7 +47,7 @@ const SHORTCUTS: NavItem[] = [
 
 const PRODUCTS: NavItem[] = [
   { label: 'Connect', Icon: ConnectIcon, expandable: true },
-  { label: 'Payments', Icon: PaymentsIcon, expandable: true },
+  { label: 'Payments', Icon: PaymentsIcon, href: '/payments', expandable: true },
   { label: 'Billing', Icon: BillingIcon, expandable: true },
   { label: 'Reporting', Icon: ReportingIcon, expandable: true },
   { label: 'More', Icon: MoreIcon, expandable: true },

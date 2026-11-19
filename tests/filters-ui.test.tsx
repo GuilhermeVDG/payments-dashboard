@@ -280,3 +280,14 @@ describe('keyboard', () => {
     expect(chips().getByRole('button', { name: 'Status: Pending' })).toHaveFocus();
   });
 });
+
+describe('More filters', () => {
+  it('is present for fidelity but marked unavailable', async () => {
+    renderScreen();
+    await screen.findByRole('table');
+    expect(chips().getByRole('button', { name: 'More filters' })).toHaveAttribute(
+      'aria-disabled',
+      'true',
+    );
+  });
+});

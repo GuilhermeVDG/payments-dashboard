@@ -1,13 +1,14 @@
 'use client';
 
 import { useQueryStates } from 'nuqs';
-import { use, useMemo, useRef, useState } from 'react';
+import { use, useEffect, useMemo, useRef, useState } from 'react';
 import { browser } from 'react-dom';
 import { DATA_ANCHOR } from '@/data/anchor';
 import { rebaseToNow } from '@/domain/dates';
 import { applyFilters } from '@/domain/filters';
 import { paginate, type PageSize } from '@/domain/paginate';
 import type { Payment } from '@/domain/payment';
+import { LAST_LIST_QUERY_KEY } from '@/domain/routes';
 import { sortPayments, type SortRule } from '@/domain/sort';
 import { useColumnLayout } from '@/hooks/use-column-layout';
 import { useDebouncedValue } from '@/hooks/use-debounced-value';
@@ -15,6 +16,7 @@ import {
   CLEAR_FILTERS_PATCH,
   SEARCH_DEBOUNCE_MS,
   paymentsSearchParams,
+  serializePaymentsSearchParams,
   toFilterState,
   withFilterPatch,
   type FilterPatch,
@@ -45,6 +47,16 @@ export function PaymentsView({ payments }: { payments: readonly Payment[] }) {
   // pause. Clearing the search applies at once.
   const debouncedQuery = useDebouncedValue(params.q, SEARCH_DEBOUNCE_MS);
   const query = params.q === '' ? '' : debouncedQuery;
+
+  // Remember the current view so the details page can link back to it.
+  const listQuery = serializePaymentsSearchParams(params);
+  useEffect(() => {
+    try {
+      window.sessionStorage.setItem(LAST_LIST_QUERY_KEY, listQuery);
+    } catch {
+      // Storage unavailable: the back link falls back to the plain list.
+    }
+  }, [listQuery]);
 
   const { date, from, to, status, method, amin, amax, acur, tab } = params;
   const rebased = useMemo(() => rebaseToNow(payments, DATA_ANCHOR, now), [payments, now]);

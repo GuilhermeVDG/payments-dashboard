@@ -6,6 +6,7 @@ import { MOCK_ACCOUNT } from '@/components/layout/account-menu';
 import { Sidebar } from '@/components/layout/sidebar';
 import { TopBar } from '@/components/layout/top-bar';
 import { UNAVAILABLE_HINT_ID } from '@/components/layout/unavailable';
+import NotFound from '../app/not-found';
 import PaymentsLayout from '../app/payments/layout';
 
 describe('Sidebar', () => {
@@ -13,19 +14,14 @@ describe('Sidebar', () => {
     render(<Sidebar />);
     const nav = within(screen.getByRole('navigation', { name: 'Main' }));
     expect(nav.getByRole('link', { name: 'Transactions' })).toHaveAttribute('aria-current', 'page');
-    for (const name of [
-      'Home',
-      'Balances',
-      'Customers',
-      'Product catalog',
-      'Payments',
-      'Developers',
-    ]) {
+    for (const name of ['Home', 'Balances', 'Customers', 'Product catalog', 'Developers']) {
       const link = nav.getByRole('link', { name });
       expect(link).toHaveAttribute('aria-disabled', 'true');
       expect(link).toHaveAttribute('tabindex', '0');
       expect(link).toHaveAttribute('aria-describedby', UNAVAILABLE_HINT_ID);
     }
+    expect(nav.getByRole('link', { name: 'Payments' })).toHaveAttribute('href', '/payments');
+    expect(nav.getByRole('link', { name: 'Payments' })).not.toHaveAttribute('aria-disabled');
     expect(nav.getByRole('list', { name: 'Shortcuts' })).toBeInTheDocument();
     expect(nav.getByRole('list', { name: 'Products' })).toBeInTheDocument();
     expect(screen.queryByRole('heading')).toBeNull();
@@ -85,6 +81,17 @@ describe('PaymentsLayout', () => {
     expect(screen.getAllByRole('navigation', { name: 'Main' })).toHaveLength(1);
     expect(document.getElementById(UNAVAILABLE_HINT_ID)).toHaveTextContent(
       'Not available in this demo',
+    );
+  });
+});
+
+describe('NotFound', () => {
+  it('links back to payments', () => {
+    render(<NotFound />);
+    expect(screen.getByRole('heading', { name: 'Page not found' })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Go to payments' })).toHaveAttribute(
+      'href',
+      '/payments',
     );
   });
 });

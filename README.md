@@ -32,8 +32,8 @@ npm run dev          # http://localhost:3000 (redirects to /payments)
 - **Filters:** status tabs (All, Succeeded, Refunded, Disputed, Failed, Uncaptured) and filter chips (Date and time, Amount, Currency, Status, Payment method). Each active filter is a removable chip; "Clear filters" resets everything. Date presets: Today, Last 7 days, Last 30 days, Custom (inclusive, local time). Amount range is inclusive and rejects min > max inline.
 - **Search** (top bar): payment ID prefix, customer email substring or exact card/account last 4. Debounced 200 ms.
 - **Empty state** with "Clear filters".
-- **Shell:** sidebar and top bar matching the reference, with an account menu. Only Transactions → Payments is wired.
-- **Payment details** at `/payments/[id]`: summary, timeline of events (started, succeeded / failed / refunded / pending) and metadata. Click a row or the Payment ID to open it.
+- **Shell:** sidebar and top bar matching the reference, with an account menu. Only the Payments screen is wired.
+- **Payment details** at `/payments/[id]`: summary, timeline of events (started, succeeded / failed / refunded / pending) and metadata. Open it by clicking a row, the Payment ID link, or **View payment details** in the row menu. "‹ Payments" returns to the list with the filters, sort and page you left.
 - **Columns:** drag a header's handle to reorder (or Space, arrows, Space from the keyboard), drag its edge to resize (arrow keys, Home / End, Enter or double-click to reset), and show or hide columns from **Edit columns**.
 - **Export:** downloads the current filtered and sorted view as CSV.
 - **URL state:** every filter, sort, page and page size lives in the URL, so a link reproduces the view. Defaults are omitted and invalid values are ignored. Examples: `?sort=amount.desc,created.desc&page=2&size=50`, `?date=7d`, `?from=2026-11-01&to=2026-11-15`, `?status=failed,refunded&method=card,wallet`, `?amin=10&amax=500&acur=usd`, `?q=4242`.
@@ -41,19 +41,22 @@ npm run dev          # http://localhost:3000 (redirects to /payments)
 
 ## Stack
 
-Next.js 16 (App Router) · TypeScript strict · TanStack Table v8 · nuqs (URL state) · Radix UI primitives (popover, dropdown menu, tooltip, checkbox) · date-fns · Tailwind CSS v4 with design tokens in `src/styles/tokens.css` · Vitest + Testing Library.
+Next.js 16 (App Router) · TypeScript strict · TanStack Table v8 · nuqs (URL state) · Radix UI primitives (popover, dropdown menu, tooltip, checkbox) · dnd-kit (column reordering) · date-fns · Tailwind CSS v4 with design tokens in `src/styles/tokens.css` · Vitest + Testing Library.
 
 ## Project layout
 
 ```
 app/payments/layout.tsx      dashboard shell (sidebar, top bar, skip link)
 app/payments/page.tsx        page header + client view inside Suspense
+app/payments/[id]/           payment details (statically generated) and its 404
+app/not-found.tsx            app-wide 404
 scripts/                     deterministic mock data generator (seeded PRNG)
 src/data/                    committed dataset (600 rows) and its anchor date
 src/domain/                  pure, tested logic: money, dates, filters, search,
                              sorting, pagination, chip labels, status tabs
 src/state/url-state.ts       nuqs parsers, defaults, filter patches
-src/components/              table + cells, filters, layout, UI primitives
+src/components/              table + cells, filters, details page, layout, UI primitives
+src/hooks/                   debounced value, column layout persistence
 src/styles/tokens.css        colors, type, radii, layout as Tailwind @theme tokens
 tests/                       domain, URL state, generator and UI tests
 ```
@@ -71,8 +74,8 @@ Filtering, search, sorting comparators, money formatting and date presets are pu
 - **Statuses: the four in the spec.** The reference also shows Disputed and Uncaptured tabs and Canceled / Blocked badges. The tabs are rendered; Disputed and Uncaptured have no matching mock payments, so they show their own empty state (`?tab=disputed`).
 - **The account menu is in the sidebar**, on the account switcher, where the reference puts it. The spec mentions it under the top bar.
 - **Placeholders instead of real third parties.** The reference's account name and third-party app logos are replaced by "Acme Inc." and a generic apps icon. Card, wallet and bank marks are simplified generic SVGs.
-- **Inert controls.** Create payment, Analyze, the other sidebar sections and the top-bar icons are present for fidelity but are not implemented. They are focusable, marked `aria-disabled` and described as "Not available in this demo".
-- **Column layout is per browser.** Order, widths and hidden columns are saved in `localStorage`, not the URL: they are a personal preference rather than part of a shareable view. A column used for sorting can't be hidden.
+- **Inert controls.** Create payment, Analyze, More filters, the other sidebar sections and the top-bar icons are present for fidelity but are not implemented. Both Transactions and Payments in the sidebar open this screen. They are focusable, marked `aria-disabled` and described as "Not available in this demo".
+- **Column layout is per browser.** Order, widths and hidden columns are saved in `localStorage`, not the URL: they are a personal preference rather than part of a shareable view. A column used for sorting can't be hidden, and Amount, Date and Payment ID always stay visible (the Payment ID link is the keyboard path to a payment).
 - **CSV export** contains every row of the current filtered and sorted view (all pages), with RFC 4180 quoting, a UTF-8 BOM for Excel, ISO UTC dates and amounts in major units. Text fields starting with `=`, `+`, `-` or `@` are prefixed with `'` to prevent spreadsheet formula injection.
 - **Font.** The live Dashboard uses the system UI stack (`-apple-system, system-ui, …`), which this project uses too, so it renders the same on macOS. Colors and sizes were measured on the live Dashboard (test mode) with computed styles.
 - **Client-side data.** The 600 rows are bundled and filtered in memory. That keeps the demo simple and instant; a real app would page and filter on the server.

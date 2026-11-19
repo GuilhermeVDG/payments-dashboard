@@ -48,13 +48,13 @@ export function createColumns(now: Date): TableOptions<Payment>['columns'] {
         <Checkbox
           label="Select all payments on this page"
           checked={
-            table.getIsAllRowsSelected()
+            table.getIsAllPageRowsSelected()
               ? true
-              : table.getIsSomeRowsSelected()
+              : table.getIsSomePageRowsSelected()
                 ? 'indeterminate'
                 : false
           }
-          onCheckedChange={(checked) => table.toggleAllRowsSelected(checked)}
+          onCheckedChange={(checked) => table.toggleAllPageRowsSelected(checked)}
         />
       ),
       cell: ({ row }) => (

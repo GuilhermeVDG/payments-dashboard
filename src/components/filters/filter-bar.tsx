@@ -1,32 +1,25 @@
 'use client';
 
-import * as Popover from '@radix-ui/react-popover';
 import type { ReactNode, Ref } from 'react';
 import { isFilterActive } from '@/domain/filters';
+import { unavailableProps } from '@/components/layout/unavailable';
 import { PlusCircleIcon } from '@/components/ui/icons';
 import { AmountFilter, CurrencyFilter } from './amount-currency-filters';
 import { DateFilter } from './date-filter';
 import { MethodFilter, StatusFilter } from './status-method-filters';
 import type { FilterControlProps } from './types';
 
+/** Present for fidelity; the extra Dashboard filters are not part of this demo. */
 function MoreFilters() {
   return (
-    <Popover.Root>
-      <Popover.Trigger className="filter-chip filter-chip__trigger inline-flex h-6 items-center gap-1.5 rounded-full border border-dashed border-border-strong bg-surface pr-2.5 pl-1.5 text-sm font-semibold text-fg-muted hover:text-fg">
-        <PlusCircleIcon className="text-fg-subdued" />
-        More filters
-      </Popover.Trigger>
-      <Popover.Portal>
-        <Popover.Content
-          align="start"
-          sideOffset={6}
-          aria-label="More filters"
-          className="filter-popover z-50 w-72 rounded-lg bg-surface p-4 text-md text-fg-muted shadow-popover"
-        >
-          Search by payment ID, customer email or card last 4 using the search bar above.
-        </Popover.Content>
-      </Popover.Portal>
-    </Popover.Root>
+    <button
+      type="button"
+      {...unavailableProps}
+      className="filter-chip filter-chip__trigger inline-flex h-6 cursor-default items-center gap-1.5 rounded-full border border-dashed border-border-strong bg-surface pr-2.5 pl-1.5 text-sm font-semibold text-fg-muted"
+    >
+      <PlusCircleIcon className="text-fg-subdued" />
+      More filters
+    </button>
   );
 }
 

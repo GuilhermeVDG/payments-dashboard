@@ -1,13 +1,15 @@
 'use client';
 
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
+import Link from 'next/link';
+import { paymentHref } from '@/domain/routes';
 import { MoreIcon } from '@/components/ui/icons';
 import { useCopy } from '@/components/ui/use-copy';
 
 const itemClass =
   'menu-item flex cursor-default items-center rounded-sm px-2 py-1.5 text-md text-fg outline-none select-none data-[disabled]:text-fg-subdued data-[highlighted]:bg-surface-hover';
 
-/** Row overflow menu. Copy results are announced through the shared live region. */
+/** Row overflow menu: a keyboard path to the payment's details, and copy. */
 export function RowActions({ paymentId }: { paymentId: string }) {
   const { copy } = useCopy();
   return (
@@ -24,6 +26,9 @@ export function RowActions({ paymentId }: { paymentId: string }) {
           sideOffset={4}
           className="menu z-50 min-w-44 rounded-md bg-surface p-1 shadow-popover"
         >
+          <DropdownMenu.Item asChild className={itemClass}>
+            <Link href={paymentHref(paymentId)}>View payment details</Link>
+          </DropdownMenu.Item>
           <DropdownMenu.Item className={itemClass} onSelect={() => void copy(paymentId)}>
             Copy payment ID
           </DropdownMenu.Item>

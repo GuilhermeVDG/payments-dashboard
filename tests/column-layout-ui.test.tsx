@@ -48,20 +48,22 @@ describe('Edit columns', () => {
   it('hides a column, remembers it, and resets to default', async () => {
     const user = renderView();
     await screen.findByRole('table');
-    expect(headerNames()).toContain('id');
+    expect(headerNames()).toContain('description');
 
     await user.click(screen.getByRole('button', { name: 'Edit columns' }));
     const dialog = await screen.findByRole('dialog', { name: 'Edit columns' });
-    await user.click(within(dialog).getByLabelText('Payment ID'));
+    await user.click(within(dialog).getByLabelText('Description'));
 
-    expect(headerNames()).not.toContain('id');
-    expect(document.querySelector('.payments-table__col--id')).toBeNull();
+    expect(headerNames()).not.toContain('description');
+    expect(document.querySelector('.payments-table__col--description')).toBeNull();
     await waitFor(() =>
-      expect(JSON.parse(window.localStorage.getItem(STORAGE_KEY) ?? '{}').hidden).toEqual(['id']),
+      expect(JSON.parse(window.localStorage.getItem(STORAGE_KEY) ?? '{}').hidden).toEqual([
+        'description',
+      ]),
     );
 
     await user.click(within(dialog).getByRole('button', { name: 'Reset to default' }));
-    expect(headerNames()).toContain('id');
+    expect(headerNames()).toContain('description');
     expect(within(dialog).getByRole('button', { name: 'Reset to default' })).toBeDisabled();
     // Focus stays in the popover even though the reset button disabled itself.
     expect(dialog.contains(document.activeElement)).toBe(true);
@@ -79,13 +81,14 @@ describe('Edit columns', () => {
     expect(within(dialog).getByRole('checkbox', { name: 'Customer' })).toBeEnabled();
   });
 
-  it('does not offer to hide Amount or Date', async () => {
+  it('does not offer to hide Amount, Date or Payment ID', async () => {
     const user = renderView();
     await screen.findByRole('table');
     await user.click(screen.getByRole('button', { name: 'Edit columns' }));
     const dialog = await screen.findByRole('dialog', { name: 'Edit columns' });
     expect(within(dialog).queryByLabelText('Amount')).toBeNull();
     expect(within(dialog).queryByLabelText('Date')).toBeNull();
+    expect(within(dialog).queryByLabelText('Payment ID')).toBeNull();
     expect(within(dialog).getByLabelText('Customer')).toBeChecked();
   });
 });

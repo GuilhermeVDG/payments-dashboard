@@ -68,6 +68,8 @@ function isShiftClick(event: unknown): boolean {
   );
 }
 
+const NO_SELECTION: RowSelectionState = {};
+
 /** Clicks on controls inside a row keep their own behavior instead of opening the payment. */
 const INTERACTIVE =
   'a, button, input, select, [role="checkbox"], [role="menuitem"], [role="menu"], [data-row-click="ignore"]';
@@ -90,7 +92,13 @@ export function PaymentsTable({
   onLayoutChange,
 }: PaymentsTableProps) {
   const columns = useMemo(() => createColumns(now), [now]);
-  const [rowSelection, setRowSelection] = useState<RowSelectionState>({});
+  // Selection belongs to the rows on screen: changing page, filters or sort clears it.
+  const pageKey = useMemo(() => rows.map((row) => row.id).join(','), [rows]);
+  const [selection, setSelection] = useState<{ key: string; rows: RowSelectionState }>({
+    key: pageKey,
+    rows: {},
+  });
+  const rowSelection = selection.key === pageKey ? selection.rows : NO_SELECTION;
   const router = useRouter();
   const sorting = useMemo(() => toSortingState(sort), [sort]);
   const isDefaultSort = isDefaultSortRules(sort);
@@ -134,7 +142,11 @@ export function PaymentsTable({
       const next = typeof updater === 'function' ? updater(sorting) : updater;
       onSortChange(toSortRules(next));
     },
-    onRowSelectionChange: setRowSelection,
+    onRowSelectionChange: (updater: Updater<RowSelectionState>) =>
+      setSelection({
+        key: pageKey,
+        rows: typeof updater === 'function' ? updater(rowSelection) : updater,
+      }),
   });
 
   function resize(columnId: string, delta: number | null) {

@@ -34,9 +34,13 @@ export const COLUMN_LABELS: Record<MovableColumn, string> = {
   failureReason: 'Decline reason',
 };
 
-/** Columns the user may hide; Amount and Date always stay visible. */
+/**
+ * Columns the user may hide. Amount and Date always stay visible, and so does
+ * Payment ID: its link is the keyboard path to a payment's details.
+ */
+export const ALWAYS_VISIBLE: readonly MovableColumn[] = ['amount', 'created', 'id'];
 export const HIDEABLE_COLUMNS: readonly MovableColumn[] = MOVABLE_COLUMNS.filter(
-  (id) => id !== 'amount' && id !== 'created',
+  (id) => !ALWAYS_VISIBLE.includes(id),
 );
 
 export const MIN_COLUMN_WIDTH = 48;
