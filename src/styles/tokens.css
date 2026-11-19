@@ -1,0 +1,79 @@
+/*
+ * Design tokens for the Stripe-style payments screen.
+ * Seed values; tuned against the reference in the visual fidelity pass.
+ */
+:root {
+  /* Typography */
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Ubuntu, sans-serif;
+  --font-size-xs: 12px;
+  --font-size-sm: 13px;
+  --font-size-md: 14px;
+  --font-size-lg: 16px;
+  --font-size-title: 28px;
+  --line-height-sm: 16px;
+  --line-height-md: 20px;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Colors: text */
+  --color-text: #353a44;
+  --color-text-strong: #21252c;
+  --color-text-muted: #596171;
+  --color-text-subdued: #87909f;
+  --color-text-link: #533afd;
+
+  /* Colors: surfaces and borders */
+  --color-bg: #ffffff;
+  --color-bg-subtle: #f5f6f8;
+  --color-bg-hover: #f5f6f8;
+  --color-border: #ebeef1;
+  --color-border-strong: #d8dee4;
+  --color-focus-ring: rgba(83, 58, 253, 0.36);
+
+  /* Colors: brand */
+  --color-brand: #533afd;
+  --color-brand-hover: #4434d4;
+  --color-on-brand: #ffffff;
+
+  /* Colors: status badges */
+  --color-success-bg: #d1fab3;
+  --color-success-text: #217005;
+  --color-success-border: #a8f170;
+  --color-danger-bg: #ffe7f2;
+  --color-danger-text: #b3093c;
+  --color-danger-border: #ffccdf;
+  --color-warning-bg: #fcedb9;
+  --color-warning-text: #a82c00;
+  --color-warning-border: #fcd579;
+  --color-neutral-bg: #ebeef1;
+  --color-neutral-text: #545969;
+  --color-neutral-border: #d8dee4;
+
+  /* Radii */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-pill: 9999px;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+
+  /* Layout */
+  --sidebar-width: 240px;
+  --topbar-height: 60px;
+  --table-row-height: 50px;
+
+  /* Elevation */
+  --shadow-popover:
+    0 0 0 1px rgba(64, 68, 82, 0.08), 0 5px 15px 0 rgba(64, 68, 82, 0.12),
+    0 15px 35px 0 rgba(64, 68, 82, 0.08);
+}
