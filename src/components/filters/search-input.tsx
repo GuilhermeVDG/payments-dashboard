@@ -13,7 +13,7 @@ const searchParams = { q: paymentsSearchParams.q, page: paymentsSearchParams.pag
 export function SearchInput() {
   const [{ q }, setParams] = useQueryStates(searchParams);
   return (
-    <div className="search-input relative w-[360px] max-w-full">
+    <div className="search-input relative w-[573px] max-w-full">
       <SearchIcon className="pointer-events-none absolute top-1/2 left-2.5 -translate-y-1/2 text-fg-subdued" />
       <input
         type="search"

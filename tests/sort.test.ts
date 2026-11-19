@@ -1,6 +1,12 @@
 import { describe, expect, it } from 'vitest';
 import type { Payment } from '@/domain/payment';
-import { DEFAULT_SORT, normalizeSort, sortPayments, type SortRule } from '@/domain/sort';
+import {
+  DEFAULT_SORT,
+  isDefaultSortRules,
+  normalizeSort,
+  sortPayments,
+  type SortRule,
+} from '@/domain/sort';
 import { makePayment } from './fixtures';
 
 const ids = (rows: Payment[]) => rows.map((p) => p.id);
@@ -119,5 +125,19 @@ describe('normalizeSort', () => {
       { key: 'amount', desc: true },
       { key: 'created', desc: true },
     ]);
+  });
+});
+
+describe('isDefaultSortRules', () => {
+  it('detects the default created desc sort', () => {
+    expect(isDefaultSortRules([{ key: 'created', desc: true }])).toBe(true);
+    expect(isDefaultSortRules([{ key: 'created', desc: false }])).toBe(false);
+    expect(isDefaultSortRules([{ key: 'amount', desc: true }])).toBe(false);
+    expect(
+      isDefaultSortRules([
+        { key: 'created', desc: true },
+        { key: 'amount', desc: true },
+      ]),
+    ).toBe(false);
   });
 });

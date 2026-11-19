@@ -1,7 +1,11 @@
 @import 'tailwindcss';
 @import '../src/styles/tokens.css';
 
-html,
+/* Keep the root at the browser default (16px): Tailwind spacing is in rem. */
+html {
+  background: var(--color-surface);
+}
+
 body {
   background: var(--color-surface);
   color: var(--color-fg);

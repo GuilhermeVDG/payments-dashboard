@@ -11,7 +11,7 @@ import {
 } from '@tanstack/react-table';
 import { useMemo, useState } from 'react';
 import { isOneOf, type Payment } from '@/domain/payment';
-import { SORT_KEYS, type SortRule } from '@/domain/sort';
+import { SORT_KEYS, isDefaultSortRules, type SortRule } from '@/domain/sort';
 import { SortIcon } from '@/components/ui/icons';
 import { createColumns } from './columns';
 
@@ -37,14 +37,21 @@ function isShiftClick(event: unknown): boolean {
   );
 }
 
+/** Pinned cells keep a solid background and a hairline on their left edge. */
+const STICKY_RIGHT =
+  'sticky right-0 z-10 bg-surface shadow-[inset_1px_0_0_var(--color-border)] group-hover:bg-surface-hover group-data-[state=selected]:bg-surface-subtle';
+
 const ARIA_SORT = { asc: 'ascending', desc: 'descending' } as const;
 
 function HeaderCell({
   header,
   sortCount,
+  isDefaultSort,
 }: {
   header: Header<Payment, unknown>;
   sortCount: number;
+  /** The reference shows no arrow for the default sort; reveal it on hover/focus only. */
+  isDefaultSort: boolean;
 }) {
   const { column } = header;
   const meta = column.columnDef.meta;
@@ -64,7 +71,7 @@ function HeaderCell({
       scope="col"
       style={{ width: header.getSize() }}
       aria-sort={column.getCanSort() ? (isPrimary ? ARIA_SORT[sorted] : 'none') : undefined}
-      className={`payments-table__th payments-table__col--${meta?.className ?? column.id} h-9 px-2 text-sm font-semibold whitespace-nowrap text-fg ${alignRight ? 'text-right' : 'text-left'}`}
+      className={`payments-table__th payments-table__col--${meta?.className ?? column.id} h-9 px-2 text-sm font-semibold whitespace-nowrap text-fg-strong ${alignRight ? 'text-right' : 'text-left'} ${meta?.stickyRight ? STICKY_RIGHT : ''}`}
     >
       {column.getCanSort() ? (
         <button
@@ -77,8 +84,8 @@ function HeaderCell({
           <SortIcon
             sort={sorted}
             className={
-              sorted
-                ? 'text-fg'
+              sorted && !isDefaultSort
+                ? 'text-fg-strong'
                 : 'text-fg-subdued opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100'
             }
           />
@@ -106,6 +113,7 @@ export function PaymentsTable({ rows, sort, onSortChange, now }: PaymentsTablePr
   const columns = useMemo(() => createColumns(now), [now]);
   const [rowSelection, setRowSelection] = useState<RowSelectionState>({});
   const sorting = useMemo(() => toSortingState(sort), [sort]);
+  const isDefaultSort = isDefaultSortRules(sort);
 
   // TanStack Table returns unstable function references, so the React Compiler skips
   // this component; memoization is handled explicitly above.
@@ -136,7 +144,12 @@ export function PaymentsTable({ rows, sort, onSortChange, now }: PaymentsTablePr
           {table.getHeaderGroups().map((group) => (
             <tr key={group.id} className="border-b border-border">
               {group.headers.map((header) => (
-                <HeaderCell key={header.id} header={header} sortCount={sorting.length} />
+                <HeaderCell
+                  key={header.id}
+                  header={header}
+                  sortCount={sorting.length}
+                  isDefaultSort={isDefaultSort}
+                />
               ))}
             </tr>
           ))}
@@ -153,7 +166,7 @@ export function PaymentsTable({ rows, sort, onSortChange, now }: PaymentsTablePr
                 return (
                   <td
                     key={cell.id}
-                    className={`payments-table__td payments-table__col--${meta?.className ?? cell.column.id} h-10 max-w-0 truncate px-2 align-middle ${meta?.align === 'right' ? 'text-right' : 'text-left'}`}
+                    className={`payments-table__td payments-table__col--${meta?.className ?? cell.column.id} h-9 max-w-0 truncate px-2 align-middle ${meta?.align === 'right' ? 'text-right' : 'text-left'} ${meta?.stickyRight ? STICKY_RIGHT : ''}`}
                   >
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
                   </td>

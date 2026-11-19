@@ -45,6 +45,13 @@ export function compareNewestFirst(a: Payment, b: Payment): number {
   return -ASCENDING.created(a, b) || compareCodeUnits(a.id, b.id);
 }
 
+export function isDefaultSortRules(rules: readonly SortRule[]): boolean {
+  return (
+    rules.length === DEFAULT_SORT.length &&
+    rules.every((r, i) => r.key === DEFAULT_SORT[i].key && r.desc === DEFAULT_SORT[i].desc)
+  );
+}
+
 /** Drops repeated keys, keeping the first occurrence (the higher priority rule). */
 export function normalizeSort(rules: readonly SortRule[]): SortRule[] {
   const seen = new Set<SortKey>();

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { paginate, rangeLabel } from '@/domain/paginate';
+import { paginate, rangeLabelParts } from '@/domain/paginate';
 
 const rows = Array.from({ length: 600 }, (_, i) => i + 1);
 
@@ -43,23 +43,44 @@ describe('paginate', () => {
   });
 });
 
-describe('rangeLabel', () => {
+const label = (page: Parameters<typeof rangeLabelParts>[0]) => {
+  const { range, total, noun } = rangeLabelParts(page);
+  return range ? `${range} of ${total} ${noun}` : `${total} ${noun}`;
+};
+
+describe('rangeLabelParts', () => {
   it('labels the first page', () => {
-    expect(rangeLabel(paginate(rows, 1, 25))).toBe('1–25 of 600 results');
+    expect(rangeLabelParts(paginate(rows, 1, 25))).toEqual({
+      range: '1–25',
+      total: '600',
+      noun: 'results',
+    });
   });
 
   it('labels the last page correctly', () => {
-    expect(rangeLabel(paginate(rows, 24, 25))).toBe('576–600 of 600 results');
-    expect(rangeLabel(paginate(rows.slice(0, 130), 3, 50))).toBe('101–130 of 130 results');
+    expect(rangeLabelParts(paginate(rows, 24, 25)).range).toBe('576–600');
+    expect(label(paginate(rows.slice(0, 130), 3, 50))).toBe('101–130 of 130 results');
   });
 
-  it('formats large counts with separators', () => {
+  it('formats large counts with separators in range and total', () => {
     const many = Array.from({ length: 12_345 }, (_, i) => i);
-    expect(rangeLabel(paginate(many, 2, 100))).toBe('101–200 of 12,345 results');
+    expect(rangeLabelParts(paginate(many, 11, 100))).toEqual({
+      range: '1,001–1,100',
+      total: '12,345',
+      noun: 'results',
+    });
   });
 
   it('handles zero and one result', () => {
-    expect(rangeLabel(paginate([], 1, 25))).toBe('0 results');
-    expect(rangeLabel(paginate([1], 1, 25))).toBe('1 result');
+    expect(rangeLabelParts(paginate([], 1, 25))).toEqual({
+      range: null,
+      total: '0',
+      noun: 'results',
+    });
+    expect(rangeLabelParts(paginate([1], 1, 25))).toEqual({
+      range: null,
+      total: '1',
+      noun: 'result',
+    });
   });
 });

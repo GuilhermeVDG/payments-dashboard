@@ -7,7 +7,7 @@ import type { FilterControlProps } from './types';
 export function StatusTabs({ filters, onChange }: FilterControlProps) {
   const active = activeStatusTab(filters.status, filters.statusTab);
   return (
-    <div role="group" aria-label="Payment status" className="status-tabs grid grid-cols-6 gap-2">
+    <div role="group" aria-label="Payment status" className="status-tabs grid grid-cols-6 gap-2.5">
       {STATUS_TABS.map((tab) => {
         const selected = tab.id === active;
         return (
@@ -19,10 +19,10 @@ export function StatusTabs({ filters, onChange }: FilterControlProps) {
               const { status, tab: value } = selectStatusTab(tab.id);
               onChange({ status: status.length > 0 ? status : null, tab: value });
             }}
-            className={`status-tabs__tab flex h-11 items-center rounded-lg border px-3 text-left text-md font-semibold ${
+            className={`status-tabs__tab flex h-11 items-center rounded-md border px-3 text-left text-md ${
               selected
-                ? 'status-tabs__tab--active border-brand text-link ring-1 ring-brand'
-                : 'border-border-strong text-fg-muted hover:border-fg-subdued'
+                ? 'status-tabs__tab--active border-brand font-semibold text-link ring-1 ring-brand'
+                : 'border-border-strong text-fg-muted hover:bg-surface-hover'
             }`}
           >
             {tab.label}

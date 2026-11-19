@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 import { PAYMENTS } from '@/data/payments';
 import { SearchInput } from '@/components/filters/search-input';
+import { PageHeader } from '@/components/layout/page-header';
 import { PaymentsView } from '@/components/payments/payments-view';
 
 function PaymentsLoading() {
@@ -18,7 +19,7 @@ function PaymentsLoading() {
 }
 
 function SearchFallback() {
-  return <div className="h-9 w-[360px] max-w-full rounded-lg bg-surface-subtle" />;
+  return <div className="h-9 w-[573px] max-w-full rounded-lg bg-surface-subtle" />;
 }
 
 export default function PaymentsPage() {
@@ -30,9 +31,9 @@ export default function PaymentsPage() {
         </Suspense>
       </header>
       <main className="payments-page__main pb-10">
-        <h1 className="payments-page__title mt-4 mb-6 text-title font-bold text-fg-strong">
-          Transactions
-        </h1>
+        <div className="mt-4 mb-[18px]">
+          <PageHeader />
+        </div>
         <Suspense fallback={<PaymentsLoading />}>
           <PaymentsView payments={PAYMENTS} />
         </Suspense>

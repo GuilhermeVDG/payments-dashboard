@@ -1,6 +1,6 @@
 'use client';
 
-import { PAGE_SIZES, rangeLabel, type Page, type PageSize } from '@/domain/paginate';
+import { PAGE_SIZES, rangeLabelParts, type Page, type PageSize } from '@/domain/paginate';
 
 interface PaginationProps {
   page: Pick<Page<unknown>, 'from' | 'to' | 'total' | 'page' | 'hasPrevious' | 'hasNext'>;
@@ -13,8 +13,23 @@ function toPageSize(value: string): PageSize | undefined {
   return PAGE_SIZES.find((option) => String(option) === value);
 }
 
+function RangeSummary({ page }: { page: PaginationProps['page'] }) {
+  const { range, total, noun } = rangeLabelParts(page);
+  const strong = 'font-semibold text-fg-strong';
+  return range ? (
+    <>
+      Viewing <span className={strong}>{range}</span> of <span className={strong}>{total}</span>{' '}
+      {noun}
+    </>
+  ) : (
+    <>
+      Viewing <span className={strong}>{total}</span> {noun}
+    </>
+  );
+}
+
 const buttonClass =
-  'pagination__button h-7 rounded-md border border-border-strong bg-surface px-2.5 text-sm font-semibold text-fg shadow-[0_1px_1px_rgb(0_0_0/0.04)] hover:bg-surface-hover disabled:cursor-default disabled:text-fg-subdued disabled:hover:bg-surface';
+  'pagination__button h-7 rounded-md border border-border-strong bg-surface px-2.5 text-sm font-semibold text-fg-strong shadow-[0_1px_1px_rgb(0_0_0/0.04)] hover:bg-surface-hover disabled:cursor-default disabled:font-normal disabled:text-fg-subdued disabled:hover:bg-surface';
 
 export function Pagination({ page, size, onPageChange, onSizeChange }: PaginationProps) {
   return (
@@ -23,7 +38,7 @@ export function Pagination({ page, size, onPageChange, onSizeChange }: Paginatio
       className="pagination flex items-center justify-between gap-4 py-3"
     >
       <p className="pagination__summary text-md text-fg-muted" aria-live="polite">
-        Viewing <span className="font-semibold text-fg">{rangeLabel(page)}</span>
+        <RangeSummary page={page} />
       </p>
       <div className="pagination__controls flex items-center gap-2">
         <label className="pagination__size flex items-center gap-2 text-sm text-fg-muted">

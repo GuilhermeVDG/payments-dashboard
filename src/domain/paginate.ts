@@ -36,14 +36,25 @@ export function paginate<T>(rows: readonly T[], page: number, size: PageSize): P
 
 const countFormat = new Intl.NumberFormat('en-US');
 
-/** `1–25 of 600 results`, `1 result`, `0 results`. */
-export function rangeLabel({
+/**
+ * Range label pieces (`1–25` of `600` results) so the UI can emphasise the
+ * numbers. A single result or none has no range: `1 result`, `0 results`.
+ */
+export interface RangeLabelParts {
+  /** `1–25`; null when there is at most one result. */
+  range: string | null;
+  total: string;
+  noun: 'result' | 'results';
+}
+
+export function rangeLabelParts({
   from,
   to,
   total,
-}: Pick<Page<unknown>, 'from' | 'to' | 'total'>): string {
-  const noun = total === 1 ? 'result' : 'results';
-  if (total === 0) return `0 ${noun}`;
-  if (total === 1) return `1 ${noun}`;
-  return `${countFormat.format(from)}–${countFormat.format(to)} of ${countFormat.format(total)} ${noun}`;
+}: Pick<Page<unknown>, 'from' | 'to' | 'total'>): RangeLabelParts {
+  return {
+    range: total > 1 ? `${countFormat.format(from)}–${countFormat.format(to)}` : null,
+    total: countFormat.format(total),
+    noun: total === 1 ? 'result' : 'results',
+  };
 }

@@ -21,6 +21,8 @@ declare module '@tanstack/react-table' {
     hiddenHeader?: boolean;
     /** Column hook for styling: `payments-table__col--<name>`. */
     className?: string;
+    /** Pinned to the right edge while the table scrolls horizontally. */
+    stickyRight?: boolean;
   }
 }
 
@@ -38,7 +40,7 @@ export function createColumns(now: Date): TableOptions<Payment>['columns'] {
   return [
     column.display({
       id: 'select',
-      size: 40,
+      size: 36,
       header: ({ table }) => (
         <Checkbox
           label="Select all payments on this page"
@@ -64,7 +66,7 @@ export function createColumns(now: Date): TableOptions<Payment>['columns'] {
     column.accessor('amount', {
       id: SORT_IDS.amount,
       header: 'Amount',
-      size: 108,
+      size: 84,
       sortDescFirst: true,
       cell: ({ row }) => (
         <AmountCell amount={row.original.amount} currency={row.original.currency} />
@@ -73,7 +75,7 @@ export function createColumns(now: Date): TableOptions<Payment>['columns'] {
     }),
     column.accessor('currency', {
       header: 'Currency',
-      size: 52,
+      size: 48,
       enableSorting: false,
       cell: ({ row }) => <CurrencyCell currency={row.original.currency} />,
       meta: { hiddenHeader: true, className: 'currency' },
@@ -81,7 +83,7 @@ export function createColumns(now: Date): TableOptions<Payment>['columns'] {
     column.accessor('status', {
       id: SORT_IDS.status,
       header: 'Status',
-      size: 128,
+      size: 124,
       sortDescFirst: false,
       cell: ({ row }) => <StatusBadge status={row.original.status} />,
       // The reference shows no label over the badges; the sort control keeps an
@@ -90,21 +92,21 @@ export function createColumns(now: Date): TableOptions<Payment>['columns'] {
     }),
     column.accessor('method', {
       header: 'Payment method',
-      size: 172,
+      size: 136,
       enableSorting: false,
       cell: ({ row }) => <MethodCell method={row.original.method} />,
       meta: { align: 'right', className: 'method' },
     }),
     column.accessor('description', {
       header: 'Description',
-      size: 190,
+      size: 158,
       enableSorting: false,
       cell: ({ row }) => <DescriptionCell description={row.original.description} />,
       meta: { className: 'description' },
     }),
     column.accessor('customer', {
       header: 'Customer',
-      size: 250,
+      size: 268,
       enableSorting: false,
       cell: ({ row }) => <CustomerCell customer={row.original.customer} />,
       meta: { className: 'customer' },
@@ -119,31 +121,31 @@ export function createColumns(now: Date): TableOptions<Payment>['columns'] {
     column.accessor('created', {
       id: SORT_IDS.created,
       header: 'Date',
-      size: 150,
+      size: 136,
       sortDescFirst: true,
       cell: ({ row }) => <DateCell iso={row.original.created} now={now} />,
       meta: { className: 'created' },
     }),
     column.accessor('refundedAt', {
       header: 'Refunded date',
-      size: 140,
+      size: 116,
       enableSorting: false,
       cell: ({ row }) => <DateCell iso={row.original.refundedAt} now={now} />,
       meta: { className: 'refunded' },
     }),
     column.accessor('failureReason', {
       header: 'Decline reason',
-      size: 160,
+      size: 140,
       enableSorting: false,
       cell: ({ row }) => <DeclineReasonCell reason={row.original.failureReason} />,
       meta: { className: 'decline-reason' },
     }),
     column.display({
       id: 'actions',
-      size: 48,
+      size: 44,
       header: () => <span className="sr-only">Actions</span>,
       cell: ({ row }) => <RowActions paymentId={row.original.id} />,
-      meta: { align: 'right', className: 'actions' },
+      meta: { align: 'right', className: 'actions', stickyRight: true },
     }),
   ];
 }

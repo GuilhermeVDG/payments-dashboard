@@ -70,21 +70,25 @@ export function PaymentsView({ payments }: { payments: readonly Payment[] }) {
   return (
     <AnnouncerProvider>
       <TooltipProvider delayDuration={300}>
-        <section aria-label="Payments" className="payments-view flex flex-col gap-4">
+        <section aria-label="Payments" className="payments-view flex flex-col">
           <StatusTabs filters={filters} onChange={changeFilters} />
-          <FilterBar
-            filters={filters}
-            onChange={changeFilters}
-            onClearAll={clearFilters}
-            chipsRef={chipsRef}
-          />
+          <div className="payments-view__filters mt-[18px]">
+            <FilterBar
+              filters={filters}
+              onChange={changeFilters}
+              onClearAll={clearFilters}
+              chipsRef={chipsRef}
+            />
+          </div>
           <p role="status" className="payments-view__results-status sr-only">
             {page.total === 0 ? emptyStateCopy(filters.statusTab).title : ''}
           </p>
           {page.total === 0 ? (
-            <EmptyState statusTab={filters.statusTab} onClearFilters={clearFilters} />
+            <div className="payments-view__results mt-3">
+              <EmptyState statusTab={filters.statusTab} onClearFilters={clearFilters} />
+            </div>
           ) : (
-            <div className="payments-view__results">
+            <div className="payments-view__results mt-3">
               <PaymentsTable rows={page.rows} sort={params.sort} onSortChange={setSort} now={now} />
               <Pagination
                 page={page}

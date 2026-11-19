@@ -284,3 +284,35 @@ export function EmptySearchIcon(props: IconProps) {
     </Svg>
   );
 }
+
+export function SparkleIcon(props: IconProps) {
+  return (
+    <Svg width={12} height={12} viewBox="0 0 12 12" {...props}>
+      <path
+        d="M5 1.5c.3 2.1 1.1 2.9 3.2 3.2C6.1 5 5.3 5.8 5 7.9 4.7 5.8 3.9 5 1.8 4.7 3.9 4.4 4.7 3.6 5 1.5Z"
+        {...stroke}
+        strokeWidth={1.2}
+      />
+      <path
+        d="M9 7.5c.15.9.55 1.3 1.5 1.5-.95.2-1.35.6-1.5 1.5-.15-.9-.55-1.3-1.5-1.5.95-.2 1.35-.6 1.5-1.5Z"
+        fill="currentColor"
+      />
+    </Svg>
+  );
+}
+
+export function PlusIcon(props: IconProps) {
+  return (
+    <Svg width={12} height={12} viewBox="0 0 12 12" {...props}>
+      <path d="M6 2v8M2 6h8" {...stroke} strokeWidth={1.75} />
+    </Svg>
+  );
+}
+
+export function BarChartIcon(props: IconProps) {
+  return (
+    <Svg width={12} height={12} viewBox="0 0 12 12" {...props}>
+      <path d="M1.5 1.5v9h9M4 8V5.5M6.5 8V3.5M9 8V6" {...stroke} strokeWidth={1.4} />
+    </Svg>
+  );
+}
